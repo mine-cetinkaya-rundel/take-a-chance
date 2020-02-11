@@ -162,11 +162,13 @@ staff_long %>%
   theme(legend.position = "bottom")
 ```
 
+## Similar exercises
 
+[TO DO: OTHER EXAMPLES? NOT WORKED OUT IN AS MUCH DETAIL, BUT MAYBE POINTING TO SOME BAD VIZ AND DATA TO GO WITH IT?]
 
+## Conclusion
 
-
-
+[TO DO: A CONCLUDING PARAGRAPH]
 
 ## Further reading {-}
 
