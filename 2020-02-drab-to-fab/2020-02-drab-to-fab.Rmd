@@ -17,7 +17,7 @@ In our September 2014 column titled we wrote about five concrete reasons your st
 One of the reasons we gave was that ``[t]his workflow establishes the norm that data analysis and science in general should be an iterative process". 
 Just like data analysis in general, data visualisation is also an interative process. 
 
-[TODO: Better link]
+[TODO: Better link between two paragraphs]
 
 It can be very inspirational to share highly polished data visualisations with students. 
 A few of our favourite visualisations to bring to the classroom are text analysis of Donald Trump's tweets by David Robinbson ([varianceexplained.org/r/trump-tweets](http://varianceexplained.org/r/trump-tweets/)), the Dialect Survey by Joshua Katz ([joshkatz.co/dialect.html](http://joshkatz.co/dialect.html)), and map of America's weather related disasters by Tim Meko ([washingtonpost.com/graphics/2019/national/mapping-disasters](https://www.washingtonpost.com/graphics/2019/national/mapping-disasters)). 
