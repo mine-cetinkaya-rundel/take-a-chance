@@ -91,9 +91,12 @@ staff_long %>%
   print(n = 5)
 ```
 
-### Step 3. Recreare the plot {-}
+### Step 3. Recreate the plot {-}
 
-Something is not right...
+We reordered the graph, so one can more easily make comparisons of the percentage of faculty at each level in a given year. This is often a first step for recreating the graph, but still something is not right...
+
+- How is this plot an improvement on the original? 
+- What about this plot still makes the primary message hidden?
 
 ```{r}
 staff_long %>%
@@ -115,6 +118,10 @@ staff_long %>%
 
 This tells the story even better...
 
+- How is this an imporvement on the previous plot? 
+- What is an advantage of using a segmented barplot rather than side-by-sided bars as in the previous iteration? 
+- How can we improve this plot further to make the primary message even clearer? 
+
 ```{r}
 staff_long %>%
   ggplot(aes(x = year, y = percentage, fill = faculty_type)) +
@@ -131,16 +138,38 @@ staff_long %>%
   geom_line()
 ```
 
+The lines are an improvement over the bars, but notice the x-axis. Because `year` was originally stored as categorical data, the years are equally spaced in the plot, giving the impression that the data were collected at equally spaced time intevals. 
+Let's fix this, so it is clear to the reader the intervals at which the data were collected.
+
+Talk about the axes, ...Need to make year numeric, so the axes are in time order. Add points to the plots, so you can see the years where there's data.
+
+```{r}
+staff_long <- staff_long %>%
+  mutate(year = as.numeric(year))
+```
+
+```{r}
+staff_long %>%
+  ggplot(aes(x = year, y = percentage, group = faculty_type, 
+             color = faculty_type)) +
+  geom_point(size = 0.5) +
+  geom_line()
+```
+
 And we can take it even one step further...
+
 
 ```{r}
 staff_long %>%
   mutate(part_time = if_else(faculty_type == "Part-Time Faculty", "Part-Time Faculty", "Other Faculty")) %>%
   ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
              color = part_time)) +
+  geom_point(size = 0.5) +
   geom_line() +
   scale_color_manual(values = c("gray", "red"))
 ```
+
+Now we've focused in on one primary message: the increase in part-time faculty over time. By making the lines for the other faculty levels gray, we can still see the trends at those levels; however, they do not distract from the primary level of interest - part time faculty. Now the reader can get one clear message from the plot after only a few moments of examination. 
 
 ### Step 5. Pushing it a bit more {-}
 
@@ -149,6 +178,7 @@ staff_long %>%
   mutate(part_time = if_else(faculty_type == "Part-Time Faculty", "Part-Time Faculty", "Other Faculty")) %>%
   ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
              color = part_time)) +
+  geom_point(size = 0.5) +
   geom_line() +
   scale_color_manual(values = c("gray", "red")) +
   scale_y_continuous(labels = percent_format(accuracy = 1)) +
@@ -161,6 +191,8 @@ staff_long %>%
   ) +
   theme(legend.position = "bottom")
 ```
+
+
 
 ## Similar exercises
 
