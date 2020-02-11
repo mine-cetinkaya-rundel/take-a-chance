@@ -18,7 +18,7 @@ library(knitr)
 
 In our September 2014 column titled we wrote about five concrete reasons your students should be learning to analyze data in the reproducible paradigm. 
 One of the reasons we gave was that ``[t]his workflow establishes the norm that data analysis and science in general should be an iterative process". 
-Just like data analysis in general, data visualisation is also an interative process. 
+Just like data analysis in general, creating an effective data visualisation is also an interative process. 
 
 [TODO: Better link between two paragraphs]
 
@@ -47,7 +47,7 @@ knitr::include_graphics("img/staff-employment.png")
 The visualisation is a bit difficult to make sense of, and this is the point. 
 We show this visualisation to the students at the beginning of the class, with some clarification on what the y-axis means (various levels of staff at the university who teach classes, ranging from graduate students to full-time tenured faculty) and ask them to interpret the visualisation in teams. 
 Eventually students are able to identify the main message of the story: the highest proportion of instructors are part-time faculty, and this proportion has been increasing from 1975 to 2011. 
-Along with this main message, students also naturally come to the conclusion that this is not the best visualisation of these data, and in fact, the visualisation makes it hides the main message instead of making it loud and clear.
+Along with this main message, students also naturally come to the conclusion that this is not the best visualisation of these data, and in fact, the visualisation hides the main message instead of making it loud and clear.
 
 At this point it's a worthwhile exercise to ask students to start thinking about how this visualisation can be improved. 
 Instead of just talking through it, we ask students to sketch the visualisations on a piece of paper. 
@@ -64,7 +64,7 @@ One can do this as a class exercise, with interactive exercises and just-in-time
 For the latter, we have had a great experience with assigning this as a team exercise. 
 If the class size allows, it's also a great idea to then have students present their process (both technical and thought processes) for improving so that they can see the various approaches each team takes.
 
-Next we walk through a possible path to ``fab" (an improved visualisation), highlighting opportunities for instruction along the way. We also present a series of questions for discussion.
+Next we walk through a possible path to "fab" (an improved visualisation), highlighting opportunities for instruction along the way. We also present a series of questions for discussion.
 
 ### Step 1. Get the data {-}
 
