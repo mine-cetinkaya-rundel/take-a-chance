@@ -10,7 +10,9 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE)
 library(tidyverse)
 library(scales)
 library(knitr)
@@ -196,6 +198,63 @@ staff_long %>%
 
 
 ## Similar exercises
+
+Electric Skateboard HQ Comparison Chart([www.electricskateboardhq.com/boards-comparison/](https://www.electricskateboardhq.com/boards-comparison/))
+
+The data for used to create this plot may be found [here](https://compare-skateboards.com/#1488732069728-b989687a-f273).
+
+```{r echo=FALSE, fig.cap="Comparison of specifications for electronic skateboards"}
+knitr::include_graphics("img/skateboard_compare.jpg")
+```
+
+- Primary issue with this visulaization is that they're trying to convey too much information on one graph. 
+
+1. Begin by having the students list of all the variables included in this visualizaton and how they are displayed in the scatterplot.
+  - Relationship between the top speed and the range (points on x and y axis)
+  - Manufacturer (color of points)
+  - Weight of electronic skateboard (size of point)
+  - Type of Drive (dotted vs. solid line on point)
+  - Name of electronic skateboard (labels for each point)
+
+This graph is a good one to help students think about how much information is necessary for a single visualization. 
+
+The most clear information we get from this visualization is the relationship between the top speed and the range Therefore, let's start by making a plot that just examines the relationship between these two variables and build from there: 
+
+```{r}
+skateboard <- read_csv("data/skateboard.csv")
+```
+
+```{r}
+skateboard %>%
+  ggplot(aes(x = range, y = top_speed)) +
+  geom_point()
+```
+
+Let's use color to add information about the weights. 
+
+```{r}
+skateboard %>%
+  ggplot(aes(x = range, y = top_speed, color = weight)) +
+  geom_point()
+```
+
+Finally, we can use `facet_wrap` to create separate plots for Belt Drvies vs. Hub/Direct drives for easier comparison between the two groups. We've also added labels and a title to our final data visualization. 
+
+
+```{r}
+skateboard %>%
+  mutate(is_belt = if_else(drive == "Belt", "Belt", "Hub/Direct")) %>%
+  ggplot(aes(x = range, y = top_speed, color = weight)) +
+  geom_point() + 
+  facet_wrap(~is_belt) + 
+  labs(x = "Range (in miles)", 
+       y = "Top speed (in miles per hour)", 
+       color = "Weight (in pounds)", 
+       title = "Comparing Specifications for Electronic Skateboards", 
+       subtitle = "by Drive Type"
+       )
+```
+
 
 [TO DO: OTHER EXAMPLES? NOT WORKED OUT IN AS MUCH DETAIL, BUT MAYBE POINTING TO SOME BAD VIZ AND DATA TO GO WITH IT?]
 
