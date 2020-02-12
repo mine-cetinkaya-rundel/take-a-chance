@@ -92,12 +92,11 @@ staff_long %>%
   print(n = 5)
 ```
 
+2. What does each row represent? How does this differ from what each row represents in `staff_wide`?
+
 ### Step 3. Recreate the plot {-}
 
-We reordered the graph, so one can more easily make comparisons of the percentage of faculty at each level in a given year. This is often a first step for recreating the graph, but still something is not right...
-
-- How is this plot an improvement on the original? 
-- What about this plot still makes the primary message hidden?
+We've made some improvement on the original visualization, but still something is not right... 
 
 ```{r}
 staff_long %>%
@@ -115,13 +114,12 @@ staff_long %>%
   coord_flip()
 ```
 
+3. In what way(s) is this plot an improvement on the original "drab" visualization?
+4. In what way(s) is the main message still unclear / hidden?
+
 ### Step 4. Improve the plot {-}
 
-This tells the story even better...
-
-- How is this an imporvement on the previous plot? 
-- What is an advantage of using a segmented barplot rather than side-by-sided bars as in the previous iteration? 
-- How can we improve this plot further to make the primary message even clearer? 
+Next, let's try a segmented bar plot. This tells the story even better...
 
 ```{r}
 staff_long %>%
@@ -129,6 +127,9 @@ staff_long %>%
   geom_col() + 
   coord_flip()
 ```
+
+5. In what way(s) is the segmented bar plot an improvement on the the side-by-side bar plot from the previous step? 
+6. In what way(s) is the main message still unclear / hidden?
 
 But lines would be better...
 
@@ -139,10 +140,10 @@ staff_long %>%
   geom_line()
 ```
 
-The lines are an improvement over the bars, but notice the x-axis. Because `year` was originally stored as categorical data, the years are equally spaced in the plot, giving the impression that the data were collected at equally spaced time intevals. 
-Let's fix this, so it is clear to the reader the intervals at which the data were collected.
+The lines are an improvement over the bars, but let's take a look at the x-axis. When the data was reshaped in Step 1, `year` was stored as a character type `staff_long`. Therefore, the yars are equally spaced in our visualization, giving the impression that the data were collected at equally spaced time intervals. 
 
-Talk about the axes, ...Need to make year numeric, so the axes are in time order. Add points to the plots, so you can see the years where there's data.
+Let's update `year` and add points to the visualization, so one can more easily see the years in the dataset. 
+
 
 ```{r}
 staff_long <- staff_long %>%
@@ -157,8 +158,7 @@ staff_long %>%
   geom_line()
 ```
 
-And we can take it even one step further...
-
+Now we can take it even one step further...
 
 ```{r}
 staff_long %>%
@@ -170,7 +170,7 @@ staff_long %>%
   scale_color_manual(values = c("gray", "red"))
 ```
 
-Now we've focused in on one primary message: the increase in part-time faculty over time. By making the lines for the other faculty levels gray, we can still see the trends at those levels; however, they do not distract from the primary level of interest - part time faculty. Now the reader can get one clear message from the plot after only a few moments of examination. 
+By making the lines for the other faculty levels gray, we can still see the trends at those levels; however, they do not distract from the primary level of interest - part time faculty. Now the reader can get one clear message from the plot after only a few moments of examination. 
 
 ### Step 5. Pushing it a bit more {-}
 
