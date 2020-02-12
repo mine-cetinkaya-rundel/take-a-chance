@@ -1,0 +1,155 @@
+company,board,year,price,range,speed,weight,drive,battery
+Metroboard,41´ Dual,2016,1799,25,24,24,Belt,396
+Metroboard,41´ Slim 16AH,2015,1499,40,24,23,Belt,576
+LHB,LHB Dual 12s,2016,2330,25,35,22,Belt,430
+Ollin,Freeride Dual Drive,2016,2200,40,28,22,Belt,648
+LHB,LHB Dual 10s,2016,2230,20,30,21,Belt,360
+Enertion,Raptor 2.0,2017,1316,25,28,20,Hub,360
+DIYElectric,Torque Rocket FreeFlow 10S4P,2017,1374,25,30,20,Hub,370
+LEIF Tech,Esnowboard Pacific LT3X,2016,1729,15,23,20,Belt,144
+LEIF Tech,Esnowboard Fulton LT3X,2016,1729,15,23,20,Belt,144
+LEIF Tech,Esnowboard Atlantic LT3X,2016,1729,15,23,20,Belt,144
+ZBoard,ZBoard 2 Pearl,2016,1499,24,20,19,Belt,324
+DIYElectric,Torque Rocket FreeFlow 12S3P,2017,1399,20,30,19,Hub,333
+Epic,Racer 3200 Carbon Dual Pro,2017,2100,12,24,19,Belt,317
+Swagtron,Voyager Longboard,2017,400,15,15,19,Hub,79
+Slick Revolution,FLEX-EBOARD,2018,1020,10,22,19,Belt,196
+Evolve,GTX Street,2017,1779,31,26,19,Belt,360
+Evolve,Carbon Street,2013,1559,25,24,18,Belt,360
+Metroboard,41´ Slim 8AH,2015,1299,20,24,18,Belt,288
+Mellow,Mellow Board 4x4,2017,3650,15,25,18,Hub,198
+Epic,Racer 3200 Pro,2016,915,12,26,18,Belt,317
+LEIF Tech,Esnowboard Pacific LT2X,2016,1649,10,23,18,Belt,96
+LEIF Tech,Esnowboard Fulton LT2X,2016,1649,10,23,18,Belt,96
+LEIF Tech,Esnowboard Atlantic LT2X,2016,1649,10,23,18,Belt,96
+Liftboard,Liftboard Dual,2016,600,16,19,18,Belt,190
+Skullboard,S1 (Sanyo),2018,499,10,25,18,Hub,216
+Skullboard,S1 (Samsung),2018,599,15,25,18,Hub,291
+Evolve,Bamboo Street,2014,989,19,24,17,Belt,252
+Evolve,GT Bamboo Street,2016,1449,19,26,17,Belt,234
+Evolve,GT Carbon Street,2016,1959,31,26,17,Belt,360
+Metroboard,41´ Slim 6AH,2015,1199,15,24,17,Belt,216
+ZBoard,ZBoard 2 Blue,2016,1299,16,20,17,Belt,237
+ACTON,Blink Qu4tro,2017,1699,22,23,17,Hub,240
+Genesis,Tomahawk,2016,599,20,20,17,Hub,144
+Genesis,Hellfire,2016,549,20,20,17,Hub,144
+DIYElectric,Torque Rocket FreeFlow 10S3P,2017,1299,15,30,17,Hub,278
+I-Wonder,SK-D2,2016,600,11,22,17,Belt,211
+Epic,Racer 3200 Fly,2016,820,6,24,17,Belt,97
+Epic,Racer 2800 Pro Hub,2017,1061,12,24,17,Hub,317
+Jed Boards,Jed Board All Wheel,2018,1599,25,24,17,Direct,160
+Koowheel,Kooboard 2nd Gen,2017,649,15,26,17,Hub,198
+WowGo,WowGo 2s (Samsung Bat),2018,440,12,24,17,Hub,144
+Stark,Starkboard,2018,599,12,20,17,Hub,208
+Boosted,Boosted Mini X,2018,1099,14,20,17,Belt,199
+Boosted,Boosted Plus,2018,1499,14,22,17,Belt,199
+Boosted,Boosted Stealth,2018,1699,14,24,17,Belt,199
+WowGo,WowGo 2s (LG Bat),2018,480,14,24,17,Hub,230
+WowGo,WowGo 2s (Sanyo),2018,620,22,24,17,Hub,306
+WowGo,WowGo KT (Samsung Bat),2018,440,12,24,17,Hub,144
+WowGo,WowGo KT (LG Bat),2018,480,14,24,17,Hub,230
+WowGo,WowGo KT (Sanyo),2018,620,22,24,17,Hub,306
+Skullboard,S2 (Sanyo),2018,499,10,25,17,Hub,216
+Skullboard,S2 (Samsung),2018,599,15,25,17,Hub,291
+Skullboard,S3 (Sanyo),2018,499,10,25,17,Hub,216
+Skullboard,S3 (Samsung),2018,599,15,25,17,Hub,291
+Boosted,Dual Extended V2,2016,1399,12,20,16,Belt,198
+Boosted,Dual+ Extended V2,2016,1599,12,22,16,Belt,198
+Metroboard,32´ Shortboard,2015,955,15,20,16,Belt,144
+DIYElectric,Torque Rocket Dual 10S3P,2017,1299,15,30,16,Belt,278
+DIYElectric,Torque Rocket Dual 12S3P,2017,1399,20,30,16,Belt,333
+Koowheel,Kooboard D3M,2016,599,25,28,16,Hub,158
+Evolve,ONE,2017,1049,21,22,16,Belt,252
+Teemo,Teemoboard M-1,2018,269,11,25,16,Hub,158
+Teemo,Teemoboard M-2,2018,329,15,25,16,Hub,230
+Teemo,Teemoboard - HQC,2018,399,16,24,16,Hub,238
+Meepo,Meepo V2,2018,399,11,25,16,Hub,144
+Meepo,Meepo V2P,2018,419,11,25,16,Hub,144
+Meepo,Meepo V2P Sanyo,2018,599,17,25,16,Hub,292
+Boosted,Dual V2,2016,1299,7,20,15,Belt,99
+Boosted,Dual+ V2,2016,1499,7,22,15,Belt,99
+Metroboard,29´ Micro,2014,1099,10,20,15,Belt,144
+Metroboard,33´ Mini,2015,1099,10,20,15,Belt,144
+Metroboard,36´ Gravity,2015,1099,10,20,15,Belt,144
+Metroboard,41´ Slim 4AH,2015,1149,10,24,15,Belt,144
+Enertion,Raptor Dual,2015,1600,19,28,15,Belt,270
+Yuneec,E-Go 2,2016,600,18,13,15,Belt,202
+ACTON,Blink S2,2017,899,14,18,15,Hub,160
+Inboard,M1,2016,999,10,22,15,Hub,97
+Epic,Racer 2800 Fly Hub,2017,944,6,24,15,Hub,97
+Liftboard,Liftboard Single,2016,500,16,16,15,Belt,190
+WALNUTT,SPECTRA Silver,2017,1199,20,22,15,Hub,148
+Meepo,Meepo v1.5,2017,280,11,22,15,Hub,158
+Meepo,Meepo Sanyo,2017,510,17,22,15,Hub,295
+Backfire,Galaxy 2,2018,499,13,23,15,Hub,148
+Boosted,Boosted Mini S,2018,825,7,18,15,Belt,99
+WowGo,WowGo Mini (Samsung Bat),2018,440,12,24,15,Hub,144
+WowGo,WowGo Mini (LG Bat),2018,480,14,24,15,Hub,230
+WowGo,WowGo Mini (Sanyo),2018,620,22,24,15,Hub,306
+Backfire,Galaxy G2s,2018,549,13,25,15,Hub,148
+Harvoo,Harvoo,2018,480,14,22,15,Hub,209
+Boosted,Single,2014,999,8,18,14,Belt,99
+Boosted,Dual,2014,1000,7,20,14,Belt,99
+Boosted,Dual+,2014,1299,7,22,14,Belt,99
+Yuneec,E-Go 1,2014,500,18,13,14,Belt,202
+DIYElectric,Torque Rocket Single 10S3P,2017,999,15,30,14,Belt,278
+DIYElectric,Torque Rocket Single 12S3P,2017,1099,20,30,14,Belt,333
+DIYElectric,Torque Rocket Single 10S4P,2017,1199,25,30,14,Belt,370
+Jed Boards,Jed Board Dual,2018,1199,19,24,14,Direct,160
+Teamgee,Teamgee H6,2018,519,10,19,14,Hub,126
+Riptide,Riptide R1 Elite,2018,729,8,20,14,Belt,97
+Atom,Atom B10X,2018,509,7,15,14,Belt,90
+Predator,Predator Banshee,2017,897,14,24,13,Hub,222
+I-Wonder,SK-B2,2016,529,20,19,13,Belt,211
+Nilox,DOC Skateboard Sky Blue,2016,556,12,9,13,Hub,158
+Nilox,DOC Skateboard Black,2016,556,12,9,13,Hub,158
+Nilox,DOC Skateboard Plus Black,2016,598,12,9,13,Hub,158
+Juiced,Juiced Dual,2017,599,7,20,13,Hub,94
+Riptide,Riptide R1,2018,599,7,18,13,Belt,97
+Huboards,Huboards 1.0,2018,799,10,25,13,Hub,158
+Huboards,Huboards 1.0 (long distance),2018,899,15,25,13,Hub,216
+Huboards,Huboards,2017,599,10,25,13,Hub,158
+Atom,Atom H16D,2018,699,12,20,13,Hub,158
+Maxfind,Max-a,2016,599,10,17,12,Hub,79
+Maxfind,Max-b,2016,599,10,17,12,Hub,79
+Genesis,Stinger,2016,549,20,20,12,Hub,144
+I-Wonder,SK-A2,2016,550,20,19,12,Belt,211
+I-Wonder,SK-B1,2015,510,10,19,12,Belt,106
+WALNUTT,SPECTRA Pro,2017,799,12,16,12,Hub,89
+Juiced,Juiced Single,2017,449,7,17,12,Hub,94
+Lou,Lou 3.0,2017,990,15,21,12,Hub,108
+Atom,Atom H10,2018,499,8,16,12,Hub,104
+Arc Boards,Aileron V2,2018,1199,19,28,12,Direct,133
+Stary,Stary Board,2016,899,10,19,11,Hub,93
+I-Wonder,SK-A1,2015,475,10,19,11,Belt,106
+I-Wonder,SK-A3,2016,500,10,19,11,Belt,106
+WALNUTT,SPECTRA Advanced,2017,569,12,16,11,Hub,89
+Lou,Lou 1.0,2017,449,9,17,11,Hub,79
+Atom,Atom B10,2018,414,6,16,11,Belt,90
+Marbel,Marbel 2.0,2017,1299,18,26,10,Belt,220
+ACTON,Blink S,2017,699,7,15,10,Hub,80
+Swagtron,Swagboard NG-1,2016,200,10,11,10,Hub,48
+Lou,Lou 2.0,2017,790,9,17,10,Hub,79
+Arc Boards,Aileron,2018,1049,11,22,10,Belt,133
+Marbel,Marbel,2015,1199,10,20,9,Belt,190
+Mellow,Mellow Board,2017,2100,10,25,9,Hub,99
+Arc Boards,Arc Board,2018,699,11,16,9,Belt,133
+Bolt,Bolt Motion,2018,935,9,18,9,Belt,97
+Mellow,Cruiser,2018,1695,10,25,9,Hub,99
+Mellow,Surfer,2018,1695,10,25,9,Hub,99
+ACTON,Blink Lite,2016,299,5,10,8,Hub,56
+WALNUTT,SPECTRA Mini,2017,299,7,12,8,Hub,44
+Meepo,Meepo Campus,2017,180,5,14,8,Hub,158
+Meepo,Meepo Campus Sanyo,2017,260,10,14,8,Hub,295
+Meepo,Meepo Campus 2WD,2017,229,5,14,8,Hub,158
+Meepo,Meepo Campus 2WD Sanyo,2017,299,10,14,8,Hub,295
+Atom,Atom H4,2018,249,4,9,8,Hub,55
+Onan,X2 Booster BP10,2016,859,9,25,4,Hub,90
+Onan,X1 Booster BP10,2016,559,7,12,4,Hub,90
+Onan,X1 Booster BP20,2016,599,16,12,4,Hub,158
+Onan,X2 Booster BP20,2016,899,17,25,4,Hub,158
+Mellow,Drive,2018,1549,10,25,2,Hub,99
+Unlimited,Eon Solo,2017,639,8,22,-,Hub,-
+Unlimited,Eon Cruiser,2017,739,15,22,-,Hub,-
+Unlimited,Eon R,2017,999,15,22,-,Hub,-
+DIYElectric,Torque Speedster,2017,599,7,22,-,Belt,89
