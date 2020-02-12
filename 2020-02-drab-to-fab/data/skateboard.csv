@@ -1,4 +1,4 @@
-company,board,year,price,range,speed,weight,drive,battery
+company,board,year,price,range,top_speed,weight,drive,battery
 Metroboard,41´ Dual,2016,1799,25,24,24,Belt,396
 Metroboard,41´ Slim 16AH,2015,1499,40,24,23,Belt,576
 LHB,LHB Dual 12s,2016,2330,25,35,22,Belt,430
