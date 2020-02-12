@@ -33,7 +33,10 @@ It is possible for a student just starting off to think "well, I could never do 
 Or perhaps worse, to think that they can, and not get to something as impressive on their first or second try and get discouraged. 
 We believe that it's important to show students not only the end result, but also the process of building a meaningful data visualisation. 
 This journey can be incredibly educational in its own, as each step of the improvement is an opportunity to teach a new data visualisation or wrangling technique. 
-In this column we walk through one such example. 
+
+In this column we walk through present three examples of ``from drab to fab" type class activities, i.e. improving data visualisations. 
+The first example is on types of staff involved with instruction at American universities and how their distributions have changed over time. We walk through this example in detail, showing some of the code and step-by-step improvements on the visualisations. We then present two more examples of such activities, one on electric skateboards and the other on fisheries. The data for all three examples along with R code to produce the visualisations presented here can be found on the GitHub repository accompanying this column at [bit.ly/taking-a-chance](http://bit.ly/taking-a-chance).
+
 
 ## The drab {-}
 
@@ -198,6 +201,11 @@ staff_long %>%
 ## Similar exercises
 
 [TO DO: OTHER EXAMPLES? NOT WORKED OUT IN AS MUCH DETAIL, BUT MAYBE POINTING TO SOME BAD VIZ AND DATA TO GO WITH IT?]
+
+- Maria: skateboard example
+- Mine: Fisheries example
+  - Data joins, data cleaning -> continent level analysis
+  - More joins, geolocation -> mapping
 
 ## Conclusion
 
