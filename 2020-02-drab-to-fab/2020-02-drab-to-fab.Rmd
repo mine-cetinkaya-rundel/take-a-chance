@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE,
 library(tidyverse)
 library(scales)
 library(knitr)
+library(patchwork)
 ```
 
 In our September 2014 column titled we wrote about five concrete reasons your students should be learning to analyse data in the reproducible paradigm. 
@@ -79,7 +80,7 @@ For the latter, we have had success in assigning this as a team exercise in whic
 After a few days, teams present their visualizations during class while describing how they have improved upon the original one. 
 If the class size allows, it's also a great idea to then have students present their process (both technical and thought processes) for improving the visualization, so they can see the various approaches each team has taken. 
 
-In the walk through of a possible path to "fab" (an improved visualisation) that we present below, we highlight opportunities for instruction along the way, using R as the programming language and the tidyverse suite of packages. We also present a series of questions that can be used as part of a class activity or assignment.  We deliberately keep steps simple, improving only one or two features of the visualisation at a time, in an effort to emphasize that creating an effective data visualisation is an iterative process. The visualizations in this path is representative of the variety of those created by students across multiple semesters of doing this assignment in introductory data science courses. 
+In the walk through of a possible path to "fab" (an improved visualisation) that we present below, we highlight opportunities for instruction along the way, using R as the programming language and the **tidyverse** suite of packages. We also present a series of questions that can be used as part of a class activity or assignment.  We deliberately keep steps simple, improving only one or two features of the visualisation at a time, in an effort to emphasize that creating an effective data visualisation is an iterative process. The visualizations in this path is representative of the variety of those created by students across multiple semesters of doing this assignment in introductory data science courses. 
 
 ### Step 1. Get the data {-}
 
@@ -208,13 +209,12 @@ Now the main message of the story is clear: the highest proportion of instructor
 
 There are still a number of features of this plot that could use improving: 
 
-1. The labels are poorly formatted
-2. Percentages are missing the % sign
-3. Legend is taking up too much space on the right hand side
+1. Percentages are missing the % sign (we'll use the `percent_format()` function from the **scales** package for this)
+2. The labels are poorly formatted and the data source is not indicated
 4. The grey lines on grey background don't offer much contrast
-5. Data source is not indicated
+5. Legend is taking up too much space on the right hand side
 
-Suppose we store the plot from the previous step as `p`. Then, we can add the necessary layers to `p` to address these updates.    
+Suppose we store the plot from the previous step as `p`. Then, we can add the necessary layers to `p` to address these updates. We indicted which line of code refers to which update using comments with issue numbers in the code.   
 
 ```{r echo=FALSE}
 p <- ggplot(data = staff_long, aes(x = year, y = percentage/100, 
@@ -224,17 +224,18 @@ p <- ggplot(data = staff_long, aes(x = year, y = percentage/100,
 ```
 
 ```{r}
+library(scales)
 p +
-  scale_y_continuous(labels = percent_format(accuracy = 1)) +
-  labs(
+  scale_y_continuous(labels = percent_format(accuracy = 1)) + # 1
+  labs( # 2
     title = "Percentage of part-time faculty instructors is on the rise",
     x = "Year",
     y = "Percentage",
     caption = "Source: bit.ly/taking-a-chance",
     color = ""
   ) +
-  theme_minimal() +
-  theme(legend.position = "bottom")
+  theme_minimal() + # 3
+  theme(legend.position = "bottom") # 4
 ```
 
 
@@ -242,62 +243,48 @@ p +
 
 ### Electric skateboars {-}
 
-Electric Skateboard HQ is a review and discussion site on, you guessed it, electronic skateboards. They summarise their comparison of various electic skateboards using the plot shown in Figure \@ref(fig:skateboard) is an example of such a sketch. The primary issue with this visualisation is that it's trying to convey too much information at once.
+Electric Skateboard HQ is a review and discussion site on, you guessed it, electronic skateboards. They summarise their comparison of various electric skateboards using the plot shown in Figure \@ref(fig:skateboard) is an example of such a sketch. The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
 
 ```{r skateboard, echo=FALSE, fig.cap="Comparison of specifications for electronic skateboards.", out.width="80%"}
 knitr::include_graphics("img/skateboard_compare.jpg")
 ```
 
-The data for used to create this plot may be found at [/bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). Below is an outline of a class activity around improving this visualisation.
+The data for used to create this plot may be found at [/bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). A class activity / assignment around this example should begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot: 
 
-1. Begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot.
-  - Relationship between the top speed and the range (points on x and y axis)
-  - Manufacturer (colour of points)
-  - Weight of electronic skateboard (size of point)
-  - Type of Drive (dotted vs. solid line on point)
-  - Name of electronic skateboard (labels for each point)
+- Relationship between the top speed and the range (points on x and y axis)
+- Manufacturer (colour of points)
+- Weight of electronic skateboard (size of point)
+- Type of drive (dotted vs. solid line on point)
+- Name of electronic skateboard (labels for each point)
 
-This graph is a good one to help students think about how much information is necessary for a single visualization. 
+The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables. Then, we add colour to add information on weights, and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title. Figure \@ref(fig: skateboard-improve) shows the evolution of these visualisations.
 
-The most clear information we get from this visualization is the relationship between the top speed and the range Therefore, let's start by making a plot that just examines the relationship between these two variables and build from there: 
-
-```{r}
+```{r skateboard-improve, echo=FALSE, fig.cap="Plot I: Top speed vs. range, 2. Plot II: I + coloring by weight, 3. Plot III: II + faceting anf formatting"}
 skateboard <- read_csv("data/skateboard.csv")
-```
-
-```{r}
-skateboard %>%
-  ggplot(aes(x = range, y = top_speed)) +
+p1 <- ggplot(skateboard, aes(x = range, y = top_speed)) +
   geom_point()
-```
-
-Let's use color to add information about the weights. 
-
-```{r}
-skateboard %>%
-  ggplot(aes(x = range, y = top_speed, color = weight)) +
+p2 <- ggplot(skateboard, aes(x = range, y = top_speed, color = weight)) +
   geom_point()
-```
-
-Finally, we can use `facet_wrap` to create separate plots for Belt Drvies vs. Hub/Direct drives for easier comparison between the two groups. We've also added labels and a title to our final data visualization. 
-
-
-```{r}
-skateboard %>%
+p3 <- skateboard %>%
   mutate(is_belt = if_else(drive == "Belt", "Belt", "Hub/Direct")) %>%
   ggplot(aes(x = range, y = top_speed, color = weight)) +
   geom_point() + 
+  scale_color_viridis_c() +
   facet_wrap(~is_belt) + 
   labs(x = "Range (in miles)", 
-       y = "Top speed (in miles per hour)", 
+       y = "Top speed (in mph)", 
        color = "Weight (in pounds)", 
        title = "Comparing Specifications for Electronic Skateboards", 
        subtitle = "by Drive Type"
        )
+patchwork <- (p1 | p2) / 
+   p3
+patchwork + 
+  plot_annotation(tag_levels = "I", tag_prefix = "Plot ") & 
+  theme(plot.tag = element_text(size = 12))
 ```
 
-
-[TO DO: OTHER EXAMPLES? NOT WORKED OUT IN AS MUCH DETAIL, BUT MAYBE POINTING TO SOME BAD VIZ AND DATA TO GO WITH IT?]
+### Fisheries of the world
 
 - Mine: Fisheries example
   - Data joins, data cleaning -> continent level analysis
