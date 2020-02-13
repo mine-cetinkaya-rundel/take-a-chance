@@ -326,7 +326,7 @@ ggplot(fisheries_summary,
 
 For a slightly more advanced activity, we map these data. This will require a discussion around basics of making maps in R and shapefiles. Fortunately, there is plenty of built-in functionality in the **gplot2** package for making country level maps. Despite the code required for mapping not being too complicated, this exercise can still ignite plenty of discussion around missing data, specifically how to represent countries for which we don't have any data on a map. Figure \@ref(fisheries-improve2) presents an example of a choropleth map of the distrbution of percentage of aquaculture across the globe. 
 
-```{r fisheries-improve, echo=FALSE, fig.height=4.2, fig.cap = "Choropleth map of percentage of aquaculture.", out.width="80%"}
+```{r fisheries-improve2, echo=FALSE, fig.height=4.2, fig.cap = "Choropleth map of percentage of aquaculture.", out.width="80%"}
 fisheries <- fisheries %>%
   filter(total > 100000) %>%
   left_join(continents) %>%
