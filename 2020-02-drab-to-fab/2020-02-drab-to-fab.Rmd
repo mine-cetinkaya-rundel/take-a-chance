@@ -324,7 +324,7 @@ ggplot(fisheries_summary,
   theme_minimal()
 ```
 
-For a slightly more advanced activity, we map these data. This will require a discussion around basics of making maps in R and shapefiles. Fortunately, there is plenty of built-in functionality in the **gplot2** package for making country level maps. Despite the code required for mapping not being too complicated, this exercise can still ignite plenty of discussion around missing data, specifically how to represent countries for which we don't have any data on a map. Figure \@ref(fisheries-improve2) presents an example of a choropleth map of the distrbution of percentage of aquaculture across the globe. 
+For a slightly more advanced activity, we map these data. This will require a discussion around basics of making maps in R and shapefiles. Fortunately, there is plenty of built-in functionality in the **gplot2** package for making country level maps. Despite the code required for mapping not being too complicated, this exercise can still ignite plenty of discussion around missing data, specifically how to represent countries for which we don't have any data on a map. Figure \@ref(fisheries-improve2) presents an example of a choropleth map of the distribution of percentage of aquaculture across the globe. 
 
 ```{r fisheries-improve2, echo=FALSE, fig.height=4.2, fig.cap = "Choropleth map of percentage of aquaculture.", out.width="80%"}
 fisheries <- fisheries %>%
@@ -376,9 +376,11 @@ ggplot() +
   )
 ```
 
+This activity can also be restructured as a web scraping exercise, where students first scrape the data from Wikipedia, and then dive into visualisation.
+
 ## Conclusion {-}
 
-[TO DO: A CONCLUDING PARAGRAPH]
+In this column we gave three examples of "from drab to fab" visualisation activities, for each one we highlighted other topics you can introduce along with data visualisation. You can find the data as well as the code for reproducing all of the figures we presented in the GitHub repository for this column as well as links to the additional resources we mentioned at [bit.ly/taking-a-chance](http://bit.ly/taking-a-chance).
 
 ## Further reading {-}
 
