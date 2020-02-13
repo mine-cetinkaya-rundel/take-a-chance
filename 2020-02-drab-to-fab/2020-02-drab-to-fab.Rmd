@@ -5,7 +5,7 @@ author: "Mine Çetinkaya-Rundel and Maria Tackett"
 date: "February 2020"
 output: 
   bookdown::pdf_document2: 
-    theme: readable
+    #theme: readable
     fig_caption: yes
     toc: no
 ---
@@ -235,8 +235,13 @@ p +
 
 Electric Skateboard HQ is a review and discussion site on, you guessed it, electric skateboards. They summarise their comparison of various electric skateboards using the plot shown in Figure \@ref(fig:skateboard-drab) is an example of such a sketch. The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
 
-```{r skateboard-drab, echo=FALSE, fig.cap="Comparison of specifications for electric skateboards.", out.width="60%"}
-knitr::include_graphics("img/skateboard_compare.jpg")
+```{r load-skateboard, echo = F}
+skateboard <- read_csv("data/skateboard.csv")
+```
+
+```{r skateboard-drab-old, echo=FALSE, fig.cap="Comparison of specifications for electric skateboards."}
+#knitr::include_graphics("img/skateboard_compare.jpg")
+knitr::include_graphics("img/skateboard_compare_create.png")
 ```
 
 The data for used to create this plot may be found at [bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). A class activity / assignment around this example should begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot: 
@@ -250,7 +255,6 @@ The data for used to create this plot may be found at [bit.ly/chance-skateboard]
 Figure \@ref(fig:skateboard-fab) shows the evolution of visualisations we can make in improving this plot. The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables (Plot I). Then, we add colour to add information on weights (Plot II), and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title (Plot III). 
 
 ```{r skateboard-fab, echo=FALSE, fig.cap="Plot I: Top speed vs. range, 2. Plot II: I + coloring by weight, 3. Plot III: II + faceting and formatting", fig.height=5}
-skateboard <- read_csv("data/skateboard.csv")
 p1 <- ggplot(skateboard, aes(x = range, y = top_speed)) +
   geom_point()
 p2 <- ggplot(skateboard, aes(x = range, y = top_speed, color = weight)) +
