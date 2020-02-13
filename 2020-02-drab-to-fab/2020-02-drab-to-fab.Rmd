@@ -32,8 +32,6 @@ In our September 2014 column titled we wrote about five concrete reasons your st
 One of the reasons we gave was that ``[t]his workflow establishes the norm that data analysis and science in general should be an iterative process". 
 Just like data analysis in general, creating an effective data visualisation is also an iterative process. 
 
-[TODO: Better link between two paragraphs]
-
 It can be very inspirational to share highly polished data visualisations with students. 
 A few of our favourite visualisations to bring to the classroom are text analysis of Donald Trump's tweets by David Robinbson ([varianceexplained.org/r/trump-tweets](http://varianceexplained.org/r/trump-tweets/)), the Dialect Survey by Joshua Katz ([joshkatz.co/dialect.html](http://joshkatz.co/dialect.html)), and map of America's weather related disasters by Tim Meko ([washingtonpost.com/graphics/2019/national/mapping-disasters](https://www.washingtonpost.com/graphics/2019/national/mapping-disasters)). 
 We also love the NY Times series What's Going on in This Graph? ([nytimes.com/column/whats-going-on-in-this-graph](https://www.nytimes.com/column/whats-going-on-in-this-graph)) as well as just about any visualisation from the Flowing Data blog by Nathan Yau ([flowingdata.com](https://flowingdata.com/)), The Pudding ([pudding.cool](https://pudding.cool/)), The Functional Art blog by Alberto Cairo ([thefunctionalart.com](http://www.thefunctionalart.com/)), and Chartable ([blog.datawrapper.de](https://blog.datawrapper.de/)). 
@@ -295,7 +293,7 @@ The final example is on fishing harvest of countries around the world. The data 
 knitr::include_graphics("img/fisheries.png")
 ```
 
-The data for used to create this plot may be found at [bit.ly/chance-fishery](http://bit.ly/chance-fishery). 
+The fishery data for used to create this plot may be found at [bit.ly/chance-fishery](http://bit.ly/chance-fishery) and the continent data at [bit.ly/chance-continent](http://bit.ly/chance-continent). 
 This is a great example for introducing data joins. Figure \@ref(fig:fisheries-improve) shows the evolution of visualisations we can make in improving this plot using data joins. If wanting to keep the activity simple, one can join the fishery data with continent information and calculate various statistics at continent level and visualise them (Plot I). For a slightly more advanced activity, one can join the data with a shapefile for country boundaries and create a heat map (Plot II).
 
 ```{r echo=FALSE, out.width="100%"}
