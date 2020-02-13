@@ -393,3 +393,4 @@ In this column we gave three examples of "from drab to fab" visualisation activi
 1. Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686.
 2. "Fishing industry by country." Wikipedia, Wikimedia Foundation, 12 February 2020,
     [en.wikipedia.org/wiki/Fishing_industry_by_country](https://en.wikipedia.org/wiki/Fishing_industry_by_country).
+3. Healy, K., (2019). *Data Visualization: A Practical Introduction*. Princeton University Press.
