@@ -239,9 +239,9 @@ Electric Skateboard HQ is a review and discussion site on, you guessed it, elect
 skateboard <- read_csv("data/skateboard.csv")
 ```
 
-```{r skateboard-drab-old, echo=FALSE, fig.cap="Comparison of specifications for electric skateboards."}
+```{r skateboard-drab-old, echo=FALSE, fig.cap="Comparison of specifications for electric skateboards.", out.width = '75%'}
 #knitr::include_graphics("img/skateboard_compare.jpg")
-knitr::include_graphics("img/skateboard_compare_create.png")
+knitr::include_graphics("img/skateboard-compare-create.png")
 ```
 
 The data for used to create this plot may be found at [bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). A class activity / assignment around this example should begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot: 
