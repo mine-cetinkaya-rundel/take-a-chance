@@ -215,7 +215,7 @@ p +
 
 ### Electric skateboards {-}
 
-Electric Skateboard HQ is a review and discussion site on, you guessed it, electric skateboards. They summarise their comparison of various electric skateboards using a visualisation similar to the one in Figure \@ref(fig:skateboard-drab). The original visualisation can be found on the Electric Skateboard HQ website ([www.electricskateboardhq.com/boards-comparison/](https://www.electricskateboardhq.com/boards-comparison/)). The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
+Electric Skateboard HQ is a review and discussion site on, you guessed it, electric skateboards. They summarise their comparison of various electric skateboards using a visualisation similar to the one in Figure \@ref(fig:skateboard-drab). The original visualisation can be found on the Electric Skateboard HQ website ([electricskateboardhq.com/boards-comparison/](https://www.electricskateboardhq.com/boards-comparison/)). The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
 
 ```{r load-skateboard, echo = F}
 skateboard <- read_csv("data/skateboard.csv")
