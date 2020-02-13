@@ -18,7 +18,10 @@ blockquote{
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
                       warning = FALSE, 
-                      message = FALSE)
+                      message = FALSE,
+                      fig.align = "center",
+                      fig.height = 4,
+                      out.width = "80%")
 library(tidyverse)
 library(scales)
 library(knitr)
@@ -28,8 +31,6 @@ library(patchwork)
 In our September 2014 column titled we wrote about five concrete reasons your students should be learning to analyse data in the reproducible paradigm. 
 One of the reasons we gave was that ``[t]his workflow establishes the norm that data analysis and science in general should be an iterative process". 
 Just like data analysis in general, creating an effective data visualisation is also an iterative process. 
-
-[TODO: Better link between two paragraphs]
 
 It can be very inspirational to share highly polished data visualisations with students. 
 A few of our favourite visualisations to bring to the classroom are text analysis of Donald Trump's tweets by David Robinbson ([varianceexplained.org/r/trump-tweets](http://varianceexplained.org/r/trump-tweets/)), the Dialect Survey by Joshua Katz ([joshkatz.co/dialect.html](http://joshkatz.co/dialect.html)), and map of America's weather related disasters by Tim Meko ([washingtonpost.com/graphics/2019/national/mapping-disasters](https://www.washingtonpost.com/graphics/2019/national/mapping-disasters)). 
@@ -205,7 +206,7 @@ ggplot(data = staff_long, aes(x = year, y = percentage/100,
 
 Now the main message of the story is clear: the highest proportion of instructors are part-time faculty, and this proportion has been increasing from 1975 to 2011. In the previous line plots, it was unclear where one should focus their attention since each faculty type was a distinct and vibrant colour. By making the lines for the other faculty levels grey, one is still able to see the trends for those faculty types without distracting from the trend of the primary faculty type of interest in this story, part-time faculty.
 
-### Step 5. Formatting and annotation {-}
+### Step 6. Formatting and annotation {-}
 
 There are still a number of features of this plot that could use improving: 
 
@@ -249,7 +250,7 @@ Electric Skateboard HQ is a review and discussion site on, you guessed it, elect
 knitr::include_graphics("img/skateboard_compare.jpg")
 ```
 
-The data for used to create this plot may be found at [/bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). A class activity / assignment around this example should begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot: 
+The data for used to create this plot may be found at [bit.ly/chance-skateboard](http://bit.ly/chance-skateboard). A class activity / assignment around this example should begin by having the students list of all the variables included in this visualisation and how they are displayed in the scatterplot: 
 
 - Relationship between the top speed and the range (points on x and y axis)
 - Manufacturer (colour of points)
@@ -257,7 +258,7 @@ The data for used to create this plot may be found at [/bit.ly/chance-skateboard
 - Type of drive (dotted vs. solid line on point)
 - Name of electronic skateboard (labels for each point)
 
-The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables. Then, we add colour to add information on weights, and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title. Figure \@ref(fig: skateboard-improve) shows the evolution of these visualisations.
+Figure \@ref(fig:skateboard-improve) shows the evolution of visualisations we can make in improving this plot. The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables (Plot I). Then, we add colour to add information on weights (Plot II), and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title (Plot III). 
 
 ```{r skateboard-improve, echo=FALSE, fig.cap="Plot I: Top speed vs. range, 2. Plot II: I + coloring by weight, 3. Plot III: II + faceting anf formatting"}
 skateboard <- read_csv("data/skateboard.csv")
@@ -284,16 +285,94 @@ patchwork +
   theme(plot.tag = element_text(size = 12))
 ```
 
-### Fisheries of the world
+### Fisheries of the world {-}
 
-- Mine: Fisheries example
-  - Data joins, data cleaning -> continent level analysis
-  - More joins, geolocation -> mapping
+The final example is on fishing harvest of countries around the world. The data come from Wikipedia article titled *Fishing industry by country*. Figure \@ref(fig:fisheries-drab) shows the "drab" starting point for this exercise.
 
-## Conclusion
+```{r fisheries-drab, echo=FALSE, fig.cap = "Starting point for the fisheries exercise."}
+knitr::include_graphics("img/fisheries.png")
+```
+
+The fishery data for used to create this plot may be found at [bit.ly/chance-fishery](http://bit.ly/chance-fishery) and the continent data at [bit.ly/chance-continent](http://bit.ly/chance-continent). 
+This is a great example for introducing data joins. Figure \@ref(fig:fisheries-improve) shows the evolution of visualisations we can make in improving this plot using data joins. If wanting to keep the activity simple, one can join the fishery data with continent information and calculate various statistics at continent level and visualise them (Plot I). For a slightly more advanced activity, one can join the data with a shapefile for country boundaries and create a heat map (Plot II).
+
+```{r echo=FALSE, out.width="100%"}
+fisheries <- read_csv("data/fisheries.csv")
+continents <- read_csv("data/continents.csv")
+fisheries <- fisheries %>%
+  filter(total > 100000) %>%
+  left_join(continents) %>%
+  mutate(
+    continent = case_when(
+      country == "Democratic Republic of the Congo" ~ "Africa",
+      country == "Hong Kong"                        ~ "Asia",
+      country == "Myanmar"                          ~ "Asia",
+      TRUE                                          ~ continent
+    ),
+    aquaculture_perc = aquaculture / total
+  )
+fisheries_summary <- fisheries %>%
+  group_by(continent) %>%
+  summarise(
+    min_ap  = min(aquaculture_perc),
+    mean_ap = mean(aquaculture_perc),
+    max_ap  = max(aquaculture_perc)
+  ) 
+p1 <- ggplot(fisheries_summary, 
+       aes(x = reorder(continent, mean_ap), y = mean_ap)) +
+  geom_col() +
+  coord_flip() +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) + #<<
+  labs(
+    x = "", y = "",
+    title = "Average share of aquaculture by continent",
+    subtitle = "out of total fisheries harvest, 2016",
+    caption = "Source: bit.ly/chance-fishery"
+  ) +
+  theme_minimal()
+world_map <- map_data("world") %>%
+  mutate(region = case_when(
+    region == "UK"           ~ "United Kingdom",
+    region == "USA"          ~ "United States",
+    subregion == "Hong Kong" ~ "Hong Kong",
+    TRUE                     ~ region
+    )
+  )
+fisheries_map <- left_join(fisheries, world_map, 
+                           by = c("country" = "region"))
+fisheries_map <- fisheries_map %>%
+  mutate(
+    aquaculture_perc = aquaculture / total
+  )
+
+p2 <- ggplot() +
+  geom_polygon(world_map, 
+               mapping = aes(x = long, y = lat, group = group), 
+               fill = "lightgray") +
+  geom_polygon(fisheries_map, 
+               mapping = aes(x = long, y = lat, group = group, 
+                             fill = aquaculture_perc)) +
+  scale_fill_viridis_c(labels = percent_format(accuracy = 1)) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom", 
+    legend.box = "vertical"
+    ) +
+  labs(
+    title = "Share of aquaculture by country",
+    subtitle = "out of total fisheries harvest, 2016",
+    caption = "Source: bit.ly/chance-fishery",
+    x = "", y = "",
+    fill = "Aquaculture %"
+  )
+p1 + p2
+```
+
+## Conclusion {-}
 
 [TO DO: A CONCLUDING PARAGRAPH]
 
 ## Further reading {-}
 
 1. Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686.
+2. "Fishing industry by country." Wikipedia, Wikimedia Foundation, 12 February 2020, [en.wikipedia.org/wiki/Fishing_industry_by_country](https://en.wikipedia.org/wiki/Fishing_industry_by_country).
