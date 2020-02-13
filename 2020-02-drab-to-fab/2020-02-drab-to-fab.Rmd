@@ -4,9 +4,10 @@ subtitle: "Teaching visualisation via incremental improvements"
 author: "Mine Çetinkaya-Rundel and Maria Tackett"
 date: "February 2020"
 output: 
-  bookdown::html_document2: 
+  bookdown::pdf_document2: 
     theme: readable
     fig_caption: yes
+    toc: no
 ---
 
 <style>
@@ -20,8 +21,9 @@ knitr::opts_chunk$set(echo = TRUE,
                       warning = FALSE, 
                       message = FALSE,
                       fig.align = "center",
-                      fig.height = 4,
-                      out.width = "80%")
+                      fig.height = 3,
+                      out.width = "100%",
+                      fig.retina = 3)
 library(tidyverse)
 library(scales)
 library(knitr)
@@ -31,7 +33,7 @@ library(patchwork)
 In our September 2014 column titled we wrote about five concrete reasons your students should be learning to analyse data in the reproducible paradigm. 
 One of the reasons we gave was that ``[t]his workflow establishes the norm that data analysis and science in general should be an iterative process". 
 Just like data analysis in general, creating an effective data visualisation is also an iterative process. 
-
+ 
 It can be very inspirational to share highly polished data visualisations with students. 
 A few of our favourite visualisations to bring to the classroom are text analysis of Donald Trump's tweets by David Robinbson ([varianceexplained.org/r/trump-tweets](http://varianceexplained.org/r/trump-tweets/)), the Dialect Survey by Joshua Katz ([joshkatz.co/dialect.html](http://joshkatz.co/dialect.html)), and map of America's weather related disasters by Tim Meko ([washingtonpost.com/graphics/2019/national/mapping-disasters](https://www.washingtonpost.com/graphics/2019/national/mapping-disasters)). 
 We also love the NY Times series What's Going on in This Graph? ([nytimes.com/column/whats-going-on-in-this-graph](https://www.nytimes.com/column/whats-going-on-in-this-graph)) as well as just about any visualisation from the Flowing Data blog by Nathan Yau ([flowingdata.com](https://flowingdata.com/)), The Pudding ([pudding.cool](https://pudding.cool/)), The Functional Art blog by Alberto Cairo ([thefunctionalart.com](http://www.thefunctionalart.com/)), and Chartable ([blog.datawrapper.de](https://blog.datawrapper.de/)). 
@@ -53,7 +55,7 @@ The first example is on types of staff involved with instruction at American uni
 The data come from The American Association of University Professors (AAUP), which is a nonprofit membership association of faculty and other academic professionals. 
 In 2013, the AAUP published a report on Trends in Instructional Staff Employment Status. The plot shown in Figure \@ref(fig:staff-drab) is very similar to a plot presented in this report.
 
-```{r staff-drab, echo=FALSE, fig.cap="Reproduction of visualisation included in the 2013 AAUP report on titled Trends in Instructional Staff Employment Status"}
+```{r staff-drab, echo=FALSE, fig.cap="Reproduction of visualisation included in the 2013 AAUP report on titled Trends in Instructional Staff Employment Status", out.width="60%"}
 knitr::include_graphics("img/staff-employment.png")
 ```
 
@@ -67,7 +69,7 @@ Instead of just talking through it, we ask students to sketch the visualisations
 They're not expected to actually create an accurate visualisation via a sketch, but we recommend they label their axes, mark their axis ranges, and decide on which geometric object(s) they plan on using to represent their data (points, lines, bars, etc.). 
 Figure \@ref(fig:staff-sketch) is an example of such a sketch.
 
-```{r staff-sketch, echo=FALSE, fig.cap="Example of sketch of redesigned visualisation.", out.width="80%"}
+```{r staff-sketch, echo=FALSE, fig.cap="Example of sketch of redesigned visualisation.", out.width="60%"}
 knitr::include_graphics("img/staff-employment-sketch.png")
 ```
 
@@ -87,88 +89,81 @@ In the walk through of a possible path to "fab" (an improved visualisation) that
 
 The dataset provided in the AAUP report is in the following format, and this is exactly how we recommend showing it to the students before distributing it. 
 
-```{r echo=FALSE, message=FALSE}
+```{r staff-wide, echo=FALSE, message=FALSE}
 staff_wide <- read_csv("data/instructional-staff.csv")
-staff_wide %>% kable()
+staff_wide %>% kable("latex", booktabs = TRUE)
 ```
 
-> **Question 1.** What does each row in the dataset represent? What does each column represent? What do the numbers represent? What does each column add up to, and why?
+> _**Question 1.** What does each row in the dataset represent? What does each column represent? What do the numbers represent? What does each column add up to, and why?_
 
 We can load the data frame using the following, and call it `staff_wide`.
 
-```{r eval=FALSE}
+```{r load-staff-show, eval=FALSE}
 library(tidyverse)
 staff <- read_csv("http://bit.ly/chance-staff")
 ```
 
 ### Step 2. Reshape the data {-}
 
-Remember, our goal is to create a visualisation like the one sketched in Figure \@ref(fig:staff-sketch). In order to do this we need a column for year, a column for percentage, and a column for faculty staff type. However, our dataset is currently not in this format. This presents a great opportunity for some just-in-time teaching for reshaping data from wide to long format. This data wrangling step is quite common when working with time series and with repeated measures data, and hence it's a useful skill for students to have.
+Our goal is to create a visualisation similar to the sketch in Figure \@ref(fig:staff-sketch). In order to do this we need a column for year, a column for percentage, and a column for faculty staff type. However, our dataset is currently not in this format. This presents a great opportunity for some just-in-time teaching for reshaping data from wide to long format. This data wrangling step is quite common when working with time series and with repeated measures data, and hence it's a useful skill for students to have.
 
-> **Q2.** If the long data will have a row for each year/faculty type combination, 
-and there are 5 faculty types and 11 years of data, how many rows will the data have?
+> _**Q2.** If the long data will have a row for each year/faculty type combination, and there are 5 faculty types and 11 years of data, how many rows will the data have?_
 
 We can accomplish this task using the `pivot_longer()` function, which also has a counterpart `pivot_wider()` for going from long to wide datasets. In the next code chunk we start with the wide dataset and we pivot all of its columns except for faculty type (`cols = -faculty_type`), placing column names in a new variable called `year` and placing the values in the original data frame in a new variable called `percentage`.
 
-```{r}
+```{r staff-long}
 staff_long <- staff_wide %>%
   pivot_longer(cols = -faculty_type, names_to = "year", values_to = "percentage") 
 ```
 
-```{r echo=FALSE}
+```{r staff-long-show, echo=FALSE}
 staff_long %>%
   print(n = 5)
 ```
 
-> **Q3.** What does each row represent in the long dataset? How does this differ from what each row represents in the wide dataset?
+> _**Q3.** What does each row represent in the long dataset? How does this differ from what each row represents in the wide dataset?_
 
 ### Step 3. Recreate the plot {-}
 
-A good way to get started with improving a visualisation is to first recreate it. We can do that by placing `percentage` on the x-axis and `faculty_type` on the y-axis and colouring the bars by the year.
+A good way to get started with improving a visualisation is to first recreate it. We can do that by placing `percentage` on the x-axis and `faculty_type` on the y-axis and filling the bars by `year`.
 
-```{r}
-ggplot(data = staff_long, aes(x = percentage, y = faculty_type, color = year)) +
-  geom_col(position = "dodge")
-```
-
-Something doesn't look quite right though... We want the bars to be `fill`ed with colors indicating the faculty type.
-
-```{r}
+```{r drab, fig.height=3.2}
 ggplot(data = staff_long, aes(x = percentage, y = faculty_type, fill = year)) +
   geom_col(position = "dodge")
 ```
 
-That looks better, as in more similar to the original visualisation, but it doesn't look like the plot we sketched earlier. Our next step is to get closer to that sketch.
+Now that we know we can match out starting point (we haven't matched it exactly, but we're close enough to be confident that we're working with the same data), we can start making improvements towards our sketch.
 
 ### Step 4. Recreate the sketch {-}
 
-We'll start by changing variable mappings to certain aesthetics of the plot, like the x and y axes and the fill.
+We'll start by changing variable mappings to certain aesthetics of the plot, like the `x` and `y` axes and which variable determines how we `fill` the bars.
 
-```{r}
+```{r fab1, fig.height=2}
 ggplot(data = staff_long, aes(x = year, y = percentage, fill = faculty_type)) +
   geom_col(position = "dodge")
 ```
 
-> **Q4.** In what way(s) is this plot an improvement on the original "drab" visualization?
-> **Q5.** In what way(s) is the main message still unclear / hidden?
+> _**Q4.** In what way(s) is this plot an improvement on the original "drab" visualization?_  
+
+> _**Q5.** In what way(s) is the main message still unclear / hidden?_
 
 Next, let's convert it to a segmented bar plot by changing the position of the columns from `dodged` to `fill`. This not only looks like our sketch, but it also is starting to tell the story of increasing percentages of part-time faculty instructional faculty over the years.
 
-```{r}
+```{r fab2, fig.height=2}
 ggplot(data = staff_long, aes(x = year, y = percentage, fill = faculty_type)) +
   geom_col(position = "fill")
 ```
 
-> **Q6.** In what way(s) is the segmented bar plot an improvement on the the side-by-side bar plot from the previous step? 
-> **Q7.** In what way(s) is the main message still unclear / hidden?
+> _**Q6.** In what way(s) is the segmented bar plot an improvement on the the side-by-side bar plot from the previous step?_  
+
+> _**Q7.** In what way(s) is the main message still unclear / hidden?_
 
 ### Step 5. Improve further {-}
 
 Most students will get to this point and call it a day once they have successfully created the plot they envisioned in their sketch using R. This presents a good opportunity to get them to think about alternate geometric objects to represent the data. For example, line plots are common in time series data, so they are worth a try.
 
-```{r}
-ggplot(staff_long, aes(x = year, y = percentage, 
-                       group = faculty_type, color = faculty_type)) +
+```{r fab3, fig.height=2}
+ggplot(staff_long, aes(x = year, y = percentage/100, group = faculty_type, color = faculty_type)) +
   geom_line()
 ```
 
@@ -176,30 +171,26 @@ The lines are an improvement over the bars, but let's take a look at the x-axis.
 
 Let's first transform `year` to be a numerical variable:
 
-```{r}
-staff_long <- staff_long %>%
-  mutate(year = as.numeric(year))
+```{r mutate-year}
+staff_long <- staff_long %>% mutate(year = as.numeric(year))
 ```
 
 and then re-plot the data. 
 
-```{r}
-staff_long %>%
-  ggplot(aes(x = year, y = percentage, 
-             group = faculty_type, color = faculty_type)) +
+```{r fab4, fig.height=2}
+ggplot(staff_long, aes(x = year, y = percentage, group = faculty_type, color = faculty_type)) +
   geom_line()
 ```
 
-> **Q8.** If the main goal of this visualisation is to draw attention to the increasing percentage of part-time faculty over the years, how can we make this message stronger?
+> _**Q8.** If the main goal of this visualisation is to draw attention to the increasing percentage of part-time faculty over the years, how can we make this message stronger?_
 
 One option is to use colors to draw attention to the part-time faculty line. We can accomplish this by creating a binary variable (`part_time`) that indicates whether the faculty type is part-time or something else.  The `fct_other()` function is one quick and straightforward way of accomplishing this. Then, we can use red to indicate part-time and a much more muted colour (grey) to indicate all other categories
 
-```{r}
+```{r fab5, fig.height=2}
 staff_long <- staff_long %>%
   mutate(part_time = fct_other(faculty_type, keep = "Part-Time Faculty"))
 
-ggplot(data = staff_long, aes(x = year, y = percentage/100, 
-                              group = faculty_type, color = part_time)) +
+ggplot(staff_long, aes(x = year, y = percentage/100, group = faculty_type, color = part_time)) +
   geom_line() +
   scale_color_manual(values = c("red", "gray"))
 ```
@@ -215,28 +206,26 @@ There are still a number of features of this plot that could use improving:
 4. The grey lines on grey background don't offer much contrast
 5. Legend is taking up too much space on the right hand side
 
-Suppose we store the plot from the previous step as `p`. Then, we can add the necessary layers to `p` to address these updates. We indicted which line of code refers to which update using comments with issue numbers in the code.   
+Suppose we store the plot from the previous step as `p`. Then, we can add the necessary layers to `p` to address these updates.
 
-```{r echo=FALSE}
+```{r save-fab5, echo=FALSE}
 p <- ggplot(data = staff_long, aes(x = year, y = percentage/100, 
                               group = faculty_type, color = part_time)) +
   geom_line() +
   scale_color_manual(values = c("red", "gray"))
 ```
 
-```{r}
+```{r fab6, fig.height=3}
 library(scales)
 p +
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + # 1
-  labs( # 2
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +             # %s
+  labs(                                                                   # labels
     title = "Percentage of part-time faculty instructors is on the rise",
-    x = "Year",
-    y = "Percentage",
-    caption = "Source: bit.ly/taking-a-chance",
-    color = ""
+    x = "Year", y = "Percentage", color = "",
+    caption = "Source: bit.ly/taking-a-chance"
   ) +
-  theme_minimal() + # 3
-  theme(legend.position = "bottom") # 4
+  theme_minimal() +                                                       # background
+  theme(legend.position = "bottom")                                       # legend 
 ```
 
 
@@ -244,9 +233,9 @@ p +
 
 ### Electric skateboars {-}
 
-Electric Skateboard HQ is a review and discussion site on, you guessed it, electronic skateboards. They summarise their comparison of various electric skateboards using the plot shown in Figure \@ref(fig:skateboard) is an example of such a sketch. The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
+Electric Skateboard HQ is a review and discussion site on, you guessed it, electric skateboards. They summarise their comparison of various electric skateboards using the plot shown in Figure \@ref(fig:skateboard-drab) is an example of such a sketch. The primary issue with this visualisation is that it's trying to convey too much information at once, and hence it is a good example to discuss the appropriate level of information any single visualisation should convey.
 
-```{r skateboard, echo=FALSE, fig.cap="Comparison of specifications for electronic skateboards.", out.width="80%"}
+```{r skateboard-drab, echo=FALSE, fig.cap="Comparison of specifications for electric skateboards.", out.width="60%"}
 knitr::include_graphics("img/skateboard_compare.jpg")
 ```
 
@@ -254,13 +243,13 @@ The data for used to create this plot may be found at [bit.ly/chance-skateboard]
 
 - Relationship between the top speed and the range (points on x and y axis)
 - Manufacturer (colour of points)
-- Weight of electronic skateboard (size of point)
+- Weight of electric skateboard (size of point)
 - Type of drive (dotted vs. solid line on point)
-- Name of electronic skateboard (labels for each point)
+- Name of electric skateboard (labels for each point)
 
-Figure \@ref(fig:skateboard-improve) shows the evolution of visualisations we can make in improving this plot. The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables (Plot I). Then, we add colour to add information on weights (Plot II), and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title (Plot III). 
+Figure \@ref(fig:skateboard-fab) shows the evolution of visualisations we can make in improving this plot. The most clear information we get from this visualization is the relationship between the top speed and the range. Therefore, we can start by making a plot that just examines the relationship between these two variables (Plot I). Then, we add colour to add information on weights (Plot II), and finally, we can use we can facet the plot based on the drive (belt vs. hub/direct) as well as use proper labels and an informative title (Plot III). 
 
-```{r skateboard-improve, echo=FALSE, fig.cap="Plot I: Top speed vs. range, 2. Plot II: I + coloring by weight, 3. Plot III: II + faceting anf formatting"}
+```{r skateboard-fab, echo=FALSE, fig.cap="Plot I: Top speed vs. range, 2. Plot II: I + coloring by weight, 3. Plot III: II + faceting and formatting", fig.height=5}
 skateboard <- read_csv("data/skateboard.csv")
 p1 <- ggplot(skateboard, aes(x = range, y = top_speed)) +
   geom_point()
@@ -269,34 +258,37 @@ p2 <- ggplot(skateboard, aes(x = range, y = top_speed, color = weight)) +
 p3 <- skateboard %>%
   mutate(is_belt = if_else(drive == "Belt", "Belt", "Hub/Direct")) %>%
   ggplot(aes(x = range, y = top_speed, color = weight)) +
+  geom_smooth(method = "lm", color = "darkgray") +
   geom_point() + 
   scale_color_viridis_c() +
-  facet_wrap(~is_belt) + 
-  labs(x = "Range (in miles)", 
-       y = "Top speed (in mph)", 
-       color = "Weight (in pounds)", 
-       title = "Comparing Specifications for Electronic Skateboards", 
-       subtitle = "by Drive Type"
-       )
-patchwork <- (p1 | p2) / 
-   p3
-patchwork + 
+  scale_y_continuous(breaks = c(10, 20, 30)) +
+  facet_wrap(~is_belt, ncol = 1) + 
+  labs(title = "Specifications for electric skateboards",
+       subtitle = "by drive type",
+       x = "Range (miles)", y = "Top speed (mph)", 
+       color = "Weight
+(lbs)"
+       ) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+p1 + p2 - p3 + 
+  plot_layout(ncol = 1, heights = c(1, 2)) +
   plot_annotation(tag_levels = "I", tag_prefix = "Plot ") & 
   theme(plot.tag = element_text(size = 12))
 ```
 
 ### Fisheries of the world {-}
 
-The final example is on fishing harvest of countries around the world. The data come from Wikipedia article titled *Fishing industry by country*. Figure \@ref(fig:fisheries-drab) shows the "drab" starting point for this exercise.
+The final example is on fishing harvest of countries around the world. The data come from Wikipedia article titled [*Fishing industry by country*](https://en.wikipedia.org/wiki/Fishing_industry_by_country). Figure \@ref(fig:fisheries-drab) shows the "drab" starting point for this exercise.
 
-```{r fisheries-drab, echo=FALSE, fig.cap = "Starting point for the fisheries exercise."}
+
+```{r fisheries-drab, echo=FALSE, fig.cap = "Starting point for the fisheries exercise.", out.width="80%"}
 knitr::include_graphics("img/fisheries.png")
 ```
 
-The fishery data for used to create this plot may be found at [bit.ly/chance-fishery](http://bit.ly/chance-fishery) and the continent data at [bit.ly/chance-continent](http://bit.ly/chance-continent). 
-This is a great example for introducing data joins. Figure \@ref(fig:fisheries-improve) shows the evolution of visualisations we can make in improving this plot using data joins. If wanting to keep the activity simple, one can join the fishery data with continent information and calculate various statistics at continent level and visualise them (Plot I). For a slightly more advanced activity, one can join the data with a shapefile for country boundaries and create a heat map (Plot II).
+The fishery data for used to create this plot may be found at [bit.ly/chance-fishery](http://bit.ly/chance-fishery). In this dataset each row represents a country, and for each country we have fishing harvest data for 2016 from capture, aquaculture (fish farming), and the total harvest, in metric tonnes. This exercise presents an opportunity for teaching how to join data frames, which is an incredibly useful skill for working with data coming from multiple sources. If wanting to keep the exercise simple, we can join the fishery data with continent information (we have provide the continent data at [bit.ly/chance-continent](http://bit.ly/chance-continent)). This also presents an opportunity to talk about how one might need to make contextual decisions while preparing their data for analysis -- some of the countries in the fishery dataset (e.g. Hong Kong) do not appear on the continent lookup dataset. The discussion around how to address this is an opportunity to convey to students concerns around ethics in data science and how decisions we make in data wrangling and modelling might sometimes be subjective. Figure \@ref(fisheries-improve1) presents an example of a simple but improved data visualisation for a continent level analysis of these data.
 
-```{r echo=FALSE, out.width="100%"}
+```{r fisheries-improve1, echo=FALSE, fig.height=2, caption = "Continent level visualisation of fisheries data."}
 fisheries <- read_csv("data/fisheries.csv")
 continents <- read_csv("data/continents.csv")
 fisheries <- fisheries %>%
@@ -318,7 +310,7 @@ fisheries_summary <- fisheries %>%
     mean_ap = mean(aquaculture_perc),
     max_ap  = max(aquaculture_perc)
   ) 
-p1 <- ggplot(fisheries_summary, 
+ggplot(fisheries_summary, 
        aes(x = reorder(continent, mean_ap), y = mean_ap)) +
   geom_col() +
   coord_flip() +
@@ -330,6 +322,23 @@ p1 <- ggplot(fisheries_summary,
     caption = "Source: bit.ly/chance-fishery"
   ) +
   theme_minimal()
+```
+
+For a slightly more advanced activity, we map these data. This will require a discussion around basics of making maps in R and shapefiles. Fortunately, there is plenty of built-in functionality in the **gplot2** package for making country level maps. Despite the code required for mapping not being too complicated, this exercise can still ignite plenty of discussion around missing data, specifically how to represent countries for which we don't have any data on a map. Figure \@ref(fisheries-improve2) presents an example of a choropleth map of the distribution of percentage of aquaculture across the globe. 
+
+```{r fisheries-improve2, echo=FALSE, fig.height=4.2, fig.cap = "Choropleth map of percentage of aquaculture.", out.width="80%"}
+fisheries <- fisheries %>%
+  filter(total > 100000) %>%
+  left_join(continents) %>%
+  mutate(
+    continent = case_when(
+      country == "Democratic Republic of the Congo" ~ "Africa",
+      country == "Hong Kong"                        ~ "Asia",
+      country == "Myanmar"                          ~ "Asia",
+      TRUE                                          ~ continent
+    ),
+    aquaculture_perc = aquaculture / total
+  )
 world_map <- map_data("world") %>%
   mutate(region = case_when(
     region == "UK"           ~ "United Kingdom",
@@ -345,7 +354,7 @@ fisheries_map <- fisheries_map %>%
     aquaculture_perc = aquaculture / total
   )
 
-p2 <- ggplot() +
+ggplot() +
   geom_polygon(world_map, 
                mapping = aes(x = long, y = lat, group = group), 
                fill = "lightgray") +
@@ -365,12 +374,13 @@ p2 <- ggplot() +
     x = "", y = "",
     fill = "Aquaculture %"
   )
-p1 + p2
 ```
+
+This activity can also be restructured as a web scraping exercise, where students first scrape the data from Wikipedia, and then dive into visualisation.
 
 ## Conclusion {-}
 
-[TO DO: A CONCLUDING PARAGRAPH]
+In this column we gave three examples of "from drab to fab" visualisation activities, for each one we highlighted other topics you can introduce along with data visualisation. You can find the data as well as the code for reproducing all of the figures we presented in the GitHub repository for this column as well as links to the additional resources we mentioned at [bit.ly/taking-a-chance](http://bit.ly/taking-a-chance).
 
 ## Further reading {-}
 
