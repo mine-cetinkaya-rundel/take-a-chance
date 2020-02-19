@@ -25,13 +25,13 @@ p <- ggplot(data = staff_long, aes(x = year, y = percentage/100,
   scale_color_manual(values = c("red", "gray"))
 
 p +
-  scale_y_continuous(labels = percent_format(accuracy = 1)) +             # %s
-  labs(                                                                   # labels
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  labs(
     title = "Percentage of part-time faculty instructors is on the rise",
     x = "Year", y = "Percentage", color = "",
     caption = "Source: bit.ly/taking-a-chance"
   ) +
-  theme_minimal() +                                                       # background
+  theme_minimal() +
   theme(legend.position = "bottom")
 
 
@@ -44,8 +44,10 @@ skateboard <- read_csv("data/skateboard.csv")
 
 p1 <- ggplot(skateboard, aes(x = range, y = top_speed)) +
   geom_point()
+
 p2 <- ggplot(skateboard, aes(x = range, y = top_speed, color = weight)) +
   geom_point()
+
 p3 <- skateboard %>%
   mutate(is_belt = if_else(drive == "Belt", "Belt", "Hub/Gear/Direct")) %>%
   ggplot(aes(x = range, y = top_speed, color = weight)) +
@@ -62,11 +64,11 @@ p3 <- skateboard %>%
   ) +
   theme_minimal() +
   theme(panel.grid.minor = element_blank())
+
 p1 + p2 - p3 +
   plot_layout(ncol = 1, heights = c(1, 2)) +
   plot_annotation(tag_levels = "I", tag_prefix = "Plot ") &
   theme(plot.tag = element_text(size = 12))
-
 
 # fisheries --------------------------------------------------------------------
 
@@ -100,7 +102,7 @@ ggplot(fisheries_summary,
        aes(x = reorder(continent, mean_ap), y = mean_ap)) +
   geom_col() +
   coord_flip() +
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + #<<
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
   labs(
     x = "", y = "",
     title = "Average share of aquaculture by continent",
@@ -130,6 +132,7 @@ world_map <- map_data("world") %>%
     TRUE                     ~ region
   )
   )
+
 fisheries_map <- left_join(fisheries, world_map,by = c("country" = "region"))
 
 fisheries_map <- fisheries_map %>%
