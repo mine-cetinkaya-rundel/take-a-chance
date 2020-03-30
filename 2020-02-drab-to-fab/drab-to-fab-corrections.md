@@ -22,11 +22,13 @@ ggplot(data = staff_long,
 
 - Code box in Step 4. Line breaks as shown below:
 
+```r
 ggplot(data = staff_long, 
   aes(x = year,
       y = percentage, 
       fill = faculty_type)) + 
-geom_col(position = "dodge")
+  geom_col(position = "dodge")
+```
 
 - Caption for Figure 3: "Bar plot with dodged, horizontal bars"
 
@@ -36,12 +38,13 @@ geom_col(position = "dodge")
 
 - Code box at the bottom of page 35. Line breaks as shown below:
 
+```r
 ggplot(data = staff_long, 
   aes(x = year, 
       y = percentage, 
       fill = faculty_ type)) +
-geom_col(position = "fill")
-
+  geom_col(position = "fill")
+```
 - Caption for Figure 6: "Line plot where the years on the x-axis is encoded as character strings"
 
 - Caption for Figure 6: "Line plot where the years on the x-axis is encoded as numerical values"
@@ -50,31 +53,38 @@ geom_col(position = "fill")
 
 - First code box in Step 5. Line breaks as shown below:
 
+```r
 ggplot(staff_long, 
   aes(x = year,
       y = percentage/100, 
       group = faculty_ type,
       color = faculty_type)) + 
   geom_line()
+```
 
 - Second code box in Step 5. Line breaks as shown below:
 
+```r
 staff_long <- staff_long %>% 
   mutate (year = as.numeric(year))
+```
 
 - Third code box in Step 5. Line breaks as shown below:
 
+```r
 ggplot(staff_long, 
   aes(x = year,
       y = percentage, 
       group = faculty_type, 
       color = faculty_type)) +
   geom_line()
+```
 
 - Caption for Figure 8: "Line plot with Part-time faculty highlighted"
 
 - Code box on page 37
 
+```r
 staff_long <- staff_long %>% 
   mutate(part_time = 
     fct_other(faculty_ type, 
@@ -89,9 +99,11 @@ ggplot(staff_long,
   scale_color_manual(
     values = c(“red,” “gray”)
     )
+```
 
 - Code box on page 38
 
+```r
 library(scales)
 
 p +
@@ -107,7 +119,7 @@ p +
     ) +
   theme_minimal() +                           # background
   theme(legend.position = "bottom")           # legend
-
+```
 
 - pg. 40 - For "ggplot2" use the same font used for "tidyverse" on pg. 33
 
