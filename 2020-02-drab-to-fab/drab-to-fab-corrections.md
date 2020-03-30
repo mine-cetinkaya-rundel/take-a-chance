@@ -12,11 +12,13 @@
 
 - Code box in Step 3. Line breaks as shown below:
 
+```r
 ggplot(data = staff_long, 
   aes(x = percentage, 
       y = faculty_type, 
       fill = year)) + 
   geom_col(position = "dodge")
+```
 
 - Code box in Step 4. Line breaks as shown below:
 
