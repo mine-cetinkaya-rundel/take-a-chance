@@ -1,0 +1,64 @@
+---
+title: "Engaging students with COVID-19 data"
+subtitle: ""
+author: ""
+date: ""
+output: 
+  bookdown::pdf_document2: 
+    fig_caption: yes
+    toc: no
+---
+
+<style>
+blockquote{
+  font-size: 16px;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.align = "center",
+                      fig.height = 3,
+                      out.width = "100%",
+                      fig.retina = 3)
+library(tidyverse)
+library(scales)
+library(knitr)
+library(patchwork)
+```
+
+[INTRODUCTION]
+
+## DataFest: COVID-19 Virtual Data Challenge {-}
+
+- Description of [ASA DataFest](https://ww2.amstat.org/education/datafest/)
+- Changes to this year's competition format due to COVID-19
+- Examples of students' data sets and analysis questions? 
+- Description of some of the winning projects? 
+- Why students were encouraged to explore societal impacts rather than direct health outcomes
+  - [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)
+
+## Using COVID-19 data in the classroom {-}
+
+- eCOTS panel: [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) discussed considerations for using COVID-19 data in the classroom. 
+
+- Pedagogy must be "trauma informed"
+  - Poll students to ask if they want to talk about COVID. Get repeated feedback at that point in time, because their feelings may change. 
+  - Put a marker in the syllabus, so students know when the topic come up.
+  - Discuss other impacts besides direct health outcomes. 
+  - Create option for students who find topic too upsetting.
+  - Address the fact that the topic is sensitive to some but is an important area of research in biostatistics. Talk about how to approach data and have a healthy relationship with emotions when doing research on sensitive topics (primarily for graduate students).
+
+- Other resources for teaching about COVID or sensitive topics? 
+
+## Examples for the classroom {-}
+
+- Include some examples of data sets / articles and discussion questions for class? 
+  
+## Resources for teaching {-}
+
+1. [Teaching Statistics During the COVID-19 Health Crisis](https://coronavirus-teaching-resources.netlify.app/)
+
+2. [covid-r: Collection of analyses, packages, visualisations of COVID19 data in R](https://github.com/mine-cetinkaya-rundel/covid19-r)
