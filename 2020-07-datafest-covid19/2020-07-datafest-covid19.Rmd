@@ -32,28 +32,25 @@ library(patchwork)
 [INTRODUCTION]
 
 ## DataFest: COVID-19 Virtual Data Challenge {-}
-
 - Description of [ASA DataFest](https://ww2.amstat.org/education/datafest/)
 - Changes to this year's competition format due to COVID-19
 - Examples of students' data sets and analysis questions? 
 - Description of some of the winning projects? 
 - Why students were encouraged to explore societal impacts rather than direct health outcomes
   - [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)
+  - [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8)
 
-## Using COVID-19 data in the classroom {-}
+## Using COVID-19 data in the classroom {-} 
 
 At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom. The primary focus was that the pedagogy should be "trauma-informed" due to the pandemic's direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic^[Abuelezam, N, (2020). *Teaching Public Health Will Never Be the Same*. American Journal of PUblic Health, 110(7), 976-977. https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2020.305710]
 
-So, how do instructors take trauma-informed approach when using data related to the pandemic? The panelists shared some practical ways instructors can use a trauma-informed approach when discussing data related to the pandemic in class:
+The panelists shared practical ways instructors can use a trauma-informed approach when discussing data related to the pandemic in class:
 
   - Anonymously poll students about whether or not they want to talk about the data related to COVID-19 in class. It is a good idea to poll multiple times to get point-in-time feedback, since students' feelings may change as the situation around the pandemic evolves.
   - Indicate in the syllabus when COVID-19 data will be used, so students know when the topic will come up in class.
   - Create an alternative assignment or discussion prompt for students who do not wish to discuss the pandemic.
   - If the course is designed to a more specialized audience, such as a biostatistics or graduate-level course, the instructor can address the fact that the topic is sensitive but is also an important area of research in biostatistics. This is also an opportunity for the instructor to talk about strategies for maintaining a healthy relationship with emotions when doing research on sensitive topics.
-  - As with this year's DataFest, the data analysis can focus other societal impacts of the pandemic besides direct health outcomes. 
-
-
-- Other resources for teaching about COVID or sensitive topics?? 
+  - As with this year's DataFest, the analysis examples can focus on societal impacts of the pandemic other than direct health outcomes.
 
 ## Examples for the classroom {-}
 
