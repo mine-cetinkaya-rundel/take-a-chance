@@ -29,11 +29,15 @@ library(knitr)
 library(patchwork)
 ```
 
-[INTRODUCTION]
+[The American Statistical Association (ASA) DataFest](https://ww2.amstat.org/education/datafest/) is a data analysis competition where teams of up to five students analyze a real and complex dataset over the course of one weekend. In 2019, DataFest was held at over 40 locations in the United States and internationally with more than 2000 students participating in the event. The surprise data set is revealed to participants at the kick-off event on Friday afternoon, and students work throughout the weekend analyzing the data and deriving insights. On Sunday afternoon, the groups present their work to a panel of judges made up of instructors and data science professionals in industry. By the end of the DataFest weekend,  students have not only gained experience analyzing real-world data, they have also practiced presentation skills, all while connecting with other students, faculty members, and industry professionals.
 
 ## DataFest: COVID-19 Virtual Data Challenge {-}
-- Description of [ASA DataFest](https://ww2.amstat.org/education/datafest/)
-- Changes to this year's competition format due to COVID-19
+
+
+In March 2020 as many colleges and universities transitioned to a remote format, the DataFest steering committee considered alternatives for this year's competition. 
+
+
+- Changes to this year's competition format due to COVID-19]
 - Examples of students' data sets and analysis questions? 
 - Description of some of the winning projects? 
 - Why students were encouraged to explore societal impacts rather than direct health outcomes
@@ -54,7 +58,7 @@ The panelists shared practical ways instructors can use a trauma-informed approa
 
 ## Examples for the classroom {-}
 
-- Include some examples of data sets / articles and discussion questions for class? 
+- Is there an example activity? 
   
 ## Resources for teaching {-}
 
