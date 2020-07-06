@@ -38,9 +38,10 @@ library(patchwork)
 
 In March 2020 as many colleges and universities transitioned to a remote format, the DataFest steering committee considered alternatives for this year's competition. The goal was to adapt DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students all students with a wide range of statistics and data analysis experience. The 2020 DataFest was a virtual data challenge where students worked in teams to explore an impact of COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
 
-DataFest events were held in April - June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable. Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at the level of someone with training in epidemiology. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
+DataFest events were held in April - June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
-- Suggested analysis questions: 
+A few suggested analysis questions included 
+
   - How has the pandemic affected the airline industry and what are some potential downstream effects of this other than economic strain on the industry?
   - As a student, how would you quantify the effect of the pandemic on your education?
   - With shelter in place / lockdown in place, many workers have started working from home, which requires internet access. How prepared was the nation / your local area for this shift?
@@ -48,10 +49,10 @@ DataFest events were held in April - June, a time when data and modeling about t
   - What is the effect of the social distancing / shelter in place / lockdown recommendations and policies on pollution?
   - How can we quantify the potential effects on nutrition and general health of the public, outside of those affected by the virus?
 How are refugees affected by COVID-19?
+
 - Examples of students' data sets and analysis questions? 
 - Description of some of the winning projects? 
-- articles:
-  - [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)
+
   - [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8)
 
 ## Using COVID-19 data in the classroom {-} 
@@ -68,10 +69,16 @@ The panelists shared practical ways instructors can use a trauma-informed approa
 
 ## Examples for the classroom {-}
 
-- Is there an example activity? 
-  
+One way to use COVID-19 data in the classroom is by having students think about effective data visualizations. Since the beginning of the pandemic, there have been a variety of data visualizations used by government entities, news media, and the public outlets to help the general public better understand the pandemic (e.g. the "flattening the curve" visualizations). The activity could have four components: 
+
+1. Students consider what makes a visualization effective, especially when presenting data that is rapidly changing and potentially incomplete. The article [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8) can serve as a template for the discussion. 
+2. Students critique an existing visualization about the pandemic, discussing what makes it effective and what is confusing or even misleading.
+3. Students can create their own visualization taking into account the tips and critiques they discussed. This is an opportunity for students to think about the ethics of responsible data visualizations. It also gives them an opportunity to hone their computing skills as they wrangle and visualize the data using statistical software. Students could design their own visualizations, or could try to replicate effective exisiting visualizations. This replication approach is used in [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/), where an existing plot is used as the inspiration, and the goal is to replicate it using the skills discussed in that week's lesson. 
+
 ## Resources for teaching {-}
 
 1. [Teaching Statistics During the COVID-19 Health Crisis](https://coronavirus-teaching-resources.netlify.app/)
 
 2. [covid-r: Collection of analyses, packages, visualisations of COVID19 data in R](https://github.com/mine-cetinkaya-rundel/covid19-r)
+
+3. [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/)
