@@ -43,6 +43,8 @@ In March 2020 as many colleges and universities transitioned to a remote format,
 
 DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)^[Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].]). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
+DataFest events were held in April - June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
+
 A few suggested analysis questions included 
 
   - How has the pandemic affected the airline industry and what are some potential downstream effects of this other than economic strain on the industry?
@@ -92,5 +94,3 @@ Activity outline:
 ## Further reading {-}
 
 - Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].
-
--
