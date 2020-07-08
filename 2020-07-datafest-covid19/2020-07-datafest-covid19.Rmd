@@ -1,8 +1,7 @@
 ---
 title: "Engaging students with COVID-19 data"
-subtitle: ""
-author: ""
-date: ""
+author: "Maria Tackett and Mine Çetinkaya-Rundel"
+date: "July 2020"
 output: 
   bookdown::pdf_document2: 
     fig_caption: yes
@@ -16,6 +15,7 @@ blockquote{
 </style>
 
 ```{r setup, include=FALSE}
+# get rid of this if no code is added
 knitr::opts_chunk$set(echo = TRUE, 
                       warning = FALSE, 
                       message = FALSE,
@@ -30,13 +30,18 @@ library(patchwork)
 ```
 
 
-[INTRODUCTION]
+COVID-19 has undoubtedly generated a plethora of data, from daily counts on tests, positive results, hospitalisations, deaths, etc. to data from scientific studies on the virus and treatment to data on the impact of the pandemic on the economy, education, mental health, etc. 
+Engaging statistics and data science students with these data seems obvious, but the decision of whether to bring COVID-19 data into the statistics and data science classrooms is not simple. On one hand, the answer might seem like an obvious *yes* -- what better way to engage students with real data than data about the pandemic that has turned all of our lives upside down. On the other hand, at least at the time of writing this column, we're still in the midst of a pandemic that has taken many lives and, indeed, turned all of our lives upside down, which might be the very reason to to say *no* to bringing these data into the classroom. 
+
+In this column we showcase a few approaches for bringing COVID-19 data into our teaching as well as highlight resources that might help you decide whether to do so in the first place. 
 
 ## DataFest: COVID-19 Virtual Data Challenge {-}
 
-[The American Statistical Association (ASA) DataFest](https://ww2.amstat.org/education/datafest/) is a data analysis competition where teams of up to five students analyze a real and complex dataset over the course of one weekend. In 2019, DataFest was held at over 40 locations in the United States and internationally with more than 2000 students participating in the event. The surprise data set is revealed to participants at the kick-off event on Friday afternoon, and students work throughout the weekend analyzing the data and deriving insights. On Sunday afternoon, the groups present their work to a panel of judges made up of instructors and data science professionals in industry. By the end of the DataFest weekend, students have not only gained experience analyzing real-world data, they have also practiced presentation skills, all while connecting with other students, faculty members, and industry professionals.
+[The American Statistical Association (ASA) DataFest](https://ww2.amstat.org/education/datafest/) is a data analysis competition where teams of up to five students analyze a real and complex dataset over the course of one weekend. In 2019, DataFest was held at over 40 locations in the United States and internationally with more than 2000 students participating in the event. The surprise data set is revealed to participants at the kick-off event on Friday afternoon, and students work throughout the weekend analyzing the data and deriving insights. On Sunday afternoon, the groups present their work to a panel of judges made up of instructors and data science professionals in industry. By the end of the DataFest weekend, students have not only gained experience analyzing real data, they have also practiced presentation skills, all while connecting with other students, faculty members, and industry professionals.
 
-In March 2020 as many colleges and universities transitioned to a remote format, the DataFest steering committee considered alternatives for this year's competition. The goal was to adapt DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students all students with a wide range of statistics and data analysis experience. The 2020 DataFest was a virtual data challenge where students worked in teams to explore an impact of COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
+In March 2020 as many colleges and universities transitioned to a remote format, the ASA DataFest steering committee considered alternatives for this year's competition. The goal was to adapt ASA DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students all students with a wide range of statistics and data analysis experience. The 2020 ASA DataFest ran as a virtual data challenge where students worked in teams to explore an impact of the COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
+
+DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)^[Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].]). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
 DataFest events were held in April - June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
@@ -57,7 +62,7 @@ How are refugees affected by COVID-19?
 
 ## Using COVID-19 data in the classroom {-} 
 
-At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom. The primary focus was that the pedagogy should be "trauma-informed" due to the pandemic's direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic^[Abuelezam, N, (2020). *Teaching Public Health Will Never Be the Same*. American Journal of PUblic Health, 110(7), 976-977. https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2020.305710]
+At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom. The primary focus was that the pedagogy should be "trauma-informed" due to the direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic^[Abuelezam, N, (2020). *Teaching Public Health Will Never Be the Same*. American Journal of PUblic Health, 110(7), 976-977. https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2020.305710]
 
 The panelists shared practical ways instructors can use a trauma-informed approach when discussing data related to the pandemic in class:
 
@@ -85,3 +90,7 @@ Activity outline:
 2. [covid-r: Collection of analyses, packages, visualisations of COVID19 data in R](https://github.com/mine-cetinkaya-rundel/covid19-r)
 
 3. [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/)
+
+## Further reading {-}
+
+- Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].
