@@ -74,6 +74,22 @@ The panelists shared practical ways instructors can use a trauma-informed approa
 
 ## Example activities {-}
 
+- Visualization activities 
+  - Get students thinking about effective data visualizations 
+  - Get students to think about the limitations of the data used to create data visualizations 
+  - Get students to think about creating ethical data visualizations 
+  - Does the visualization convey the information you intend it to / think it does? 
+  
+  - Students could have the option to replicate / improve an existing visualization or create their own. 
+  
+- Take it step further and have students look at data organization on GitHub and pulling data from other sources (from the [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html))
+
+- Many of the resources we've tagged here use the direct health data, these activities could be adapted to explore other effects of the pandemic. See examples of other datasets related to the pandemic [here](https://coronavirus-teaching-resources.netlify.app/tags/alternative-data/)
+
+- Add the toilet paper modeling one? 
+
+
+
 One way to use COVID-19 data in the classroom is by having students think about effective data visualizations. Since the beginning of the pandemic, there have been a variety of data visualizations used by government organizations, news media, and the public outlets to help the general public better understand the pandemic (e.g. the "flattening the curve" visualizations). [Insert why it's important for students to understand how to interpret and critique these visualizations.]
 
 Activity outline: 
@@ -82,6 +98,7 @@ Activity outline:
 
 2. Students can create their own visualization taking into account the tips and critiques they discussed. This gives students an opportunity to hone their computing skills as they wrangle the data and create visualizations using statistical software. Students can design their own visualizations or replicate existing ones as done in the [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/) workshop. 
 
+- Kari Lock Morgan suggests to add caveats when we discuss this data that we are not experts, have not done an exhaustive literature review and can't vouch for everyone's models and predictions. 
 
 ## Resources for teaching {-}
 
@@ -90,6 +107,14 @@ Activity outline:
 2. [covid-r: Collection of analyses, packages, visualisations of COVID19 data in R](https://github.com/mine-cetinkaya-rundel/covid19-r)
 
 3. [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/)
+
+4. [Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak](https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html)
+
+5. [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html)
+
+6. [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789)
+
+7. [Ethical Data Viz from the Teach Data Science Blog](https://teachdatascience.com/ethicaldataviz/)
 
 ## Further reading {-}
 
