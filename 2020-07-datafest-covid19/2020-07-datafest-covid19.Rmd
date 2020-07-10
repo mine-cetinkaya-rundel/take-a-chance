@@ -92,9 +92,31 @@ The panelists shared practical ways instructors can use a trauma-informed approa
 
 One way to use COVID-19 data in the classroom is by having students think about effective data visualizations. Since the beginning of the pandemic, there have been a variety of data visualizations used by government organizations, news media, and the public outlets to help the general public better understand the pandemic (e.g. the "flattening the curve" visualizations). [Insert why it's important for students to understand how to interpret and critique these visualizations.]
 
-Activity outline: 
+### Visualizing the effects of the pandemic
 
-1. Critique existing visualizations using [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8) [and OTHER RESOURCES?] as a guide. The critiques should address what makes the visualizatin effectiv and what is confusing or even misleading.
+The primary goals of this exercise are for students to discuss and understand the elements of an effective data visualization and the ethical considerations when working with sensitive and continuing developing data. This exercise is largely inspired by the following data analysis exercises: [Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak](https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html), [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html)
+, and [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789). Though these three activities largely deal with the direct-health outcomes, the exercise described below could be used with any data related to the pandemic. 
+
+### Part 1: Critique existing visualizations 
+
+Since the beginning of the pandemic, there have been a variety of data visualizations used by government organizations, news media, and the public outlets to help the general public better understand the pandemic (e.g. the "flattening the curve" charts). This has resulted in a collection of examples that can be used to help students think about how visualizations can be used tos
+effectively (and sometimes effectively) communicate insights gleaned from complex data to the public. This creates a valuable learning opportunity that can help students develop their statistical literacy. It also helps students connect and immediately apply what they're learning in a real-world context, where they can contribute to current conversations in society. 
+
+The first part of the activity is to get students thinking about the principles of data ethics and ethical data visualizations. As data is being in used in almost every area of society, it is important that students learn how principles for analyzing and interpreting data in a ethical way. The 2016 *GAISE* report includes "demonstrate an awareness of ethical issues associated with sound statistical practice." The textbook [Modern Data Science with R](https://mdsr-book.github.io/excerpts/mdsr-ethics.pdf) has a chapter dedicated to ethical data science practices and professional ethics. More specific to this activity, the post [*Ethical Data Viz*](https://teachdatascience.com/ethicaldataviz/) on the Teach Data Science includes examples of ineffective and misleading data visualizations and some considerations to make when creating visualizations. Lastly, the post [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8) provides a list of criteria to consider for visualizations specific to the COVID-19 pandemic. 
+
+Have students examine a visualization that conveys information about an impact of the pandemic. Using the resources above as a foundation, students can write or discuss their responses to the following: 
+
+> _**Q1.** What is the topic of the visualization? What is its primary message?_
+
+> _**Q2.** In what ways is it effective? In what ways is it ineffective or even misleading?_
+
+> _**Q3.** (If an interactive visualization) What are the benefits of displaying the data using an interactive visualization? What are the limitations?_ 
+
+> _**Q4.** How can you improve the existing visualization or display the data in a new way?_
+
+[TO DO: PLACES TO FIND VISUALIZATION? ]
+
+### Part 2: Your turn! 
 
 2. Students can create their own visualization taking into account the tips and critiques they discussed. This gives students an opportunity to hone their computing skills as they wrangle the data and create visualizations using statistical software. Students can design their own visualizations or replicate existing ones as done in the [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/) workshop. 
 
@@ -119,3 +141,5 @@ Activity outline:
 ## Further reading {-}
 
 - Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].
+
+- Need Citation for [*GAISE*](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf)
