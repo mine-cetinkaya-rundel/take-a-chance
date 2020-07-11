@@ -1,5 +1,5 @@
 ---
-title: "Engaging students with COVID-19 data"
+title: "COVID-19 data in the classroom"
 author: "Maria Tackett and Mine Çetinkaya-Rundel"
 date: "July 2020"
 output: 
@@ -31,7 +31,9 @@ library(patchwork)
 
 
 COVID-19 has undoubtedly generated a plethora of data, from daily counts on tests, positive results, hospitalisations, deaths, etc. to data from scientific studies on the virus and treatment to data on the impact of the pandemic on the economy, education, mental health, etc. 
-Engaging statistics and data science students with these data seems obvious, but the decision of whether to bring COVID-19 data into the statistics and data science classrooms is not simple. On one hand, the answer might seem like an obvious *yes* -- what better way to engage students with real data than data about the pandemic that has turned all of our lives upside down. On the other hand, at least at the time of writing this column, we're still in the midst of a pandemic that has taken many lives and, indeed, turned all of our lives upside down, which might be the very reason to to say *no* to bringing these data into the classroom. 
+Engaging statistics and data science students with these data seems obvious, but the decision of whether to bring COVID-19 data into the statistics and data science classrooms is not simple. 
+On one hand, the answer might seem like an obvious *yes* -- what better way to engage students with real data than data about the pandemic that has turned all of our lives upside down. 
+On the other hand, at least at the time of writing this column, we're still in the midst of a pandemic that has taken many lives and, indeed, turned all of our lives upside down, which might be the very reason to to say *no* to bringing these data into the classroom. 
 
 In this column we showcase a few approaches for bringing COVID-19 data into our teaching as well as highlight resources that might help you decide whether to do so in the first place. 
 
@@ -41,23 +43,41 @@ In this column we showcase a few approaches for bringing COVID-19 data into our 
 
 In March 2020 as many colleges and universities transitioned to a remote format, the ASA DataFest steering committee considered alternatives for this year's competition. The goal was to adapt ASA DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students all students with a wide range of statistics and data analysis experience. The 2020 ASA DataFest ran as a virtual data challenge where students worked in teams to explore an impact of the COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
 
-DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)^[Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].]). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
+DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
-A few suggested analysis questions included 
+A few suggested analysis questions included the following:
 
-  - How has the pandemic affected the airline industry and what are some potential downstream effects of this other than economic strain on the industry?
-  - As a student, how would you quantify the effect of the pandemic on your education?
-  - With shelter in place / lockdown in place, many workers have started working from home, which requires internet access. How prepared was the nation / your local area for this shift?
-  - How has the spread of the pandemic affected people’s opinion on government tracking and privacy?
-  - What is the effect of the social distancing / shelter in place / lockdown recommendations and policies on pollution?
-  - How can we quantify the potential effects on nutrition and general health of the public, outside of those affected by the virus?
-How are refugees affected by COVID-19?
+- How has the pandemic affected the airline industry and what are some potential downstream effects of this other than economic strain on the industry?
+ - As a student, how would you quantify the effect of the pandemic on your education?
+- With shelter in place / lockdown orders, many workers have started working from home, which requires internet access. How prepared was the nation / your local area for this shift?
+- How has the spread of the pandemic affected people’s opinion on government tracking and privacy?
+- What is the effect of the social distancing / shelter in place / lockdown recommendations and policies on pollution?
+- How can we quantify the potential effects on nutrition and general health of the public, outside of those affected by the virus?
+- How are refugees affected by COVID-19?
 
-[TO DO: WRAP UP DATAFEST SECTION - EXAMPLE PROJECTS OR WINNERS?]
+When we suggested these potential analysis questions to students we were worried that we might be giving too much direction and curbing their creativity. 
+Fortunately, this was not the case, and students who participated in the event chose a wide variety of questions. 
+We provide below a sample of analysis foci from the winning teams that we hope might be inspirational for educators wanting to bring COVID-19 data into their classrooms.
+
+- Societal impacts of the COVID-19 pandemic on education in the United States: Analysis of data from surveys conducted by the US Census Bureau’s Household Pulse Survey, examining the availability of devices and internet in households with children in public or private schools in the US over a period of four weeks, 23 April - 26 May 2020. (The Data Quails - University of Edinburgh)
+
+- Relationship between dengue fever outbreak and lockdown: Investigation of whether the dengue fever outbreak in Singapore, which coincided with Circuit Breaker (Singapore's COVID-19 lockdown measures), could be attributed to the Circuit Breaker, or alternatively if the Circuit Breaker had worsened the dengue fever outbreak. (Team lemonchocolatecheesecake - University of Edinburgh)
+
+- Dreams in the time of COVID-19: Exploration of Google search trends as well as sentiment analysis of tweets related to people having vivid dreams during COVID-19 outbreak. (Apoorv Jha - Duke University)
+
+- How research priorities shift as COVID-19 Progresses: Exploration of the dataset provided as part of Kaggle's COVID-19 Open Research Dataset Challenge (CORD-19) suggesting that research focus shifted from finding a cure to preventative measures for containing COVID-19. (Team N & N - Duke University)
+
+- Purchasing behavior via Amazon and Google Trends: Analysis of purchasing behavior data based on Amazon prices and Google Trends. (Team Maskman - UCLA)
+
+- Driving during quarantine: Investigation of traffic data to evaluate the effectiveness of the call for social distancing in Toronto measured by the decrease in the amount of people driving in residential areas of the city. (Team Shirley Eva - University of Toronto)
+
+The variety in these projects signal the feasibility of engaging students with COVID-19 data without the need for epidemiological modeling expertise. 
+We should also note that almost many submissions for ASA DataFest used data provided openly by governments, suggesting that featuring COVID-19 related data in classes might also be a good way to expose students to open government datasets. 
+
 
 ## Using COVID-19 data in the classroom {-} 
 
-At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom. The primary focus was that the pedagogy should be "trauma-informed" due to the direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic^[Abuelezam, N, (2020). *Teaching Public Health Will Never Be the Same*. American Journal of PUblic Health, 110(7), 976-977. https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2020.305710]
+At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom. The primary focus was that the pedagogy should be "trauma-informed" due to the direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic.
 
 The panelists shared practical ways instructors can use a trauma-informed approach when discussing data related to the pandemic in class:
 
@@ -120,8 +140,10 @@ In this column we shared how we used this year's DataFest to give students an op
 - [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789)
 
 
-<!--
+
 ## Further reading {-}
+
+- ASA DataFest. <https://ww2.amstat.org/education/datafest/>.
 
 - American Statistical Association, 2016. Guidelines for Assessment and Instruction in Statistics Education (GAISE) College Report, Alexandria: American Statistical Association.
 
@@ -129,9 +151,8 @@ In this column we shared how we used this year's DataFest to give students an op
 
 - Hardin, J., 2020. Ethical Data Viz. [online] Teach Data Science. Available at: <https://teachdatascience.com/ethicaldataviz/> [Accessed 9 July 2020]. 
 
-- Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’S So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].
+- Koerth, M., Bronner, L. and Mithani, J., 2020. Why It’s So Freaking Hard To Make A Good COVID-19 Model. [online] FiveThirtyEight. Available at: <https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/> [Accessed 8 July 2020].
 
 - Makulec, A., 2020. Ten Considerations Before You Create Another Chart About COVID-19. [online] Nightingale. Available at: <https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8> [Accessed 8 July 2020].
--->
 
-
+- Abuelezam, N, 2020. Teaching Public Health Will Never Be the Same. American Journal of PUblic Health, 110(7), 976-977. Available at: <https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2020.305710> [Accessed 10 July 2020].
