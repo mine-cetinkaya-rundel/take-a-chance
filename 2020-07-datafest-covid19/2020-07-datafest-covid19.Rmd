@@ -127,18 +127,17 @@ In this column we shared how we used this year's DataFest to give students an op
 
 ## Resources for teaching
 
-- [Teaching Statistics During the COVID-19 Health Crisis](https://coronavirus-teaching-resources.netlify.app/)
+- Teaching Statistics During the COVID-19 Health Crisis <https://coronavirus-teaching-resources.netlify.app>
 
-- [covid-r: Collection of analyses, packages, visualisations of COVID19 data in R](https://github.com/mine-cetinkaya-rundel/covid19-r)
+- covid-r: Collection of analyses, packages, visualisations of COVID19 data in R. <https://github.com/mine-cetinkaya-rundel/covid19-r>
 
-- [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/)
+- I Eat Data Science for Breakfast: pandemic 2020 edition. <https://learn.themethodsection.com/workshops/ieat/pandemic2020>
 
-- [Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak](https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html)
+- Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak. <https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html>
 
-- [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html)
+- Visualizing COVID-19. <https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html>
 
-- [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789)
-
+- Cumulative deaths from COVID-19. <https://rstudio.cloud/project/1444789>
 
 
 ## Further reading {-}
