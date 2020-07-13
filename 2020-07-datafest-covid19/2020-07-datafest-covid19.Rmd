@@ -22,28 +22,28 @@ library(knitr)
 ```
 
 
-COVID-19 has undoubtedly generated a plethora of data, from daily counts on tests, positive results, hospitalisations, deaths, etc. to data from scientific studies on the virus and treatment to data on the impact of the pandemic on the economy, education, mental health, etc. 
+COVID-19 has undoubtedly generated a plethora of data, from daily counts on tests, positive results, hospitalizations, deaths, etc. to data from scientific studies on the virus and treatment to data on the impact of the pandemic on the economy, education, mental health, etc. 
 Engaging statistics and data science students with these data seems obvious, but the decision of whether to bring COVID-19 data into the statistics and data science classrooms is not simple. 
 On one hand, the answer might seem like an obvious *yes* -- what better way to engage students with real data than data about the pandemic that has turned all of our lives upside down? 
 On the other hand, at least at the time of writing this column, we're still in the midst of a pandemic that has taken many lives and, which might be the very reason to to say *no* to requiring students to engage with data about the pandemic that might have taken the life of a loved one or caused economic hardship or affected their lives in some other way that is causing stress and grief. 
 
-The goal of this column is not to provide a definite answer for whether or not educators *should* bring COVID-19 data into their classrooms, but instead to showcase a few approaches for *how* they can do so responsibly and highlight resources that might help educators decide whether to do so in the first place. 
+The goal of this column is not to provide a definite answer for whether or not educators *should* bring COVID-19 data into their classrooms, but instead to showcase a few approaches for *how* they can do so responsibly, and to highlight resources that might help educators decide whether to do so in the first place. 
 
 ## DataFest: COVID-19 Virtual Data Challenge {-}
 
-[The American Statistical Association (ASA) DataFest](https://ww2.amstat.org/education/datafest/) is a data analysis competition where teams of up to five students analyze a real and complex dataset over the course of one weekend. In 2019, DataFest was held at over 40 locations in the United States and internationally with more than 2,000 students participating in the event. The surprise data set is revealed to participants at the kick-off event on Friday afternoon, and students work throughout the weekend analyzing the data and deriving insights. On Sunday afternoon, the groups present their work to a panel of judges made up of instructors and data science professionals in industry. By the end of the DataFest weekend, students have not only gained experience analyzing real data, they have also practiced presentation skills, all while connecting with other students, faculty members, and industry professionals.^[For more information on ASA DataFest, see [amstat.org/education/datafest](https://ww2.amstat.org/education/datafest/).]
+[The American Statistical Association (ASA) DataFest](https://ww2.amstat.org/education/datafest/) is a data analysis competition where teams of up to five students analyze a real and complex dataset over the course of one weekend. In 2019, DataFest was held at over 40 locations in the United States and internationally with more than 2,000 students participating in the event.In a typical DataFest a surprise data set is revealed to participants at a kick-off event on Friday afternoon, and students work throughout the weekend analyzing the data and deriving insights. On Sunday afternoon, groups present their work to a panel of judges made up of instructors and statistics and data science professionals in industry. By the end of the DataFest weekend, students have not only gained experience analyzing real data, they have also practiced presentation skills, all while connecting with other students, faculty members, and industry professionals.^[For more information on ASA DataFest, see [amstat.org/education/datafest](https://ww2.amstat.org/education/datafest/).]
 
-In March 2020 as many colleges and universities transitioned to a remote format, the ASA DataFest steering committee considered alternatives for this year's competition. The goal was to adapt ASA DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students all students with a wide range of statistics and data analysis experience. The 2020 ASA DataFest ran as a virtual data challenge where students worked in teams to explore an impact of the COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
+In March 2020 as many colleges and universities transitioned to a remote format, the ASA DataFest steering committee considered alternatives for this year's competition. The goal was to adapt DataFest to the new environment, yet still include the parts of the event that make it an inviting and valuable experience for students with a wide range of statistics and data analysis experience. The 2020 DataFest was held as a virtual data challenge where students worked in teams to explore an impact of the COVID-19 global pandemic. Given the variety of potential topics, part of what made this year's challenge unique was that it involved participants finding a data set for their analysis.
 
-DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic was rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates require understanding the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
+DataFest events were held in April through June, a time when data and modeling about the direct health outcomes of the pandemic were rapidly changing and unreliable (see [*Why It’s So Freaking Hard To Make A Good COVID-19 Model*](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/)). Building models and drawing reliable conclusions about infection, mortality, or recovery rates would require participants to understand the nuances and limitations of the COVID-19 health data at a level that would likely not be feasible in the short span of the DataFest competition. Therefore, participants were advised to “tell us about something affected by the COVID-19 pandemic other than its direct health outcomes”, to discourage them from presenting conclusions that could be potentially misleading or harmful. 
 
-A few suggested analysis questions included the following:
+A few suggested analysis questions included 
 
 - How has the pandemic affected the airline industry and what are some potential downstream effects of this other than economic strain on the industry?
  - As a student, how would you quantify the effect of the pandemic on your education?
-- With shelter in place / lockdown orders, many workers have started working from home, which requires internet access. How prepared was the nation / your local area for this shift?
+- With shelter-in-place / lockdown orders, many workers have started working from home, which requires internet access. How prepared was the nation / your local area for this shift?
 - How has the spread of the pandemic affected people’s opinion on government tracking and privacy?
-- What is the effect of the social distancing / shelter in place / lockdown recommendations and policies on pollution?
+- What is the effect of the social distancing / shelter-in-place / lockdown recommendations and policies on pollution?
 - How can we quantify the potential effects on nutrition and general health of the public, outside of those affected by the virus?
 - How are refugees affected by COVID-19?
 
@@ -71,14 +71,14 @@ We should also note that a majority of the teams worked with data provided openl
 
 ## Using COVID-19 data in the classroom {-} 
 
-At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [Engaging Students during the COVID-19 Health Crisis](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the COVID-19 pandemic in the classroom^[Laura Le, Kari Lock Morgan, and Lucy McGowan. “Engaging Students during the COVID-19 Health Crisis.” Electronic Conference on Teaching Statistics, 20 May 2020, Online. \url{https://www.causeweb.org/cause/ecots/ecots20/panels/2}.]. The primary take away from this panel discussion was that the pedagogy should be ``trauma-informed" due to the direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic.
+At the May 2020 Electronic Conference on Teaching Statistics (eCOTS), Laura Le, Kari Lock Morgan, and Lucy McGowan presented [*Engaging Students during the COVID-19 Health Crisis*](https://www.causeweb.org/cause/ecots/ecots20/panels/2) about how to incorporate data related to the pandemic in the classroom^[Laura Le, Kari Lock Morgan, and Lucy McGowan. “Engaging Students during the COVID-19 Health Crisis.” Electronic Conference on Teaching Statistics, 20 May 2020, Online. \url{https://www.causeweb.org/cause/ecots/ecots20/panels/2}.]. The primary message from this talk was that the pedagogy should be ``trauma-informed'' due to the direct impact on students. By taking this trauma-informed approach instructors can create a classroom environment where students feel safe to discuss the subject and reduce risk of retraumatizing students impacted by the pandemic.
 
-The panel shared practical ways instructors can use a trauma-informed approach when discussing data related to the pandemic in class:
+The panel shared practical ways instructors can use a trauma-informed approach when discussing this data in class: 
 
-- Anonymously poll students about whether or not they want to talk about the data related to COVID-19 in class. It is a good idea to poll multiple times to get point-in-time feedback, since students' feelings may change as the situation around the pandemic evolves.
-- Indicate in the syllabus when COVID-19 data will be used, so students know when the topic will come up in class.
+- Start by taking an anonymous poll asking students whether or not they want to talk about the data related to the pandemic in class. If the data will be used multiple times in a semester, it is good to repeat the poll and get point-in-time feedback, since students' feelings may change as the situation around the pandemic evolves.
+- Indicate in the syllabus when data about the pandemic will be used, so students know when to expect the topic to come up in class.
 - Create an alternative assignment or discussion prompt for students who do not wish to discuss the pandemic.
-- If the course is designed to a more specialized audience, such as a biostatistics or graduate-level course, the instructor can address the fact that the topic is sensitive but is also an important area of research in biostatistics. This is also an opportunity for the instructor to talk about strategies for maintaining a healthy relationship with emotions when doing research on sensitive topics.
+- If the course is designed for a more specialized audience, such as biostatistics or graduate students, the instructor can address the fact that the topic is sensitive but is also an important area of research. This is also an opportunity to talk about strategies for maintaining a healthy relationship with emotions when doing research on sensitive topics.
 - As with this year's DataFest, the analysis examples can focus on societal impacts of the pandemic other than direct health outcomes. 
 
 The panel also suggested that we should be honest about our experience with working with COVID-19 data and, where appropriate, provide a disclaimer that we are not experts in epidemiology and infectious diseases, that we have not done an exhaustive literature review, and that we can't vouch for everyone's models and predictions. 
@@ -86,54 +86,47 @@ The panel also suggested that we should be honest about our experience with work
 
 ## Activity: Visualizing the effects of the pandemic {-}
 
-The primary goals of this exercise are for students to discuss and understand the elements of an effective data visualization and the ethical considerations when working with sensitive and continuing developing data. This exercise is largely inspired by the following data analysis exercises: [Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak](https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html), [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html)
-, and [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789). Though these three activities largely deal with the direct-health outcomes, the exercise described below could be used with any data related to the pandemic^[See examples of other datasets related to the pandemic at [coronavirus-teaching-resources.netlify.app/tags/alternative-data](https://coronavirus-teaching-resources.netlify.app/tags/alternative-data).].
+Here we outline an activity to incorporate data related to the pandemic in a statistics or data science course. The primary goals are for students to understand the how to create an effective data visualization and the ethical considerations of visualizing data that is sensitive and regularly changing. This activity is largely inspired by the following data analysis exercises: [Dangerous Numbers? Teaching About Data and Statistics Using the Coronavirus Outbreak](https://www.nytimes.com/2020/02/27/learning/dangerous-numbers-teaching-about-data-and-statistics-using-the-coronavirus-outbreak.html), [Visualizing COVID-19](https://rpruim.github.io/ds303/S20/hw/covid-19/covid-19.html)
+, and [Cumulative deaths from COVID-19]( https://rstudio.cloud/project/1444789). Though the data in these three activities primarily deal with direct health outcomes, the activity outlined here can be done using any data related to the pandemic^[See examples of other datasets related to the pandemic at [coronavirus-teaching-resources.netlify.app/tags/alternative-data](https://coronavirus-teaching-resources.netlify.app/tags/alternative-data).].
 
-### Part 1: Critique existing visualizations {-}
+Since the beginning of the pandemic, there have been countless data visualizations used by government organizations, news media, and other public outlets to help the general public better understand the pandemic (e.g. the ``flattening the curve'' plots). 
+This has resulted in a vast collection of examples that can be used to help students think about how visualizations are used to effectively (and sometimes ineffectively) communicate insights from complex data to the public. Students can develop their statistical literacy as they apply what they're learning in a real-world context that is current and relevant. 
 
-Since the beginning of the pandemic, there have been a variety of data visualizations used by government organizations, news media, and the public outlets to help the general public better understand the pandemic (e.g. the ``flattening the curve" charts). 
-This has resulted in a collection of examples that can be used to help students think about how visualizations can be used to effectively (and sometimes ineffectively) communicate insights gleaned from complex data to the public. 
-This creates a valuable learning opportunity that can help students develop their statistical literacy. 
-It also helps students connect and immediately apply what they're learning in a real-world context, where they can contribute to current conversations in society. 
+### Part 1: Evaluate existing visualizations {-}
 
-The first part of the activity gets students thinking about the principles of data ethics and ethical data visualizations. 
-As data is being in used in almost every area of society, it is important that students learn how principles for analyzing and interpreting data in a ethical way. 
-The Guidelines for Assessment and Instruction in Statistics Education (GAISE) include ``demonstrate an awareness of ethical issues associated with sound statistical practice." The textbook [Modern Data Science with R](https://mdsr-book.github.io/excerpts/mdsr-ethics.pdf) has a chapter dedicated to ethical data science practices and professional ethics. More specific to this activity, the post [*Ethical Data Viz*](https://teachdatascience.com/ethicaldataviz/) on the Teach Data Science blog includes examples of ineffective and misleading data visualizations and some considerations to make when creating visualizations. Lastly, the post [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8) provides a list of criteria to consider for visualizations specific to the COVID-19 pandemic.
+Part 1 focuses on the principles of data ethics and ethical data visualizations. 
+The [Guidelines for Assessment and Instruction in Statistics Education (GAISE)](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf) state that one goal for introductory statistics courses is for students to be able to ``demonstrate an awareness of ethical issues associated with sound statistical practice''. The textbook [*Modern Data Science with R*](https://mdsr-book.github.io/excerpts/mdsr-ethics.pdf) has a chapter dedicated to ethical data science practices and professional ethics that provides a foundation for discussing the ethical considerations of working with sensitive data. More specific to data visualizations, the [``Ethical Data Viz''](https://teachdatascience.com/ethicaldataviz/) on the *Teach Data Science* includes considerations for creating ethical data visualizations and examples of how visualizations can go wrong and give misleading information. Lastly, the post [*Ten Considerations Before You Create Another Chart About COVID-19*](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8) presents a set of criteria to consider when creating visualizations specific to the COVID-19 pandemic.
 
-In this activity you can have students examine a visualization that conveys information about an impact of the pandemic. 
-Using the resources above as a foundation, students can write or discuss their responses to the following: 
+After a preliminary discussion about data ethics, students examine a visualization that conveys information about an impact of the pandemic. Using the resources above as a foundation, students may write or discuss their responses to the following: 
 
 > _**Question 1.** What is the topic of the visualization? What is its primary message?_
 
-> _**Question 2.** In what ways is it effective? In what ways is it ineffective or even misleading?_
+> _**Question 2.** In what ways is it effective? In what ways is it ineffective or potentially misleading?_
 
-> _**Question 3.** (If an interactive visualization) What are the benefits of displaying the data using an interactive visualization? What are the limitations?_ 
+> _**Question 3.** (If examining an interactive visualization) What are the benefits of displaying the data using an interactive visualization? What are the limitations?_ 
 
 > _**Question 4.** How can you improve the existing visualization or display the data in a new way?_
 
-You can either have the students find a visualisation they want to examine or provide one for them. 
-If you need inspiration, the resources we list in the *Resources for teaching* section are full of data visualisations you can pick from. 
+You can either have the students find a visualization they want to examine or provide one for them. 
+If you need inspiration, the resources we list in the *Resources for teaching* section are full of data visualizations you can pick from. 
 
 ### Part 2: Your turn! {-}
 
-Once students have had a chance to examine existing visualizations, it's their turn to create their own! 
-Taking the principles from Part 1, students can create their own visualization replicate an existing one as shown in the [I Eat Data Science for Breakfast: pandemic 2020 edition](https://learn.themethodsection.com/workshops/ieat/pandemic2020/) workshop. 
-Students replicating an existing visualization can take on the additional challenge of trying to improve it. 
-Additionally, students include a short write up that includes a description of the data, the primary message, some interesting findings, and ideas to continually improve the visualization. 
+Applying the principles of ethical data visualization from Part 1, students can create their own visualization or replicate and improve an existing one. Along with the visualization is a short narrative that includes a description of the data, the primary message and interesting insights from the visualization, and ideas to improve it if given more time.
 
-Students can share their work in a platform shared by the class, such as a discussion forum in the course learning management system. 
-This can involve sharing the final visualisations only or, the entire process from getting data, tidying it to prepare it for the visualisation, and the steps (code) for creating the visualisation. 
-The gallery of student work provides another opportunity for discussion about the the decisions they made while completing the assignment and the challenges of working with complex real-world data. 
+Students can share their visualization and narrative in a platform shared by the class, such as a discussion forum in the course learning management system. 
+This can involve sharing the final visualizations only or, the entire process from getting data, tidying it to prepare it for the visualization, and the steps (code) for creating the visualization. 
+The gallery of student work provides another opportunity for discussion about the decisions they made while completing the assignment and the challenges of working with complex real-world data. 
 
 ## Resources for teaching {-}
 
 In this column we shared how we used this year's ASA DataFest to give students an opportunity to explore societal impacts of the pandemic, some considerations when using data related to the pandemic in the classroom, and an example classroom activity. 
-We encourage our readers to visit the following resources to find data and class activities related to the pandemic and to contribute their own. 
+We encourage readers to visit the following resources to find data and class activities related to the pandemic and to contribute their own. 
 
 - Teaching Statistics During the COVID-19 Health Crisis:  
 [coronavirus-teaching-resources.netlify.app](https://coronavirus-teaching-resources.netlify.app) 
 
-- covid19-r: Collection of analyses, packages, visualisations of COVID-19 data in R.  
+- covid19-r: Collection of analyses, packages, visualizations of COVID-19 data in R.  
 [mine-cetinkaya-rundel.github.io/covid19-r](https://mine-cetinkaya-rundel.github.io/covid19-r/)
 
 - I Eat Data Science for Breakfast: Pandemic 2020 edition.  
