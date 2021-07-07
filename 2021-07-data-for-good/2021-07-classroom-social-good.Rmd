@@ -78,16 +78,25 @@ We provide an opportunity for students to address topics of social justice and e
 
 For many of our students, our course is the first time they have confronted the fact that mathematics and statistics are not neutral. In the course, they begin to evaluate their social and professional responsibilities, regardless of future profession, and we culminate our discussions with the creation of a ``Hippocratic Oath" as statisticians, mathematicians, and data scientists. Though we have kept the structure of the course consistent the last few years, the conversations continue to evolve as students bring their experiences and backgrounds to the discussion.
 
-*Note: We are happy to share our course materials upon request. Please email jcanner@csumb.edu.* 
+*Note: We are happy to share our course materials upon request.Email jcanner@csumb.edu.* 
   
 ## Additional resources for teaching {-}
 
-Courses such as the ones discussed in this column give students an opportunity to deeply engage with specific social issues and the role statistics has in helping us understand them throughout an entire semester. Here we share some ideas to get started incorporating assignments and activities focused on social issues in statistics courses:  
+In this column we've shared courses that give students an opportunity to deeply engage with specific social issues and the role statistics has in helping us understand them throughout an entire semester. Below are resources for instructors interested in implementing the discussion of social issues in their courses: 
 
-- Include discussion of data ethics in all applied statistics courses , particularly the lower-level courses
-    - Use classroom norms to foster an environment where students feel free to discuss the data. (resource for classroom norms?)
-- Implement a project where students analyze data addressing an issue pertinent to their community
-- Use real-world data for examples and assignments, so students have experience dealing with the complexities of real-world data and some of the limitations / questions that arise as we analyze this data.
+- Real-world data sets:
+  - Data Is Plural: [data-is-plural.com](https://www.data-is-plural.com/)
+  - Tidy Tuesday: [github.com/rfordatascience/tidytuesday](https://github.com/rfordatascience/tidytuesday)
+  - U.S. Government Open Data: [data.gov](https://www.data.gov/)
+- FiveThirtyEight: [data.fivethirtyeight.com](https://data.fivethirtyeight.com/)
+
+- Teaching & classroom activities: 
+
+  - Hardin, J. (2020, July 29). Social Justice & Data Science. *Teach Data Science*.  [teachdatascience.com/socialjustice](https://teachdatascience.com/socialjustice/)
+  - What's Going On in This Graph? (n.d.) *New York Times*. [www.nytimes.com/column/whats-going-on-in-this-graph](https://www.nytimes.com/column/whats-going-on-in-this-graph)
+  - Skew the Script (n.d.). [skewthescript.org](https://skewthescript.org/)
+  - Tackett, M., & Çetinkaya-Rundel, M. (2020). COVID-19 Data in the Classroom. CHANCE, 33(3), 63-66. [oi.org/10.1080/09332480.2020.1820257](https://doi.org/10.1080/09332480.2020.1820257)
+
 
 
 ## References {-}
@@ -105,7 +114,7 @@ Courses such as the ones discussed in this column give students an opportunity t
 
 - Unfried, A., & Canner, J. (2019). Doing social justice: turning talk into action in a mathematics service learning course. *PRIMUS*, 29(3-4), 210-227.
 
-- Wicklin, R. (2017, May 17). Quantiles and the Flint water crisis. SAS. https://blogs.sas.com/content/iml/2017/05/17/quantiles-flint-water-crisis.html
+- Wicklin, R. (2017, May 17). Quantiles and the Flint water crisis. *SAS*. https://blogs.sas.com/content/iml/2017/05/17/quantiles-flint-water-crisis.html
 
 - Zomorodi, M. (2014, June 8). Your Facebook friend said something racist. Now What?. In *Note to Self*. WNYC Studios. https://www.wnycstudios.org/podcasts/notetoself/episodes/your-facebook-friend-said-something-racist-now-what
 
