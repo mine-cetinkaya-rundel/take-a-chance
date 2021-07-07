@@ -33,7 +33,7 @@ With a mind towards achieving these goals, one of the GAISE (2016) recommendatio
 
 More specifically, when we have a data for social good approach, we help students understand the power of statistics and how it can impact their daily lives .
 
-In this article we focus on a course that takes a social good approach to teaching statistics. Then we share resources to help instructors start incorporating real data and social issues in their classrooms.
+In this article we focus on two courses that takes a social good approach to teaching statistics. Then we share resources to help instructors start incorporating real data and social issues in their classrooms.
 
 ## Consulting and Service Learning{-}
 
@@ -55,17 +55,43 @@ We provide an opportunity for students to address topics of social justice and e
 
 For many of our students, our course is the first time they have confronted the fact that mathematics and statistics are not neutral. In the course, they begin to evaluate their social and professional responsibilities, regardless of future profession, and we culminate our discussions with the creation of a Hippocratic Oath” as statisticians, mathematicians, and data scientists. Though we have kept the structure of the course consistent the last few years, the conversations continue to evolve as students bring their experiences and backgrounds to the discussion.
 
+*Note: we are happy to share our course materials upon request jcanner@csumb.edu* 
+
+## U of Chicago {-}
+
+In 2014, in the midst of a budget crisis, Flint, Michigan switched its municipal water supply from treated water imported from Detroit to locally sourced water from the Flint River. Unfortunately, officials chose not to include standard corrosion control chemicals in the local water treatment. This led to degradation of lead service lines and an increase in water lead content to levels far above federally mandated limits. State and local officials initially denied that there was a problem, but a coalition of Flint citizens gathered evidence of the increased lead levels in both the water and in the blood of Flint children. Eventually, the activists succeeded in pressuring the government to switch the water back and supply clean water in the meantime.
+
+In 2019, I developed and first taught a 10-week introductory statistics class at the University of Chicago which uses this water crisis as a case study. The course serves undergraduate non-STEM majors, primarily first and second-year students who want to fulfill a core mathematics requirement. It covers typical intro statistics topics, including descriptive statistics, probability, correlation and regression, and inference, but does not aim to prepare students for higher-level statistics courses.  
+
+Students in the Flint course use statistical concepts to answer key questions about the water crisis and the conditions leading up to it. In the first unit, students use descriptive statistics to examine income inequality between the city and the surrounding suburbs. Using census data, they explore how this inequality has changed over time and between different racial groups. We pair these exercises with readings about historical drivers of such inequality, such as redlining. In the second unit, they learn about percentiles and sample size as they see how the government was able to manipulate early lead sampling data to avoid passing federal lead thresholds. In the third unit, students use probability and inference to evaluate study results showing an increase in the percentage of Flint children with elevated blood lead levels (eBLLs). In the fourth unit, students learn about regression and use this to read studies about the health effects of childhood lead exposure. Finally, in the fifth unit, students make predictions about the effects of the Flint crisis on children’s future, and compare the size of the lead effect to the effects of other causes such as poverty.
+
+During the course, students read a memoir by the Flint pediatrician who recognized the increase in eBLLs, Dr Mona Hanna-Attisha. They also have an introductory statistics textbook as a reference. But they primarily spend their time interacting with primary sources, such as census data or lead measurements, or reading scientific articles. Because these sources are difficult, students spend a great deal of class time working in small groups to interpret their readings. For homework and final projects, students write essays in which they must use statistics in making their arguments.
+
+My biggest challenge when teaching course has come because the Flint course touches on important but difficult issues such as poverty and structural racism. As a statistics professor, I did not come in with training in addressing such sensitive topics in the classroom. I have found my university’s Center for Teaching to be very helpful resource in giving feedback and ideas for making my classroom a safe space for learning, even as we tackle difficult concepts.
+
+My goal in developing and teaching this course is to help students develop a sense of agency, with the citizen-scientists of Flint as a model. I hope that in their future lives, my students will have the confidence to believe they can use statistical tools and language when analyzing and addressing problems in their own communities.  
+
+  
 ## Resources for teaching {-}
 
 
 ## References {-}
-Alana Unfried & Judith Canner (2019) Doing Social Justice: Turning Talk into Action in a Mathematics Service Learning Course, PRIMUS, 29:3-4, 210-227, DOI: 10.1080/10511970.2018.1510862
 
-*Note: we are happy to share our course materials upon request jcanner@csumb.edu* 
+- Carver, R., Everson, M., Gabrosek, J., Horton, N., Lock, R., Mocko, M., ... & Wood, B. (2016). Guidelines for assessment and instruction in statistics education (GAISE) college report 2016. Available at [amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf).
 
-- Carver, Robert, et al. ``Guidelines for Assessment and Instruction in Statistics Education (GAISE) College Report 2016." (2016). Available at [amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf).
+- Clark, A. (2018). *The poisoned city: Flint's water and the American urban tragedy*. Metropolitan Books.
 
-- O-Neil, Cathy (2016). Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy Crown ISBN 13: 978-0553418811
+- Hanna-Attisha, M. (2019). *What the eyes don't see: A story of crisis, resistance, and hope in an American city*. One World.
 
-- Zomorodi, M. 2014. Your Facebook friend said something racist. Now What? https://www.wnycstudios.org/podcasts/notetoself/episodes/your-facebook-friend-said-something-racist-now-what. Accessed 8 June 2021.
+- Langkjær‐Bain, R. (2017). The murky tale of Flint's deceptive water data. *Significance*, 14(2), 16-21.
+
+- O'neil, C. (2016). *Weapons of math destruction: How big data increases inequality and threatens democracy*. Crown.
+
+
+- Unfried, A., & Canner, J. (2019). Doing social justice: turning talk into action in a mathematics service learning course. *PRIMUS*, 29(3-4), 210-227.
+
+- Wicklin, R. (2017, May 17). Quantiles and the Flint water crisis. SAS. https://blogs.sas.com/content/iml/2017/05/17/quantiles-flint-water-crisis.html
+
+- Zomorodi, M. (2014, June 8). Your Facebook friend said something racist. Now What?. In *Note to Self*. WNYC Studios. https://www.wnycstudios.org/podcasts/notetoself/episodes/your-facebook-friend-said-something-racist-now-what
+
 
