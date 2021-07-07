@@ -21,19 +21,11 @@ knitr::opts_chunk$set(echo = TRUE,
 library(knitr)
 ```
 
-Data and statistics have been used to help describe and understand a variety of social phenomena in recent years, from helping society understand the COVID-19 pandemic and vaccines, to election forecasting, to understanding trends in policing and the criminal justice system in the United States. As statistics has been more widely used to understand social phenomena, it is important that students are equipped with skills to engage critically with statistics used in the world around them. These skills are outlined in two goals for introductory statistics classes from the  2016 Guidelines for Assessment and Instruction in Statistics Education (GAISE) College Report 
+In recent years, statistics has had an increasing role in helping to understand current and historical societal phenomena ranging from the distribution of COVID-19 vaccines, to election forecasting, to understanding trends in policing and the criminal justice system in the United States. Therefore, it is important that students are equipped with skills to think critically and ask questions as they engage with data and statistics in the world around them. In fact, the [Guidelines for Assessment and Instruction in Statistics Education (GAISE)](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf) recommends that introductory courses "integrate real data with context and purpose."
 
-- *Goal 1: Students should become critical consumers of statistically-based results reported in
-popular media, recognizing whether reported results reasonably follow from the study
-and analysis conducted.*
-- *Goal 9: Students should demonstrate an awareness of ethical issues associated with sound
-statistical practice.*
+Additionally, using statistics to explore social issues gives students experience grappling with the complexities, and questions that arise when using data to help understand human behavior and society. It also shows students the relevance of statistics in their daily lives and empowers them to use a data-driven approach as they engage with these issues outside of the classroom.
 
-With a mind towards achieving these goals, one of the GAISE (2016) recommendations for introductory statistics courses is to "integrate real data with context and purpose." In addition to equipping students with the skills outlined in the GAISE (2016) guidelines, using real data in the classroom helps keep students engaged as they are able to better connect with the examples they're presented and can more easily understand the relevance of statistics in their daily lives. 
-
-More specifically, when we have a data for social good approach, we help students understand the power of statistics and how it can impact their daily lives .
-
-In this article we focus on two courses that takes a social good approach to teaching statistics. Then we share resources to help instructors start incorporating real data and social issues in their classrooms. [Add brief description of the courses]
+In this column we describe two courses that focus on the role of statistics in understanding social issues. The first is an introductory statistics course developed by Kendra Burbank at the University of Chicago where students learn statistical methods as they explore different aspects of the water crisis in Flint, Michigan. Then, we describe an intermediate-level service learning course taught by Judith Canner and  Alana Unfried at California State University Monterey Bay University where students use statistics to consult with local non-profits and learn how to take a data-driven approach to affect change. We conclude with resources for instructors interested in incorporating social issues in their courses.
 
 ## Introductory course focused on Flint, Michigan
 
