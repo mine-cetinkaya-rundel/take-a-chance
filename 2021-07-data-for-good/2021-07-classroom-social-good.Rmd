@@ -72,7 +72,7 @@ For many of our students, our course is the first time they have confronted the 
 
 *Note: We are happy to share our course materials upon request.Email jcanner@csumb.edu.* 
   
-## Additional resources for teaching {-}
+## Resources for Teaching {-}
 
 In this column we've shared courses that give students an opportunity to deeply engage with specific social issues and the role statistics has in helping us understand them throughout an entire semester. Below are resources for instructors interested in implementing the discussion of social issues in their courses: 
 
@@ -80,7 +80,7 @@ In this column we've shared courses that give students an opportunity to deeply 
   - Data Is Plural: [data-is-plural.com](https://www.data-is-plural.com/)
   - Tidy Tuesday: [github.com/rfordatascience/tidytuesday](https://github.com/rfordatascience/tidytuesday)
   - U.S. Government Open Data: [data.gov](https://www.data.gov/)
-- FiveThirtyEight: [data.fivethirtyeight.com](https://data.fivethirtyeight.com/)
+  - FiveThirtyEight: [data.fivethirtyeight.com](https://data.fivethirtyeight.com/)
 
 - Teaching & classroom activities: 
 
