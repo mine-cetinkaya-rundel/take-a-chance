@@ -1,6 +1,6 @@
 ---
-title: "Data for social good in the classroom"
-author: ""
+title: "Teaching Courses Focused on Social Good"
+author: "Maria Tackett, Kendra Burbank, Judith Canner, Mine Çetinkaya-Rundel"
 date: "July 2021"
 output: 
   bookdown::pdf_document2: 
@@ -27,7 +27,7 @@ Additionally, using statistics to explore social issues gives students experienc
 
 In this column we describe two courses that focus on the role of statistics in understanding social issues. The first is an introductory statistics course developed by Kendra Burbank at the University of Chicago where students learn statistical methods as they explore different aspects of the water crisis in Flint, Michigan. Then, we describe an intermediate-level service learning course taught by Judith Canner and  Alana Unfried at California State University Monterey Bay University where students use statistics to consult with local non-profits and learn how to take a data-driven approach to affect change. We conclude with resources for instructors interested in incorporating social issues in their courses.
 
-## Introductory course focused on Flint, Michigan
+## Introductory Course Focused on Flint, Michigan {-}
 
 In 2014, in the midst of a budget crisis, Flint, Michigan switched its municipal water supply from treated water imported from Detroit to locally sourced water from the Flint River. Unfortunately, officials chose not to include standard corrosion control chemicals in the local water treatment. This led to degradation of lead service lines and an increase in water lead content to levels far above federally mandated limits. State and local officials initially denied that there was a problem, but a coalition of Flint citizens gathered evidence of the increased lead levels in both the water and in the blood of Flint children. Eventually, the activists succeeded in pressuring the government to switch the water back and supply clean water in the meantime.
 
