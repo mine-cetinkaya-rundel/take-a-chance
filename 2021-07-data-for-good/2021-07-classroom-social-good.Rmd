@@ -25,7 +25,7 @@ In recent years, statistics has had an increasing role in helping to understand 
 
 Additionally, using statistics to explore social issues gives students experience grappling with the complexities, and questions that arise when using data to help understand human behavior and society. It also shows students the relevance of statistics in their daily lives and empowers them to use a data-driven approach as they engage with these issues outside of the classroom.
 
-In this column we describe two courses that focus on the role of statistics in understanding social issues. The first is an introductory statistics course developed by Kendra Burbank at the University of Chicago where students learn statistical methods as they explore different aspects of the water crisis in Flint, Michigan. Then, we describe an intermediate-level service learning course taught by Judith Canner and  Alana Unfried at California State University Monterey Bay University where students use statistics to consult with local non-profits and learn how to take a data-driven approach to affect change. We conclude with resources for instructors interested in incorporating social issues in their courses.
+In this column we describe two courses that focus on the role of statistics in understanding social issues. The first is an introductory statistics course developed by Dr. Kendra Burbank at the University of Chicago where students learn statistical methods as they explore different aspects of the water crisis in Flint, Michigan. Then, we describe an intermediate-level service learning course taught by Dr. Judith Canner and  Dr. Alana Unfried at California State University Monterey Bay University where students use statistics to consult with local non-profits and learn how to take a data-driven approach to affect change. We conclude with resources for instructors interested in incorporating social issues in their courses.
 
 ## Introductory Course Focused on Flint, Michigan {-}
 
@@ -70,7 +70,7 @@ We provide an opportunity for students to address topics of social justice and e
 
 For many of our students, our course is the first time they have confronted the fact that mathematics and statistics are not neutral. In the course, they begin to evaluate their social and professional responsibilities, regardless of future profession, and we culminate our discussions with the creation of a ``Hippocratic Oath" as statisticians, mathematicians, and data scientists. Though we have kept the structure of the course consistent the last few years, the conversations continue to evolve as students bring their experiences and backgrounds to the discussion.
 
-*Note: We are happy to share our course materials upon request.Email jcanner@csumb.edu.* 
+*Note: We are happy to share our course materials upon request. Email jcanner@csumb.edu.* 
   
 ## Resources for Teaching {-}
 
@@ -85,13 +85,13 @@ In this column we've shared courses that give students an opportunity to deeply 
 - Teaching & classroom activities: 
 
   - Hardin, J. (2020, July 29). Social Justice & Data Science. *Teach Data Science*.  [teachdatascience.com/socialjustice](https://teachdatascience.com/socialjustice/)
-  - What's Going On in This Graph? (n.d.) *New York Times*. [www.nytimes.com/column/whats-going-on-in-this-graph](https://www.nytimes.com/column/whats-going-on-in-this-graph)
+  - What's Going On in This Graph? *New York Times*. [www.nytimes.com/column/whats-going-on-in-this-graph](https://www.nytimes.com/column/whats-going-on-in-this-graph)
   - Skew the Script (n.d.). [skewthescript.org](https://skewthescript.org/)
   - Tackett, M., & Çetinkaya-Rundel, M. (2020). COVID-19 Data in the Classroom. CHANCE, 33(3), 63-66. [oi.org/10.1080/09332480.2020.1820257](https://doi.org/10.1080/09332480.2020.1820257)
 
 
 
-## References {-}
+## Further reading {-}
 
 - Carver, R., Everson, M., Gabrosek, J., Horton, N., Lock, R., Mocko, M., ... & Wood, B. (2016). Guidelines for assessment and instruction in statistics education (GAISE) college report 2016. Available at [amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf).
 
@@ -101,7 +101,7 @@ In this column we've shared courses that give students an opportunity to deeply 
 
 - Langkjær‐Bain, R. (2017). The murky tale of Flint's deceptive water data. *Significance*, 14(2), 16-21.
 
-- O'neil, C. (2016). *Weapons of math destruction: How big data increases inequality and threatens democracy*. Crown.
+- O'Neil, C. (2016). *Weapons of math destruction: How big data increases inequality and threatens democracy*. Crown.
 
 
 - Unfried, A., & Canner, J. (2019). Doing social justice: turning talk into action in a mathematics service learning course. *PRIMUS*, 29(3-4), 210-227.
