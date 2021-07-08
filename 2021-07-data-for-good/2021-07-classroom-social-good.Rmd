@@ -91,7 +91,7 @@ In this column we've shared courses that give students an opportunity to deeply 
 
 
 
-## Further reading {-}
+## Further Reading {-}
 
 - Carver, R., Everson, M., Gabrosek, J., Horton, N., Lock, R., Mocko, M., ... & Wood, B. (2016). Guidelines for assessment and instruction in statistics education (GAISE) college report 2016. Available at [amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf).
 
