@@ -7,5 +7,8 @@ Articles for the Taking a Chance in the Classroom column of [CHANCE](https://www
 - [Outcome-Oriented Educational Tasks With Flipbooks](https://doi.org/10.1080/09332480.2020.1847963)
 - [The Data Science Instructional Escape Room-a Successful Experiment](https://doi.org/10.1080/09332480.2021.1915034)
  
-- Sep 2021 issue due July 8 
-- Nov 2021 issue due ?? 
+- Nov 2021 issue due September?
+
+---
+
+[ASA Magazine Style Guide](https://magazine.amstat.org/wp-content/uploads/2020/02/style_2020.pdf)
