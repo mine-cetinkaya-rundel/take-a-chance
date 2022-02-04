@@ -13,11 +13,14 @@ Helpful links can be found below (https://bit.ly/taking-a-chance).
 Example of creating a feature:
 https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FESk6Hc14NGjmbU1DOsAk%2Ffile.json 
 
-Example of the "bag of words":
-https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2Fq85Ry2T9HrizpOz27gmq%2Ffile.json 
+StoryQ app: https://concord.org/storyq/app
+
+Example of the "bag of words" using StoryQ with spam data: http://short.concord.org/lq9
 
 Example of creating a tree:
 https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2F6IflG42x1N2p0hNzs7x5%2Ffile.json 
+
+
 
 https://nicholasjhorton.shinyapps.io/spam_classifier/ (thanks to [Leah Johnson](https://github.com/leahannejohnson)!)
 
