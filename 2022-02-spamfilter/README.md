@@ -10,33 +10,34 @@ The column describes four different ways to provide students with experiences cl
 
 Helpful links can be found below (https://bit.ly/taking-a-chance).
 
-Example of creating a feature:
+- Example of creating a feature:
 https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FESk6Hc14NGjmbU1DOsAk%2Ffile.json 
 
-StoryQ app: https://concord.org/storyq/app
+- StoryQ app (with email subject line data): http://short.concord.org/lq9
 
-Example of the "bag of words" using StoryQ with spam data: http://short.concord.org/lq9
+- StoryQ app (with frozen dessert reviews data): https://concord.org/storyq/app
 
-Example of creating a tree:
+- Example of the "bag of words" using StoryQ with spam data: http://short.concord.org/lq9
+
+- Example of creating a tree:
 https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2F6IflG42x1N2p0hNzs7x5%2Ffile.json 
 
 
+- Shiny app to classify emails: https://nicholasjhorton.shinyapps.io/spam_classifier/ (thanks to [Leah Johnson](https://github.com/leahannejohnson)!)
 
-https://nicholasjhorton.shinyapps.io/spam_classifier/ (thanks to [Leah Johnson](https://github.com/leahannejohnson)!)
-
-Datasets of email subject lines and news headlines: https://github.com/leahannejohnson/textclassificationexamples
+- Datasets of email subject lines and news headlines: https://github.com/leahannejohnson/textclassificationexamples
 
 ## Further reading and resources
 
-CATALST (Change Agents for Teaching and Learning Statistics) Group (2009). "Creating a Spam Filter", https://serc.carleton.edu/sp/cause/mea/examples/example3.html 
+- CATALST (Change Agents for Teaching and Learning Statistics) Group (2009). "Creating a Spam Filter", https://serc.carleton.edu/sp/cause/mea/examples/example3.html 
 
-CODAP (Common Online Data Access Platform) (2022). https://codap.concord.org 
+- CODAP (Common Online Data Access Platform) (2022). https://codap.concord.org 
 
-Concord Consortium (2021). "Narrative Modeling using StoryQ", https://concord.org/our-work/research-projects/storyq/ 
+- Concord Consortium (2021). "Narrative Modeling using StoryQ", https://concord.org/our-work/research-projects/storyq/ 
 
-Nolan, D and Temple Lang, D. (2015). "Using Statistics to Identify Spam", 
+- Nolan, D and Temple Lang, D. (2015). "Using Statistics to Identify Spam", 
 in "Data Science in R: A Case Studies Approach to Computational Reasoning and Problem Solving", CRC Press, https://rdatasciencecases.org 
 
-Spamlaws.com (2022), "Spamlaws: How to Stop Scams and Fraud", https://www.spamlaws.com 
+- Spamlaws.com (2022), "Spamlaws: How to Stop Scams and Fraud", https://www.spamlaws.com 
 
 
