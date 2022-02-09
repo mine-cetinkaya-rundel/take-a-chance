@@ -30,13 +30,13 @@ The world is full of data, and much of it is unstructured. An example is text da
 
 While there are many interesting literary analyses that one might consider, we explore a more mundane but familiar example by exploring when a text string taken from an email subject line is spam (an unwanted or inappropriate email message).
 
-In this column we briefly describe four different ways to provide students with experiences classifying text as data by exploring spam. The data for the examples along with helpful links can be found in the GitHub repository accompanying this column at http://bit.ly/taking-a-chance.
+In this column we briefly describe four different ways to provide students with experiences classifying text as data by exploring spam. The data for the examples along with helpful links can be found in the GitHub repository accompanying this column at [*bit.ly/taking-a-chance*](http://bit.ly/taking-a-chance).
 
 
 ## What is spam? {-}
 
 Email users are unfortunately all too familiar with spam.
-The website https://www.spamlaws.com, based on materials created by David E. Sorkin from John Marshall Law School, provides some additional background on these indiscriminate and unwanted communications.
+The website [*www.spamlaws.com*](https://www.spamlaws.com), based on materials created by David E. Sorkin from John Marshall Law School, provides some additional background on these indiscriminate and unwanted communications.
 This site defines spam as "submitting the same message to a large group of individuals in an effort to force the message onto people who would otherwise choose not to receive this message."
 The problem of spam is notable: they estimate that there are more than 14 billion spam messages created daily: a substantial fraction of all emails.
 
@@ -69,7 +69,7 @@ Before we proceed further, it's important to keep in mind (particularly for inst
 
 ### Model Eliciting Activities and SPAM classification {-}
 
-Model Eliciting Activities (MEA) are designed to let students explore open-ended problems that represent real-world problems (CATALST, 2009).
+The CATALST (Change Agents for Teaching and Learning Statistics) Group defines Model Eliciting Activities (MEA) as those that are designed to let students explore open-ended problems that represent real-world problems.
 We consider an MEA developed by researchers at the University of Minnesota where students are encouraged to invent approaches to classify spam messages.
 This MEA has often been incorporated into an undergraduate introductory statistics course by the first author.
 
@@ -190,7 +190,7 @@ While constrained to this particular example and feature set, the Shiny app allo
 A number of activities might be explored, including calculation of predicted probabilities for a simple logistic regression model, or comparison of the predicted probabilities for a logistic regression vs. tree model. 
 No coding is needed for this exploration: as is true for CODAP, all that is required is access to a browser. 
 
-Example of the Clickbait Shiny app: https://nicholasjhorton.shinyapps.io/spam_classifier 
+Example of the Clickbait Shiny app: [*nicholasjhorton.shinyapps.io/spam_classifier*](https://nicholasjhorton.shinyapps.io/spam_classifier) 
 
 
 ### Classifying SPAM using R {-}
@@ -208,7 +208,7 @@ In this column we provided an overview of four approaches to engage students in 
 These varied in their use of technology and student background but all shared a common goal of using data to make better decisions (and how to judge how accurate those decisions were).
 We believe that text data deserves a larger space in the curriculum and offer these approaches as tractable ways to get started. 
 
-You can find the data, the code for reproducing the figures we presented, and links to the additional resources we mentioned in the GitHub repository for this column at http://bit.ly/taking-a-chance.
+You can find the data, the code for reproducing the figures we presented, and links to the additional resources we mentioned in the GitHub repository for this column at [*bit.ly/taking-a-chance*](http://bit.ly/taking-a-chance).
 
 
 ## Further reading {-}
