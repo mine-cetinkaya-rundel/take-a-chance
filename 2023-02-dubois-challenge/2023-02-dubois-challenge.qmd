@@ -17,9 +17,9 @@ editor: visual
 
 -   Share two examples activities to use the challenges in an introductory and more advanced statistics class
 
-## Activity for Intro Statistics 
+## Activity 1
 
-## Activity for advanced statistics 
+## Activity 2
 
 ## Conclusion 
 
