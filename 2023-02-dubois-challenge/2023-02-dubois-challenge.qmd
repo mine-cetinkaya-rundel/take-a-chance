@@ -1,0 +1,26 @@
+---
+title: "Working title: DuBois Challenge"
+execute: 
+  warning: false
+  message: false
+  echo: false
+editor: visual
+---
+
+## Introduction 
+
+-   Including data visualization history in statistics classes
+
+-   W.E.B. Du Bois contribution to data visualization
+
+-   Introduce Du Bois challenge
+
+-   Share two examples activities to use the challenges in an introductory and more advanced statistics class
+
+## Activity for Intro Statistics 
+
+## Activity for advanced statistics 
+
+## Conclusion 
+
+## Further reading
