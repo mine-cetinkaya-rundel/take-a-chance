@@ -9,7 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Introduction (\~ 3 paragraphs)
+## Introduction
 
 In 2021, [PERSON 1] and [PERSON 2] partnered with #TidyTuesday, a weekly social media data visualization challenge, to introduce the #DuBoisChallenge. In this annual challenge, the goal is to use modern computing, such as R or Python, to recreate visualizations originally drawn by [SOCIOLOGIST? ] and data visualization Pioneer, W.E.B. Du Bois. 
 
@@ -160,7 +160,9 @@ Order of activities
 
 ## Conclusion
 
+
 -   Add something in here about having thoughtful conversations (maybe there is something in the statistics history repo?)
+=======
 
 ## Further reading
 
