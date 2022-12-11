@@ -7,7 +7,7 @@ execute:
 editor: visual
 ---
 
-## Introduction 
+## Introduction
 
 -   Including data visualization history in statistics classes
 
@@ -21,6 +21,6 @@ editor: visual
 
 ## Activity 2
 
-## Conclusion 
+## Conclusion
 
 ## Further reading
