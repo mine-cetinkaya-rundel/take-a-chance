@@ -54,26 +54,100 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction-3-paragraphs" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-3-paragraphs">Introduction (~ 3 paragraphs)</h2>
 <ul>
-<li><p>Including data visualization history in statistics classes</p></li>
-<li><p>W.E.B. Du Bois contribution to data visualization</p></li>
-<li><p>Introduce Du Bois challenge</p></li>
-<li><p>Share two examples activities to use the challenges in an introductory and more advanced statistics class</p></li>
+<li><p>TidyTuesday 2021 week on Du Bois Challenge.</p>
+<ul>
+<li><p>Describe Du Bois Challenge and its origins</p></li>
+<li><p>Nice thing about the challenge is that you are learning relevant history while also practicing skills in data visualization</p></li>
+<li><p>Including data visualization history in statistics classes.</p></li>
+<li><p>There may be a brief introduction using some well-known early data visualizations by Florence Nightingale for example.</p></li>
+<li><p>An important but lesser discussed contributor to data visualization is W.E.B. Du Bois.</p></li>
+</ul></li>
+<li><p>Brief history of Du Bois</p>
+<ul>
+<li><p>Who he was and his primary work</p></li>
+<li><p>His contribution to data visualization. Visualizations are hand drawn, a variety of types and also give a view into the domestic life of African Americans in the late 1800s and early 1900s.</p></li>
+<li><p>Read more - add some resources</p></li>
+</ul></li>
+<li><p>In this article we will share two examples of how Du Bois’ visualizations can be used in the classroom to not only discuss a fuller picture of history but also give students practice with creating visualizations using ggplot2 in R. The first activity will be aimed at introductory students and the latter for more advanced students.</p></li>
 </ul>
 </section>
 <section id="activity-1" class="level2">
 <h2 class="anchored" data-anchor-id="activity-1">Activity 1</h2>
+<ul>
+<li>By this point students are learned about creating and interpreting visualizations in ggplot2 along with some data wrangling. This activity could come towards the beginning of the term after these topics have been taught (may require more guidance to help students) or at the end of the term when students are very familiar with using R.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/income-expenditures-orig.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Source: https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/challenge05/original-plate-31.jpg (find LOC source)</figcaption><p></p>
+</figure>
+</div>
+<!--# Find Library of Congress citation. -->
+<!--# https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-16/readme.md-->
+<section id="recreation" class="level3">
+<h3 class="anchored" data-anchor-id="recreation">Recreation</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="2023-02-dubois-challenge_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+<p>Order of activities</p>
+<ul>
+<li><p>Have students analyze the graph.</p>
+<ul>
+<li><p>What type of graph is this?</p></li>
+<li><p>What is being shown on this graph?</p></li>
+<li><p>What are some observations you have from the graph?</p></li>
+<li><p>What additional questions do you have after viewing this graph?</p></li>
+</ul></li>
+<li><p>Recreate the graph</p>
+<ul>
+<li><p>Data prep.</p>
+<ul>
+<li><p>Get students to load the data.</p></li>
+<li><p>What’s the format the data need to be in to make a segmented barplot?</p></li>
+</ul></li>
+<li><p>Make a basic segmented barplot</p>
+<ul>
+<li><p>You will need to use <code>geom_col()</code> since the percentages and the categories are in two different columns.</p></li>
+<li><p>add note about difference between geom_bar and geom_col</p></li>
+<li><p>You could provide this base code for students or ask them to write it themselves.</p></li>
+</ul></li>
+<li><p>Add titles and subtitles</p></li>
+<li><p>customize axes and theme.</p></li>
+<li><p>Change bar colors - dubois color palette</p></li>
+<li><p>coordflip so it is horizontal and move legend to the top</p></li>
+<li><p>Add labels within each bar</p></li>
+<li><p>add titles along side.</p></li>
+<li><p>customize background color</p></li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="activity-2" class="level2">
 <h2 class="anchored" data-anchor-id="activity-2">Activity 2</h2>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li>Add something in here about having thoughtful conversations (maybe there is something in the statistics history repo?)</li>
+</ul>
 </section>
 <section id="further-reading" class="level2">
 <h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><p>Du Bois TidyTuesday</p>
+<ul>
+<li><p>2022: https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-02-15/readme.md</p></li>
+<li><p>2021 (tweets from the challenge): https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-06-15/readme.md</p></li>
+</ul></li>
+<li><p>Du Bois data portraits repo: https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022</p></li>
+<li><p>Anthony Starks presentation on recreating the images: https://speakerdeck.com/ajstarks/recreating-the-dubois-data-portraits?</p></li>
+<li><p>W.E.B. Du Bois visuailzation book</p></li>
+</ul>
 </section>
 
 </main>

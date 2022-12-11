@@ -1,26 +1,177 @@
 ---
 title: "Working title: DuBois Challenge"
+fomrat: pdf
 execute: 
   warning: false
   message: false
-  echo: false
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Introduction 
+## Introduction (\~ 3 paragraphs)
 
--   Including data visualization history in statistics classes
+In 2021, [PERSON 1] and [PERSON 2] partnered with #TidyTuesday, a weekly social media data visualization challenge, to introduce the #DuBoisChallenge. In this annual challenge, the goal is to use modern computing, such as R or Python, to recreate visualizations originally drawn by [SOCIOLOGIST? ] and data visualization Pioneer, W.E.B. Du Bois. 
 
--   W.E.B. Du Bois contribution to data visualization
 
--   Introduce Du Bois challenge
+-   TidyTuesday 2021 week on Du Bois Challenge.
 
--   Share two examples activities to use the challenges in an introductory and more advanced statistics class
+    -   Describe Du Bois Challenge and its origins
+
+    -   Nice thing about the challenge is that you are learning relevant history while also practicing skills in data visualization
+
+    -   Including data visualization history in statistics classes.
+
+    -   There may be a brief introduction using some well-known early data visualizations by Florence Nightingale for example.
+
+    -   An important but lesser discussed contributor to data visualization is W.E.B. Du Bois.
+
+-   Brief history of Du Bois
+
+    -   Who he was and his primary work
+
+    -   His contribution to data visualization. Visualizations are hand drawn, a variety of types and also give a view into the domestic life of African Americans in the late 1800s and early 1900s.
+
+    -   Read more - add some resources
+
+-   In this article we will share two examples of how Du Bois' visualizations can be used in the classroom to not only discuss a fuller picture of history but also give students practice with creating visualizations using ggplot2 in R. The first activity will be aimed at introductory students and the latter for more advanced students.
 
 ## Activity 1
 
+-   By this point students are learned about creating and interpreting visualizations in ggplot2 along with some data wrangling. This activity could come towards the beginning of the term after these topics have been taught (may require more guidance to help students) or at the end of the term when students are very familiar with using R.
+
+![Source: https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/challenge05/original-plate-31.jpg (find LOC source)](img/income-expenditures-orig.jpeg)
+
+<!--# Find Library of Congress citation. -->
+
+<!--# https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-16/readme.md-->
+
+### Recreation
+
+```{r}
+#| echo: false
+#| fig-width: 10
+
+library(tidyverse)
+library(scales)
+library(showtext)
+
+showtext_auto()
+
+# Style guide: https://github.com/ajstarks/dubois-data-portraits/blob/master/dubois-style.pdff
+font_add_google("Big Shoulders Display", "shoulders")
+income_wide <- read_csv(here::here("2023-02-dubois-challenge", "data/income.csv")) |>
+  rename(class = Class,
+         average_income = Actual_Average)
+
+# reformat data-----------------------------------------------------------------
+income_long <- income_wide |>
+  pivot_longer(cols = -c(class, average_income),
+               names_to = "expenditure",
+               values_to = "percentage")
+
+#order expenditure categories-----------------------------------------
+# ensures the categories are in the same order as original in the plot
+income_long <- income_long |>
+  mutate(expenditure = factor(expenditure, levels = c("Other", "Tax", "Clothes",
+                                         "Food", "Rent")),
+         percent_label = if_else(percentage < 1, "", paste0(percentage, "%")),
+         class_income = paste(class, paste0("$", average_income), sep = " | "),
+         class_income = factor(class_income, levels = c("$100-200 | $139.1",
+                                                        "$200-300 | $249.45",
+                                                        "$300-400 | $335.66",
+                                                        "$400-500 | $433.82",
+                                                        "$500-750 | $547",
+                                                        "$750-1000 | $880",
+                                                        "$1000 AND OVER | $1125"))
+  )
+
+# full code---------------------------------------------------------------------
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(color = "black", size = 0.25, alpha = 0.6, position = "stack", width  = 0.5) +
+  labs(x = "",
+       y = "",
+       fill = "",
+       title = "INCOME AND EXPENDITURE OF 150 NEGRO FAMILIES IN ATLANTA, GA, U.S.A") +
+  scale_fill_manual(labels = c("RENT.", "FOOD.", "CLOTHES.", "DIRECT TAXES.", "OTHER EXPENSES AND SAVINGS."),
+                    values = c("Rent" = "#000000", "Food" = "#b19cd9",
+                               "Clothes" = "#ffc0cb", "Tax" = "#4682B4",
+                               "Other" = "#E9E9E9")) +
+  coord_flip() +
+  scale_x_discrete(limits = rev) +
+  geom_text(aes(label = percent_label, color = expenditure == "Rent"),
+            position = position_stack(0.5),
+            family = "shoulders",
+            size = 4,
+            fontface = "bold"
+  ) +
+  scale_color_manual(values = c("black", "white"))+
+  guides(color = "none") +
+  theme_void() +
+  theme(legend.position = "top",
+        axis.text.y  = element_text(hjust = 0.5, family = "shoulders"),
+        plot.title = element_text(family = "shoulders", size = 20),
+        plot.background = element_rect(fill = "#e4d2c1"))
+```
+
+Order of activities
+
+-   Have students analyze the graph.
+
+    -   What type of graph is this?
+
+    -   What is being shown on this graph?
+
+    -   What are some observations you have from the graph?
+
+    -   What additional questions do you have after viewing this graph?
+
+-   Recreate the graph
+
+    -   Data prep.
+
+        -   Get students to load the data.
+
+        -   What's the format the data need to be in to make a segmented barplot?
+
+    -   Make a basic segmented barplot
+
+        -   You will need to use `geom_col()` since the percentages and the categories are in two different columns.
+
+        -   add note about difference between geom_bar and geom_col
+
+        -   You could provide this base code for students or ask them to write it themselves.
+
+    -   Add titles and subtitles
+
+    -   customize axes and theme.
+
+    -   Change bar colors - dubois color palette
+
+    -   coordflip so it is horizontal and move legend to the top
+
+    -   Add labels within each bar
+
+    -   add titles along side.
+
+    -   customize background color
+
 ## Activity 2
 
-## Conclusion 
+## Conclusion
+
+-   Add something in here about having thoughtful conversations (maybe there is something in the statistics history repo?)
 
 ## Further reading
+
+-   Du Bois TidyTuesday
+
+    -   2022: https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-02-15/readme.md
+
+    -   2021 (tweets from the challenge): https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-06-15/readme.md
+
+-   Du Bois data portraits repo: https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022
+
+-   Anthony Starks presentation on recreating the images: https://speakerdeck.com/ajstarks/recreating-the-dubois-data-portraits?
+
+-   W.E.B. Du Bois visuailzation book
