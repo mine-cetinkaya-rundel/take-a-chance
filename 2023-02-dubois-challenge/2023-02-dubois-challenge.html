@@ -54,29 +54,33 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<p>[ADD DISCLAIMER ABOUT ANTIQUATED LANGUAGE USED]</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In 2021, [PERSON 1] and [PERSON 2] partnered with #TidyTuesday, a weekly social media data visualization challenge, to introduce the #DuBoisChallenge. In this annual challenge, the goal is to use modern computing, such as R or Python, to recreate visualizations originally drawn by [SOCIOLOGIST? ] and data visualization Pioneer, W.E.B. Du Bois.</p>
+<p>In February 2021, Allen Hillery, Athony Starks, and Sekou Tyler, started the #DuboisChallenge, and annual online challenge where participants use modern data visualization tools such as R, Python, and Tableau, among others, to recreate the data visualizations in W.E.B. Du Bois’s 1900 Paris exhibition <em>Exposition des Nègres d’Amérique</em> (<em>The Exhibit of American Negroes</em>). The seven-week challenge included 10 out of the over 60 visualizations in the original exhibit. Each week, participants were tasked with recreating one of the visualizations and there were three “bonus” visualization challenges. People used social media to share their recreations side-by-side with the originals using the tag #DuBoisChallenge, and many shared the code they used for the recreation. The challenge took place again in February 2022 and it was featured in 2021 and 2022 as part of RStudio’s weekly online data visualization event, TidyTuesday.</p>
+<p>Many instructors in statistics and data science courses present the historical work of Florence Nightingale, a pioneer of data visualization, as early examples of visually presenting data in a compelling way. Less often presented, however, is the work of W.E.B. Du Bois, a sociologist, author, and activist, who used data visualizations to share the lived experience of African Americans in the late 19th and early 20th centuries. Though not a statistician by training, the influence of his work can still be seen in the visualizations produced by the statistics and data science communities today. As the statistics community (and STEM more broadly) strives to increase representation by people in historically marginalized groups, there is an opportunity to share and celebrate the historical work of pioneers like W.E.B. Du Bois in the classroom.</p>
+<p>In this column we present examples of activities for the classroom that are inspired by the #DuBoisChallenge. We begin with a brief history of the 1900 Paris exhibit. Then we present two activities for introductory-level students based on the visualization “Proportion of Total Negro Children of School Age Who Are Enrolled in the Public Schools.” We walk through these activities in detail, sharing discussion questions as students interpret the graph along with guidance to lead students through recreating the visualization. Next we present examples of two more recreation activities that can be used as a follow-up to the first or for students in more advanced-level data visualization courses. All of the activities are presented using <code>ggplot2</code> in R; however, the came concepts could be applied to recreate the visualizations using other software.</p>
+<p>The data for the visualization and R code to recreate the visualizations presented in this column are available in the GitHub repository at <a href="http://bit.ly/taking-a-chance">bit.ly/taking-a-chance</a> .</p>
+</section>
+<section id="a-brief-history" class="level2">
+<h2 class="anchored" data-anchor-id="a-brief-history">A Brief History</h2>
 <ul>
-<li><p>TidyTuesday 2021 week on Du Bois Challenge.</p>
-<ul>
-<li><p>Describe Du Bois Challenge and its origins</p></li>
-<li><p>Nice thing about the challenge is that you are learning relevant history while also practicing skills in data visualization</p></li>
-<li><p>Including data visualization history in statistics classes.</p></li>
-<li><p>There may be a brief introduction using some well-known early data visualizations by Florence Nightingale for example.</p></li>
-<li><p>An important but lesser discussed contributor to data visualization is W.E.B. Du Bois.</p></li>
-</ul></li>
 <li><p>Brief history of Du Bois</p>
 <ul>
 <li><p>Who he was and his primary work</p></li>
 <li><p>His contribution to data visualization. Visualizations are hand drawn, a variety of types and also give a view into the domestic life of African Americans in the late 1800s and early 1900s.</p></li>
-<li><p>Read more - add some resources</p></li>
+<li><p>Discuss visualizations in the 1900 exhibit.</p></li>
 </ul></li>
-<li><p>In this article we will share two examples of how Du Bois’ visualizations can be used in the classroom to not only discuss a fuller picture of history but also give students practice with creating visualizations using ggplot2 in R. The first activity will be aimed at introductory students and the latter for more advanced students.</p></li>
 </ul>
 </section>
 <section id="activity-1" class="level2">
 <h2 class="anchored" data-anchor-id="activity-1">Activity 1</h2>
+</section>
+<section id="activity-2" class="level2">
+<h2 class="anchored" data-anchor-id="activity-2">Activity 2</h2>
+</section>
+<section id="extension" class="level2">
+<h2 class="anchored" data-anchor-id="extension">Extension</h2>
 <ul>
 <li>By this point students are learned about creating and interpreting visualizations in ggplot2 along with some data wrangling. This activity could come towards the beginning of the term after these topics have been taught (may require more guidance to help students) or at the end of the term when students are very familiar with using R.</li>
 </ul>
@@ -95,47 +99,10 @@ ul.task-list{list-style: none;}
 <p><img src="2023-02-dubois-challenge_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
-<p>Order of activities</p>
-<ul>
-<li><p>Have students analyze the graph.</p>
-<ul>
-<li><p>What type of graph is this?</p></li>
-<li><p>What is being shown on this graph?</p></li>
-<li><p>What are some observations you have from the graph?</p></li>
-<li><p>What additional questions do you have after viewing this graph?</p></li>
-</ul></li>
-<li><p>Recreate the graph</p>
-<ul>
-<li><p>Data prep.</p>
-<ul>
-<li><p>Get students to load the data.</p></li>
-<li><p>What’s the format the data need to be in to make a segmented barplot?</p></li>
-</ul></li>
-<li><p>Make a basic segmented barplot</p>
-<ul>
-<li><p>You will need to use <code>geom_col()</code> since the percentages and the categories are in two different columns.</p></li>
-<li><p>add note about difference between geom_bar and geom_col</p></li>
-<li><p>You could provide this base code for students or ask them to write it themselves.</p></li>
-</ul></li>
-<li><p>Add titles and subtitles</p></li>
-<li><p>customize axes and theme.</p></li>
-<li><p>Change bar colors - dubois color palette</p></li>
-<li><p>coordflip so it is horizontal and move legend to the top</p></li>
-<li><p>Add labels within each bar</p></li>
-<li><p>add titles along side.</p></li>
-<li><p>customize background color</p></li>
-</ul></li>
-</ul>
 </section>
-</section>
-<section id="activity-2" class="level2">
-<h2 class="anchored" data-anchor-id="activity-2">Activity 2</h2>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<ul>
-<li><h1 id="add-something-in-here-about-having-thoughtful-conversations-maybe-there-is-something-in-the-statistics-history-repo">Add something in here about having thoughtful conversations (maybe there is something in the statistics history repo?)</h1></li>
-</ul>
 </section>
 <section id="further-reading" class="level2">
 <h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
@@ -147,7 +114,7 @@ ul.task-list{list-style: none;}
 </ul></li>
 <li><p>Du Bois data portraits repo: https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022</p></li>
 <li><p>Anthony Starks presentation on recreating the images: https://speakerdeck.com/ajstarks/recreating-the-dubois-data-portraits?</p></li>
-<li><p>W.E.B. Du Bois visuailzation book</p></li>
+<li><p>W.E.B. Du Bois Data Visualization book</p></li>
 </ul>
 </section>
 
