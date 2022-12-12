@@ -1,10 +1,13 @@
 ---
 title: "Working title: DuBois Challenge"
+format: pdf
 execute: 
   warning: false
   message: false
   echo: false
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Introduction
@@ -17,7 +20,219 @@ editor: visual
 
 -   Share two examples activities to use the challenges in an introductory and more advanced statistics class
 
-## Activity 1
+## Activities
+
+```{r}
+#| label: load-packages
+
+library(tidyverse)
+library(knitr)
+library(patchwork)
+```
+
+The most prevalent type of visualizations created by W.
+E. B. Du Bois are bar charts, so the activities will focus on recreating the following, seemingly simple, bar chart that shows percentage of school aged Black children who are and are not enrolled public schools in the years 1876, 1886, and 1896.
+
+![Proportion Of Total Negro Children Of School Age Who Are Enrolled In The Public Schools (plate 49)](images/original-plate-49.jpg){fig-align="center"}
+
+For the first activity, which is aimed at the introductory statistics and data science audiences that teaches data visualization as part of its curriculum, will focus on getting a stacked bar chart representing the correct percentages.
+The second activity, aimed at a more advanced audience in a data visualization course, will build on it to capture all features of the visualization, including varying sizes of bars as well as colors and fonts.
+
+We're providing these activities assuming students use R and the **ggplot2** package for data visualization.
+The activities can also be used for teaching with other languages or software as well as other plotting systems in R, but the syntax-specific instructions will need to be updated.
+
+### Activity 1
+
+For this activity we recommend providing the following dataset to your students.
+
+```{r}
+public_school <- tribble(
+  ~enrolled, ~year, ~percent_enrolled,
+  "yes",     1876, 37.59,
+  "no",      1876, 100 - 37.59,
+  "yes",     1886, 56.66,
+  "no",      1886, 100 - 56.66, 
+  "yes",     1896, 57.29,
+  "no",      1896, 100 - 57.29
+)
+
+kable(public_school)
+```
+
+The following six exercises break down the task of reproducing the visualization, starting with ggplot2 defaults and customizing a little bit at each step until we reach something very similar (though not a perfect replica) of the original plot.
+We would recommend providing the exercises along with the target visualizations given in @fig-activity-1.
+
+1.  Create a stacked bar chart where year is on the x-axis and percent enrolled is on the y-axis.
+    Once you do, compare the plot you made to the original plot you're reproducing and make a list of all updates you will need to make to this plot to make it look more like for a complete reproduction.
+
+    ```{r}
+    public_school <- public_school |>
+      mutate(year = as.factor(year))
+
+    p1 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = enrolled)
+    ) +
+      geom_col(position = "fill")
+    ```
+
+2.  Update the colors on the plot to match the inspiration figure.
+    Also make sure that the order in which the colors show up in the bars as well as the legend labels match.
+    Note: For this task you can either use red and black colors, or use an additional piece of software (e.g., Digital Color Meter on a Mac) to match the exact colors.
+
+    ```{r}
+    p2 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = fct_rev(enrolled))
+    ) +
+      geom_col(position = "fill") +
+      scale_fill_manual(
+        name = NULL,
+        values = c("yes" = "#DD0F40", "no" = "#030302"),
+        labels = c("yes" = "PROPORTION OF CHILDREN ENROLLED\nPROPORTION D'ENFANTS ENRGISTRÉS", "no" = "PROPORTION OF CHILDREN NOT ENROLLED\nPROPORTION D'ENFANTS NON ENRGISTRÉS")
+        ) +
+      theme(
+        legend.position = "bottom", 
+        legend.direction = "vertical",
+        legend.text = element_text(size = 7)
+      )
+    ```
+
+3.  Place the percentages of "yes"s in the red portions of the bars and remove all axis elements by setting `theme_void()`.
+    Hint: First calculate where on the y-axis the annotation should be placed and store those values in the data as a new column.
+
+    ```{r}
+    public_school <- public_school |>
+      mutate(
+        annotate_location = if_else(enrolled == "no", percent_enrolled / 2, 100 - (percent_enrolled / 2)),
+        annotate_text = paste0(percent_enrolled, "%")
+        )
+
+    p3 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = fct_rev(enrolled))
+    ) +
+      geom_col(position = "fill") +
+      geom_text(data = public_school |> filter(enrolled == "yes"), aes(x = year, y = annotate_location/100, label = annotate_text)) +
+      scale_fill_manual(
+        name = NULL,
+        values = c("yes" = "#DD0F40", "no" = "#030302"),
+        labels = c("yes" = "PROPORTION OF CHILDREN ENROLLED\nPROPORTION D'ENFANTS ENRGISTRÉS", "no" = "PROPORTION OF CHILDREN NOT ENROLLED\nPROPORTION D'ENFANTS NON ENRGISTRÉS")
+        ) +
+      theme_void() +
+      theme(
+        legend.position = "bottom",
+        legend.direction = "vertical",
+        legend.text = element_text(size = 7)
+      )
+    ```
+
+4.  Add back the x-axis labels, but place them on top of the bars.
+
+    ```{r}
+    p4 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = fct_rev(enrolled))
+    ) +
+      geom_col(position = "fill") +
+      geom_text(data = public_school |> filter(enrolled == "yes"), aes(x = year, y = annotate_location/100, label = annotate_text)) +
+      scale_fill_manual(
+        name = NULL,
+        values = c("yes" = "#DD0F40", "no" = "#030302"),
+        labels = c("yes" = "PROPORTION OF CHILDREN ENROLLED\nPROPORTION D'ENFANTS ENRGISTRÉS", "no" = "PROPORTION OF CHILDREN NOT ENROLLED\nPROPORTION D'ENFANTS NON ENRGISTRÉS")
+        ) +
+      scale_x_discrete(position = "top") +
+      theme_void() +
+      theme(
+        legend.position = "bottom",
+        legend.direction = "vertical",
+        legend.text = element_text(size = 7),
+        axis.text.x.top = element_text(size = 10)
+      )
+    ```
+
+5.  Match the plot title and subtitle.
+
+    ```{r}
+    p5 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = fct_rev(enrolled))
+    ) +
+      geom_col(position = "fill") +
+      geom_text(data = public_school |> filter(enrolled == "yes"), aes(x = year, y = annotate_location/100, label = annotate_text)) +
+      scale_fill_manual(
+        name = NULL,
+        values = c("yes" = "#DD0F40", "no" = "#030302"),
+        labels = c("yes" = "PROPORTION OF CHILDREN ENROLLED\nPROPORTION D'ENFANTS ENRGISTRÉS", "no" = "PROPORTION OF CHILDREN NOT ENROLLED\nPROPORTION D'ENFANTS NON ENRGISTRÉS")
+        ) +
+      scale_x_discrete(position = "top") +
+      theme_void() +
+      theme(
+        legend.position = "bottom",
+        legend.direction = "vertical",
+        legend.text = element_text(size = 7),
+        axis.text.x.top = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size = 8),
+        plot.subtitle = element_text(hjust = 0.5, size = 6),
+        plot.margin = unit(c(0, 0, 0, 0), units = "cm")
+      ) +
+      labs(
+        title = "PROPORTION OF TOTAL NEGRO CHILDREN OF SCHOOL\nAGE WHO ARE ENROLLED IN THE PUBLIC SCHOOLS.\nPROPORTION DES ENFANTS NÈGRES AN ÂGE D'ÉCOLE\nENREGISTRÉS DANS LES ÉCOLES PUBLIQUES.",
+        subtitle = "DONE BY ATLANTA UNIVERSITY\n"
+      )
+    ```
+
+6.  Make the bars skinnier and increase the white space between them.
+
+    ```{r}
+    p6 <- ggplot(
+      public_school, 
+      aes(x = year, y = percent_enrolled, fill = fct_rev(enrolled))
+    ) +
+      geom_col(position = "fill", width = 0.5) +
+      geom_text(data = public_school |> filter(enrolled == "yes"), aes(x = year, y = annotate_location/100, label = annotate_text), size = 3) +
+      scale_fill_manual(
+        name = NULL,
+        values = c("yes" = "#DD0F40", "no" = "#030302"),
+        labels = c("yes" = "PROPORTION OF CHILDREN ENROLLED\nPROPORTION D'ENFANTS ENRGISTRÉS", "no" = "PROPORTION OF CHILDREN NOT ENROLLED\nPROPORTION D'ENFANTS NON ENRGISTRÉS")
+        ) +
+      scale_x_discrete(position = "top") +
+      theme_void() +
+      theme(
+        legend.position = "bottom",
+        legend.direction = "vertical",
+        legend.text = element_text(size = 7),
+        axis.text.x.top = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size = 8),
+        plot.subtitle = element_text(hjust = 0.5, size = 6),
+        plot.margin = unit(c(0, 0, 0, 0), units = "cm")
+      ) +
+      labs(
+        title = "PROPORTION OF TOTAL NEGRO CHILDREN OF SCHOOL\nAGE WHO ARE ENROLLED IN THE PUBLIC SCHOOLS.\nPROPORTION DES ENFANTS NÈGRES AN ÂGE D'ÉCOLE\nENREGISTRÉS DANS LES ÉCOLES PUBLIQUES.",
+        subtitle = "DONE BY ATLANTA UNIVERSITY.\n"
+      )
+    ```
+
+{{< pagebreak >}}
+
+```{r}
+#| label: fig-activity-1
+#| fig-cap: |
+#|   Expected result of each of the exercises in Activity 1.
+#| fig-width: 8
+#| fig-height: 12
+
+(p1 + p2) /
+  plot_spacer() /
+  (p3 + p4) /
+  plot_spacer() /
+  (p5 + p6) +
+  plot_layout(heights = c(4, 1, 4, 1, 4)) +
+  plot_annotation(
+    tag_levels = "1", 
+    tag_prefix = "Exercise "
+    )
+```
 
 ## Activity 2
 
