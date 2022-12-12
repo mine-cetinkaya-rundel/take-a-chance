@@ -131,18 +131,36 @@ ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expendit
         plot.background = element_rect(fill = "#e4d2c1"))
 ```
 
+We can begin by having students analyze and make observations from the original graph.
+Below are some discussion questions that can be used in a written assignment or to promote class discussion.
+
+> **Q1.** What is the topic of the graph?
+>
+> **Q2.** What do you observe from the graph?
+>
+> **Q3.** What questions do you have after viewing this graph?
+> What do you want to learn more about?
+
 ## Conclusion
 
 ## Further reading
 
--   Du Bois TidyTuesday
+-   Battle-Baptiste, W., & Rusert, B.
+    (Eds.).
+    (2018).
+    *WEB Du Bois's data portraits: Visualizing black America*.
+    Chronicle Books.
 
-    -   2022: https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-02-15/readme.md
+-   Recreations of Du Bois's Data Portraits GitHub repository: [github.com/ajstarks/dubois-data-portraits](https://github.com/ajstarks/dubois-data-portraits)
 
-    -   2021 (tweets from the challenge): https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-06-15/readme.md
+-   Starks, A.
+    (2019, August 21).
+    Recreating W.E.B Du Bois\'s Data Portraits.
+    Medium.
+    [medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34](https://medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34)
 
--   Du Bois data portraits repo: https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022
-
--   Anthony Starks presentation on recreating the images: https://speakerdeck.com/ajstarks/recreating-the-dubois-data-portraits?
-
--   W.E.B. Du Bois Data Visualization book
+-   Starks, A.
+    (2022, February 1).
+    The #DuBois Challenge.
+    Nightingale.
+    [nightingaledvs.com/the-dubois-challenge](https://nightingaledvs.com/the-dubois-challenge/)
