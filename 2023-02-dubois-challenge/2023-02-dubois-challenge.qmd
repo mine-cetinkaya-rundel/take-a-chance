@@ -51,25 +51,23 @@ They stood out from other visualizations of the time with their bright colors an
 
 Du Bois's visualizations and photographs from the 1900 Paris Exhibit are available in the [Library of Congress digital collection](https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?st=grid&sb=shelf-id_desc).
 
-## Activity 1
+## 
+Activity 1
 
 ## Activity 2
 
 ## Extension 
 
--   By this point students are learned about creating and interpreting visualizations in ggplot2 along with some data wrangling. This activity could come towards the beginning of the term after these topics have been taught (may require more guidance to help students) or at the end of the term when students are very familiar with using R.
-
-![Source: https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/challenge05/original-plate-31.jpg (find LOC source)](img/income-expenditures-orig.jpeg)
-
-<!--# Find Library of Congress citation. -->
-
-<!--# https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-16/readme.md-->
-
-### Recreation
+Another example of a visualization that can be recreated using segmented bar charts is "Income and Expenditure of 150 Negro Families in Atlanta, G.A., U.S.A." (Plate 31 in the collection).
+The visualization was originally created using ink and watercolors.
+It also stands out due to the use of photographs at the top of the graph.
+The visualization shows family budgets split by income classes for 150 families in Georgia.
+The copy of the original graph is available in [Library of Congress digital collection](https://www.loc.gov/item/2013650354/), and a recreation of the graph using `ggplot2` is below.
 
 ```{r}
 #| echo: false
 #| fig-width: 10
+#| fig-cap: Recreation of "Income and Expenditure of 150 Negro Families in Atlanta, G.A., U.S.A." (Plate 31)
 
 library(tidyverse)
 library(scales)
@@ -129,7 +127,7 @@ ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expendit
   theme_void() +
   theme(legend.position = "top",
         axis.text.y  = element_text(hjust = 0.5, family = "shoulders"),
-        plot.title = element_text(family = "shoulders", size = 20),
+        plot.title = element_text(family = "shoulders", size = 20, hjust = 0.5),
         plot.background = element_rect(fill = "#e4d2c1"))
 ```
 
