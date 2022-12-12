@@ -13,8 +13,8 @@ editor_options:
 
 ## Introduction
 
-In February 2021, Allen Hillery, Athony Starks, and Sekou Tyler, started the #DuboisChallenge, and annual online challenge where participants use modern data visualization tools such as R, Python, and Tableau, among others, to recreate the data visualizations in W.E.B. Du Bois's 1900 Paris exhibition *Exposition des Nègres d'Amérique* (*The Exhibit of American Negroes*).
-The seven-week challenge included 10 out of the over 60 visualizations in the original exhibit.
+In February 2021, Allen Hillery, Athony Starks, and Sekou Tyler, started the #DuboisChallenge, and annual online challenge where participants use modern data visualization tools such as R, Python, and Tableau, among others, to recreate the data visualizations by W.E.B. Du Bois in the 1900 *Exposition Universelle* (also known as the 1900 Paris Exposition).
+The seven-week challenge included 10 out of the 63 visualizations in the original exhibit.
 Each week, participants were tasked with recreating one of the visualizations and there were three "bonus" visualization challenges.
 People used social media to share their recreations side-by-side with the originals using the tag #DuBoisChallenge, and many shared the code they used for the recreation.
 The challenge took place again in February 2022 and it was featured in 2021 and 2022 as part of RStudio's weekly online data visualization event, TidyTuesday.
@@ -37,6 +37,19 @@ The data for the visualization and R code to recreate the visualizations present
 The book *W.E.B. Du Bois's Data Portraits: Visualizing Black America* edited by Whitney Battle-Baptiste and Britt Rusert, gives a history of Du Bois's exhibit at the *Exposition Universelle* (also known as the 1900 Paris Exposition) along with prints and details of the 63 visualization presented at the event.
 We provide a brief summary of the historical background in the book that instructors can share with students as background and context for the collection of visualizations.
 We encourage the readers to see this book and other sources in the *Further Reading* section for a more detailed history of Du Bois and the 1900 Paris Exposition.
+
+Du Bois's visualizations were part of the Exposition des Nègres d'Amérique (The Exhibit of American Negroes), an exhibit organized by newspaper editor Thomas Junius Calloway.
+The goal of the exhibit was to tell the story of African Americans after Emancipation using a variety of items including texts, portraits, and data visualizations.
+The exhibit highlighted the progress made by African Americans, and Du Bois in particulr, used data and visualizations to counter the "narrative of Black inferiority."
+
+As a professor at Atlanta University, a historically Black university in Georgia, Du Bois was one of the first professors in the United States to train students in empirical sociological involving data collection and analysis.
+Therefore, he worked with his current and former students to create the visualizations for the 1900 exhibit.
+They used data collected by Du Bois's sociology lab, government reports, and data from the United States Census.
+The data were used to create two sets of visualizations: one focusing specifically on the experience of African Americans in Georgia and one focusing on more national-level statistics and trends.
+The visualizations were hand drawn using ink, watercolor, and graphite.
+They stood out from other visualizations of the time with their bright colors and modern style, an intentional design choice by Du Bois to make more effectively convey the message to the Parisian audience.
+
+Du Bois's visualizations and photographs from the 1900 Paris Exhibit are available in the [Library of Congress digital collection](https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?st=grid&sb=shelf-id_desc).
 
 ## Activity 1
 
