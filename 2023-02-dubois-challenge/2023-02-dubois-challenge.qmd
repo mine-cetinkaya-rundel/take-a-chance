@@ -1,6 +1,6 @@
 ---
-title: "Working title: DuBois Challenge"
-fomrat: pdf
+title: "Analyzing and recreating data visualizations by W.E.B. Du Bois"
+format: pdf
 execute: 
   warning: false
   message: false
@@ -140,6 +140,70 @@ Below are some discussion questions that can be used in a written assignment or 
 >
 > **Q3.** What questions do you have after viewing this graph?
 > What do you want to learn more about?
+
+### Step 1. Create segmented bar plot
+
+```{r}
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(position = "stack")
+```
+
+### Step 2. Add labels within each bar. 
+
+```{r}
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(position = "stack") +
+    geom_text(aes(label = percent_label), position = position_stack(0.5))
+```
+
+### Step 3. Flip coordinates to make bars horizontal.
+
+```{r}
+#| fig.width: 10
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = percent_label), position = position_stack(0.5)) + 
+  coord_flip() + 
+  scale_x_discrete(limits = rev) 
+```
+
+### Step 4. Use Du Bois color palette and update legend 
+
+```{r}
+#| fig.width: 10
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = percent_label), position = position_stack(0.5)) + 
+  coord_flip() + 
+  scale_x_discrete(limits = rev) + 
+  scale_fill_manual(labels = c("RENT.", "FOOD.", "CLOTHES.", "DIRECT TAXES.", 
+                               "OTHER EXPENSES AND SAVINGS."),
+                    values = c("Rent" = "#000000", "Food" = "#b19cd9",
+                               "Clothes" = "#ffc0cb", "Tax" = "#4682B4" ,
+                               "Other" = "#E9E9E9"))
+  
+```
+
+### Step 5. Reposition legend and update axis labels and title
+
+```{r}
+#| fig.width: 10
+ggplot(data = income_long, aes(x = class_income, y = percentage, fill = expenditure)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = percent_label), position = position_stack(0.5)) + 
+  coord_flip() + 
+  scale_x_discrete(limits = rev) + 
+  scale_fill_manual(labels = c("RENT.", "FOOD.", "CLOTHES.", "DIRECT TAXES.", 
+                               "OTHER EXPENSES AND SAVINGS."),
+                    values = c("Rent" = "#000000", "Food" = "#b19cd9",
+                               "Clothes" = "#ffc0cb", "Tax" = "#4682B4" ,
+                               "Other" = "#E9E9E9")) +
+   labs(x = "", y = "", fill = "",
+       title = "INCOME AND EXPENDITURE OF 150 NEGRO FAMILIES IN ATLANTA, GA, U.S.A") +
+  theme(legend.position = "top")
+```
+
+### Additional customization
 
 ## Conclusion
 
