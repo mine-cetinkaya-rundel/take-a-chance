@@ -83,6 +83,7 @@ There have been numerous studies investigating the role of representation and su
 
 Some of the reasons that representation impacts participation in engaging in STEM include stereotypes about innate abilities and stereotypes about images in the field.  The first set of stereotypes (innate abilities) describe beliefs that particular groups are not **capable** of success in STEM fields.  The second set of stereotypes (images) describe beliefs that particular groups do not **belong** to STEM fields.  Regardless, it seems clear that if students can see themselves in the scholars of the field, they will be more likely to continue pursuing that discipline.  
 
+Buckmire et al. (2023) write on what makes a "mathematician."  They recognize that narrowly defining who should / can do mathematics is a process by which people are made to feel excluded from mathematics.  In their article they present a variety of definitions for "mathematician", and each of the nine co-authors describes how they do or do not meet each of the definitions.  The different representations show students a diversity of role models.  In what follows, we present a database of role models with the hopes of introducing students to statisticians, data scientists, and mathematicians to whom they can connect.
 
 # CURV - connecting, uplifting, and recognizing voices
 
@@ -211,5 +212,7 @@ I developed the CURV database because I didn't know of a different resource that
 * CURV website at https://hardin47.github.io/CURV/; CURV GitHub repo at https://github.com/hardin47/CURV/
 
 * Nguyen, Ursula, and Catherine Riegle-Crumb. "Who Is a Scientist? The Relationship Between Counter-Stereotypical Beliefs about Scientists and the STEM Major Intentions of Black and Latinx Male and Female Students." *International Journal of STEM Education* 8, 2021.
+
+* Buckmire, R., Diaz Eaton C., Hibdon, J., Kinnaird,K., Lewis, D., Libertini, J., Ortega, O., Roca, R., and Vindas Meléndez, A. "On Definitions of 'Mathematician'," *Journal of Humanistic Mathematics*, 13, 8-38, 2023. https://scholarship.claremont.edu/jhm/vol13/iss2/4
 
 * Bodmer, W., Bailey, R.A., Charlesworth, B. et al. The outstanding scientist, R.A. Fisher: his views on eugenics and race. *Heredity* 126, 565–576, 2021.
