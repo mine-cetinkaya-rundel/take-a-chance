@@ -1,0 +1,13 @@
+---
+format:
+  html:
+    theme: cosmo
+    toc-location: left
+    comments: 
+      hypothesis: true
+    citations-hover: true
+    crossrefs-hover: true
+  agu-pdf: default
+  pdf: default
+  jats: default
+---
