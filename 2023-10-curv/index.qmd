@@ -309,4 +309,6 @@ I developed the CURV database because I didn't know of a different resource that
 
 * Nguyen, Ursula, and Catherine Riegle-Crumb. "Who Is a Scientist? The Relationship Between Counter-Stereotypical Beliefs about Scientists and the STEM Major Intentions of Black and Latinx Male and Female Students." *International Journal of STEM Education* 8, 2021.
 
-* Bodmer, W., Bailey, R.A., Charlesworth, B. et al. The outstanding scientist, R.A. Fisher: his views on eugenics and race. *Heredity* 126, 565–576, 2021.
+* Bodmer, W., Bailey, R.A., Charlesworth, B. et al. "The outstanding scientist, R.A. Fisher: his views on eugenics and race." *Heredity* 126, 565–576, 2021.
+
+* One last reference which aligns with the goals of this article. Lee Kennedy-Shaffer has a recent 2023 article in *The Journal of Statistics and Data Science Education* titled "Teaching the Difficult Past of Statistics to Improve the Future."
