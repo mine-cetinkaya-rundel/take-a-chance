@@ -9,26 +9,42 @@ license: CC BY-SA 4.0
 keywords:
   - DEI
   - representation
-date: '2023-09-28'
+date: '2024-01-31'
 citation:
   container-title: Taking a Chance in the Classroom
 draft: false
 echo: false
 ---
 
-### Quick: think of a statistician.  Who came to mind for you?
+
+### Quick: think of a statistician. 
+
+Did you think of someone?
+Who came to mind for you?
+Are you surprised by who you thought of?
+Was it someone famous?
+Someone you know?
+Yourself?
+Male?
+Female?
+Person of color?
+Differently abled?
+International?
 
 
 # Representation Matters
 
-
-When I think about the statisticians I encountered during my education, the four individuals in @fig-coasters, seen on my personal coaster set, come to mind.
+When I think about the statisticians I encountered during my formal statistics education, the four individuals in @fig-coasters, seen on my personal coaster set (received as a gift many years ago), come to mind.
+Did you think of one of the four statisticians on my coaster set?
+Why do you think someone thought to make a coaster set including those four individuals?
 
 ```{r}
 #| echo: FALSE
 #| label: fig-coasters
-#| fig-cap: A set of four coasters including Gosset, Pearson, Bayes, and Fisher
-#| out-width: "50%"
+#| fig-cap: A set of four coasters including Gosset, Pearson, Bayes, and Fisher.
+#| fig-alt: A set of four coasters including images of Gosset, 
+#|   Pearson, Bayes, and Fisher.
+#| out-width: "30%"
 #| fig-align: center
 
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -38,38 +54,62 @@ knitr::include_graphics("coasters.jpg")
 
 
 My coasters aside, a Google search on "famous statisticians" produces a few women on the list, but the demographics of the individuals presented are remarkably homogeneous, see @fig-google.
+Is your statistician listed in the Google search?
+Are the statisticians listed by Google somehow more representative of what it means to be a "statistician"?
+What does it mean to be a representative statistician?
+Representative of what?
+
 
 ```{r}
 #| echo: FALSE
 #| label: fig-google
-#| fig-cap: In a Google search for famous statisticians, the individuals listed include Tukey, Nightingale, Fisher, Cox, Pearson, Box, Bayes, Deming, and Gosset.
+#| fig-cap: In a Google search for famous statisticians, the individuals
+#|    listed include Tukey, Nightingale, Fisher, Cox, Pearson, Box, 
+#|    Bayes, Deming, and Gosset.
+#| fig-alt: A screen shot of a Google search for "famous statistician".
+#|    The search result includes Tukey, Nightingale, Fisher, Cox, 
+#|    Pearson, Box, Bayes, Deming, and Gosset.
 #| out-width: "80%"
 #| fig-align: center
 
 knitr::include_graphics("google.png")
 ```
 
-Who else made contributions to statistics?
+Beyond initial thoughts, statistical tchotchkes, and Google searches, it's important to reflect on who else has made important contributions to statistics.
+Blatantly missing from the Google search is David Blackwell, a giant in the field.
 
 ## David Blackwell 
 
-Arguably, the most famous/influential/brilliant African American statistician is David Blackwell.  Statisticians may know Blackwell from the Rao-Blackwell theorem which says that after conditioning on a sufficient statistic, the new estimator will have smaller (or equal to) mean squared error than the original estimator. Indeed, the Rao-Blackwell theorem is seen in most undergraduate Statistical Theory textbooks.
+Arguably, the most famous/influential/brilliant African American statistician is David Blackwell.
+Statisticians may know Blackwell from the Rao-Blackwell theorem which says that after conditioning on a sufficient statistic, the new estimator will have smaller (or equal to) mean squared error than the original estimator.
+Indeed, the Rao-Blackwell theorem is seen in most undergraduate Statistical Theory textbooks.
 
-Blackwell was the 1st African American elected to the National Academies of Science and the 1st African American tenured at UC Berkeley.  He was the 7th African American to receive a PhD in mathematics.  In 2012, President Obama posthumously awarded Blackwell the National Medal of Science.
+Blackwell was the 1st African American elected to the National Academies of Science and the 1st African American tenured at UC Berkeley.
+He was the 7th African American to receive a PhD in mathematics.
+In 2012, President Obama posthumously awarded Blackwell the National Medal of Science.
 
-The majority of Blackwell's career in statistics was spent at UC Berkeley (1954-1988).  However, his start at UC Berkeley was postponed due to racism in the Department of Mathematics.  The story is that the chair of the department (Erich Lehmann) wanted to hire Blackwell in 1942.  However, the wife of another faculty member didn't want any Black members of the department because then she wouldn't feel comfortable hosting department events in her home.  So the wife told her husband to tell Lehmann not to hire Blackwell.  Which is what happened. You can hear Blackwell describe the situation in his own words at https://www.youtube.com/watch?v=Mqpf9tw44Xw.  It is a powerful three minute video, I recommend you show it to your students.
+The majority of Blackwell's career in statistics was spent at UC Berkeley (1954-1988).
+However, his start at UC Berkeley was postponed due to racism in the Department of Mathematics.
+The story is that the chair of the department (Erich Lehmann) wanted to hire Blackwell in 1942.
+However, the wife of another faculty member didn't want any Black members of the department because then she wouldn't feel comfortable hosting department events in her home.
+So the wife told her husband to tell Lehmann not to hire Blackwell.  Which is what happened.
+You can hear Blackwell describe the situation in his own words at *www.youtube.com/watch?v=Mqpf9tw44Xw*.
+It is a powerful three minute video; I recommend you watch it and show it to your students.
 
-I recount the Blackwell story to indicate that racism is critical and recent in the history of statistics.  Indeed, see Bodmer et al. (2021) for a detailed description of the eugenics movement associated with R.A. Fisher and colleagues. But even more salient is notion that in the standard undergraduate curriculum, there are very few people of color who our students see as role models.
+I recount the Blackwell story to indicate that racism is critical and recent in the history of statistics.
+Indeed, see Bodmer et al. (2021) for a detailed description of the eugenics movement associated with R.A. Fisher and colleagues.
+But even more salient is notion that in the standard undergraduate curriculum, there are very few people of color who our students see as role models.
 
 ## Why does representation matter?
 
-When individuals don't feel a part of the community, their identity gets mixed up with feelings about their ability.  @fig-xkcd shows an xkcd comic encapsulates what can happen when individuals of the non-dominant demographic group engage with content of the course / curriculum / minor / major.
+When individuals don't feel a part of the community, their identity gets mixed up with feelings about their ability.
+@fig-xkcd shows an xkcd comic encapsulates what can happen when individuals of the non-dominant demographic group engage with content of the course / curriculum / minor / major.
 
 ```{r}
 #| echo: FALSE
 #| label: fig-xkcd
-#| fig-alt: In the first panel, a stick figure makes a mathematical mistake, and the other stick figure says "you are bad at math".  In the second panel, a stick figure with long hair (presumably a female stick figure) makes the same mistake, and the other stick figure says "girls are bad at math."
-#| fig-cap: image credit -- https://xkcd.com/385/
+#| fig-alt: 'In the first panel, a stick figure makes a mathematical mistake, and the other stick figure says "you are bad at math".  In the second panel, a stick figure with long hair (presumably a female stick figure) makes the same mistake, and the other stick figure says "girls are bad at math."'
+#| fig-cap: image credit -- *https://xkcd.com/385/*
 #| out-width: "55%"
 #| fig-align: center
 
@@ -77,29 +117,48 @@ knitr::include_graphics("xkcd.png")
 ```
 
 
-There have been numerous studies investigating the role of representation and success across STEM fields.  Nguyen and Riegle-Crumb (2021) find that counter-stereotypical beliefs are associated with intentions to pursue STEM fields for Black and Latinx students.  They say: 
+There have been numerous studies investigating the role of representation and success across STEM fields.
+Nguyen and Riegle-Crumb (2021) find that counter-stereotypical beliefs are associated with intentions to pursue STEM fields for Black and Latinx students.
+They say: 
 
 >Research indicates that many young people may be deterred from pursuing STEM fields due to prominent stereotypes regarding who best fits and belongs in such fields.
 
-Some of the reasons that representation impacts participation in engaging in STEM include stereotypes about innate abilities and stereotypes about images in the field.  The first set of stereotypes (innate abilities) describe beliefs that particular groups are not **capable** of success in STEM fields.  The second set of stereotypes (images) describe beliefs that particular groups do not **belong** to STEM fields.  Regardless, it seems clear that if students can see themselves in the scholars of the field, they will be more likely to continue pursuing that discipline.  
+Some of the reasons that representation impacts participation in engaging in STEM include stereotypes about innate abilities and stereotypes about images in the field.
+The first set of stereotypes (innate abilities) describe beliefs that particular groups are not **capable** of success in STEM fields.
+The second set of stereotypes (images) describe beliefs that particular groups do not **belong** to STEM fields.
+Regardless, it seems clear that if students can see themselves in the scholars of the field, they will be more likely to continue pursuing that discipline.  
 
-Buckmire et al. (2023) write on what makes a "mathematician."  They recognize that narrowly defining who should / can do mathematics is a process by which people are made to feel excluded from mathematics.  In their article they present a variety of definitions for "mathematician", and each of the nine co-authors describes how they do or do not meet each of the definitions.  The different representations show students a diversity of role models.  In what follows, we present a database of role models with the hopes of introducing students to statisticians, data scientists, and mathematicians to whom they can connect.
+Buckmire et al. (2023) write on what makes a "mathematician."
+They recognize that narrowly defining who should / can do mathematics is a process by which people are made to feel excluded from mathematics.
+In their article they present a variety of definitions for "mathematician", and each of the nine co-authors describes how they do or do not meet each of the definitions.
+The different representations show students a diversity of role models.
+
+Our students' identities span the entire spectrum of backgrounds.
+Just like us, they are diverse with respect to race, socio-economic background, gender identity, faith, and ability.
+As educators, the more we can cultivate sense of belonging in our statistics or data science classroom, the more successful we will be at communicating our learning outcomes.
+In what follows, we present a database of role models with the hopes of introducing statisticians, data scientists, and mathematicians as individuals to whom our students can connect.
+
 
 # CURV - connecting, uplifting, and recognizing voices
 
-To combat the homogeneity of representation in standard statistics content, in most of my courses, I've introduced a weekly activity of "Statistician of the Day."  The scholars who I present are those traditionally underrepresented in statistics and data science.  Many of them are people of color, but they also represent individuals who are pushing boundaries to make statistics and data science more accessible and inclusive, often because they themselves have navigated a world which was not accessible or not inclusive.
+To combat the homogeneity of representation in standard statistics content, in most of my courses, I've introduced a weekly activity of *Statistician of the Day*.  The scholars who I present are those traditionally underrepresented in statistics and data science.  Many of them are people of color, but they also represent individuals who are pushing boundaries to make statistics and data science more accessible and inclusive, often because they themselves have navigated a world which was not accessible or not inclusive.
 
 The database is called **CURV - connecting, uplifting, and recognizing voices**.  You can see the source code and/or contribute to the database by exploring the CURV GitHub repo.
 
 
 ## Who is in CURV?
 
-The point of the CURV database is to introduce students to scholars to whom students can relate.  In that spirit, I have included:
+The point of the CURV database is to introduce students to scholars to whom students can relate.
+In that spirit, I have included:
 
 * scholars who represent the diversity of students.
 * scholars working to make statistics more accessible.
 * scholars using statistics to do good in the world.
 
+
+In what follows, I present four scholars from the database.
+The four individuals represent a diversity of backgrounds.
+The hope is that not only do students seem themselves in the scholars, but that they also recognize the value of having different perspectives in problem solving.
 
 ### Liz Hare
 
@@ -186,10 +245,47 @@ knitr::include_graphics("maria.png")
 knitr::include_graphics("maria_abstract.png")
 ```
 
+### Desi Small-Rodriguez
+
+Dr. Small-Rodriguez is a social demographer and an Assistant Professor of Sociology and American Indian Studies at UCLA. She received a PhD in Sociology from the University of Arizona and a PhD in Demography from the University of Waikato. Dr. Small-Rodriguez is Northern Cheyenne and Chicana and grounds her work in Indigenous studies, sociology of race and ethnicity, critical demography, and health policy research. She directs the Data Warriors Lab (a mobile data sovereignty lab serving Indigenous communities) and was previously a member of the Collaboratory for Indigenous Data Governance. She is a founding member of the Global Indigenous Data Alliance.
+
+Dr. Small-Rodriguez is passionate about Indigenous data sovereignty and Indigenous data governance. Using networks of Indigenous scholars and survey methods, she works toward the following two goals: (1) better collection and use of data on Indigenous people that has been gathered by external sources such as the census and other federal entities; (2) development of data methods and practitioners within the Indigenous community. Dr. Small-Rodriguez also works for health and economic justice on Indian Reservations.
+
+When I introduce Dr. Small-Rodriguez to my students, I also introduce ideas of data sovereignty.
+I point them to the Native Nations Institute at The University of Arizona where scholars have put together policy briefs and calls to action describing how data can be used thoughtfully and respectfully.
+
+### Lester Mackey
+
+Dr. Mackey is a machine learning researcher at Microsoft Research New England and an adjunct professor at Stanford University.
+He has a PhD in Computer Science and an MS in Statistics, both from UC Berkeley.  
+
+In 2006 Netflix offered $1 million to the researchers who could come up 
+with the most accurate prediction of people's movie ratings.
+As undergraduates, Dr. Mackey and two friends led the competition for a few hours in its first year.
+Later, Dr. Mackey’s group merged with a few others, forming The Ensemble.
+Their final analysis came in second with the exact same error rates as the winning entry.
+The winning entry, however, had been submitted 20 minutes prior.
+Sigh.
+
+I love telling my students Dr. Mackey's Netflix story, as it gets them thinking about how *they* can do statistics and data science, even as undergraduates.
+We talk about Kaggle and other data competitions and also about the ways that problem solving (i.e., real data science) is so much more than models applied to data that has already been cleaned.
+
+Dr. Mackey is involved in Stanford’s initiative of Statistics for Social Good and has the following quote on his website:
+
+>Quixotic though it may sound, I hope to use computer science and statistics to change the world for the better.
+
+In 2023, Dr. Mackey was awarded a MacArthur Genius Grant.
+What an awesome person for our students to know about.
 
 # CURV in the classroom
 
-While you surely have creative ideas on how to use CURV in the classroom, I have mostly used it as a "statistician of the day" project.  Once a week (or sometimes at every class period), I briefly introduce a scholar and present different ways they have contributed to the field.  My students have been extremely positive about the engagement, reporting the following about being introduced to the scholars in the CURV database.  Some of the sentiments they have reported include that the presentations of the scholars:
+While you surely have creative ideas on how to use CURV in the classroom, I have mostly used it as a *Statistician of the Day* project.
+Once a week (or sometimes at every class period), I briefly introduce a scholar and present different ways they have contributed to the field.
+Typically, I use only about five minutes of class time.
+Some scholars illicit discussion, but for most of them, I simply present their background and work, and we move on to the course material of the day.
+
+Despite the short about of time spent on introducing the scholars, my students have been extremely positive about the engagement.
+In summarized student reflections, they report that the presentations of the scholars:
 
 * is inspiring.
 * is a great way to better understand the career paths of data scientists.
@@ -204,15 +300,15 @@ In addition to presenting scholars to your students, you can engage the students
 
 # CURV aligned
 
-I developed the CURV database because I didn't know of a different resource that I could use for my "Statistician of the Day" classroom exercise.  I wanted the information provided to be relevant to my students, connecting either through identity or through class content.  That said, I've borrowed heavily from existing resources, and I appreciate the myriad efforts which engage students in many different ways.  On the CURV website I list additional fantastic resources highlighting statisticians, data scientists, and mathematicians who are traditionally underrepresented. I encourage you and your students to check them out!
+I developed the CURV database because I didn't know of a different resource that I could use for my *Statistician of the Day* classroom exercise.  I wanted the information provided to be relevant to my students, connecting either through identity or through class content.  That said, I've borrowed heavily from existing resources, and I appreciate the myriad efforts which engage students in many different ways.  On the CURV website I list additional fantastic resources highlighting statisticians, data scientists, and mathematicians who are traditionally underrepresented. I encourage you and your students to check them out!
 
 
 # Further Reading
 
-* CURV website at https://hardin47.github.io/CURV/; CURV GitHub repo at https://github.com/hardin47/CURV/
+* CURV website at *https://hardin47.github.io/CURV/*; CURV GitHub repo at *https://github.com/hardin47/CURV/*
 
 * Nguyen, Ursula, and Catherine Riegle-Crumb. "Who Is a Scientist? The Relationship Between Counter-Stereotypical Beliefs about Scientists and the STEM Major Intentions of Black and Latinx Male and Female Students." *International Journal of STEM Education* 8, 2021.
 
-* Buckmire, R., Diaz Eaton C., Hibdon, J., Kinnaird,K., Lewis, D., Libertini, J., Ortega, O., Roca, R., and Vindas Meléndez, A. "On Definitions of 'Mathematician'," *Journal of Humanistic Mathematics*, 13, 8-38, 2023. https://scholarship.claremont.edu/jhm/vol13/iss2/4
+* Bodmer, W., Bailey, R.A., Charlesworth, B. et al. "The outstanding scientist, R.A. Fisher: his views on eugenics and race." *Heredity* 126, 565–576, 2021.
 
-* Bodmer, W., Bailey, R.A., Charlesworth, B. et al. The outstanding scientist, R.A. Fisher: his views on eugenics and race. *Heredity* 126, 565–576, 2021.
+* One last reference which aligns with the goals of this article. Lee Kennedy-Shaffer has a recent 2023 article in *The Journal of Statistics and Data Science Education* titled "Teaching the Difficult Past of Statistics to Improve the Future."
